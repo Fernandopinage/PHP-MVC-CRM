@@ -8,7 +8,7 @@
 
     switch ($pagina) {
         case 'home':
-            include_once "../php/home.php";
+            include_once "../php/calendario.php";
             break;
 
         case 'parceiro':
@@ -28,6 +28,9 @@
             include_once "../php/projeto.php";
             break;
 
+        case 'agendamento/tecnico':
+            include_once "../php/calendario.php";
+            break;
 
         default:
             # code...
