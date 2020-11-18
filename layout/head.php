@@ -39,9 +39,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="?p=agendamento/tecnico">Agendamento Tecnico</a>
-                        <a class="dropdown-item" href="?p=colaborador">Colaborador</a>
-                        <a class="dropdown-item" href="?p=contrato">Contratos</a>
-                        <a class="dropdown-item" href="?p=projeto">Projeto</a>
+                        
                     </div>
                 </li>
 
