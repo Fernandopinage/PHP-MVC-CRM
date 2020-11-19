@@ -17,11 +17,11 @@
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Codigo</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email" required>
-                    
+                    <input type="text" class="form-control" name="email" id="nome" placeholder="Email" required>
+
                 </div>
                 <div class="form-group col-md-1">
-                    
+
                 </div>
 
                 <div class="form-group col-md-4">
@@ -111,9 +111,21 @@
             </div>
 
         </div>
-<!--- ********************************************************************************************************* -->
-        <div class="tab-pane fade" id="nav-funcao" role="tabpanel" aria-labelledby="nav-funcao-tab">...</div>
-<!--- ********************************************************************************************************* -->
+        <!--- ********************************************************************************************************* -->
+        <div class="tab-pane fade" id="nav-funcao" role="tabpanel" aria-labelledby="nav-funcao-tab">
+
+            <div class="input-group mb-3 form-group col-md-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    
+                    <input type="button" class="btn btn-dark" value="♣">                   
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--- ********************************************************************************************************* -->
         <div class="tab-pane fade" id="nav-documentos" role="tabpanel" aria-labelledby="nav-documentos-tab">
 
             <div class="form-row">
