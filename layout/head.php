@@ -45,6 +45,7 @@
 
             </ul>
         </div>
+        logaut
     </nav>
 
 </body>
