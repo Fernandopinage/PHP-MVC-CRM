@@ -4,32 +4,32 @@
 
     <?php
 
-    @$pagina = $_GET['p'];
+    @$pagina = $_GET['page'];
 
     switch ($pagina) {
-        case 'home':
+        case 'home/':
             include_once "../php/calendario.php";
             break;
 
-        case 'parceiro':
+        case 'parceiro/':
             include_once "../php/parceiro.php";
             break;
 
 
-        case 'colaborador':
+        case 'colaborador/':
             include_once "../php/colaborador.php";
             break;
 
-        case 'contrato':
+        case 'contrato/':
             include_once "../php/contrato.php";
             break;
 
-        case 'projeto':
+        case 'projeto/':
             include_once "../php/projeto.php";
             break;
 
-        case 'agendamento/tecnico':
-            include_once "../php/calendario.php";
+        case 'tecnico/':
+            include_once "../php/tecnico.php";
             break;
 
         default:

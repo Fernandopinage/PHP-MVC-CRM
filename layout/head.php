@@ -27,10 +27,10 @@
                         Cadastro
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="?p=parceiro">Parceiros</a>
-                        <a class="dropdown-item" href="?p=colaborador">Colaborador</a>
-                        <a class="dropdown-item" href="?p=contrato">Contratos</a>
-                        <a class="dropdown-item" href="?p=projeto">Projeto</a>
+                        <a class="dropdown-item" href="?page=parceiro/">Parceiros</a>
+                        <a class="dropdown-item" href="?page=colaborador/">Colaborador</a>
+                        <a class="dropdown-item" href="?page=contrato/">Contratos</a>
+                        <a class="dropdown-item" href="?page=projeto/">Projeto</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -38,8 +38,7 @@
                         Agendamento
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="?p=agendamento/tecnico">Agendamento Tecnico</a>
-                        
+                        <a class="dropdown-item" href="?page=tecnico/">Agendamento Tecnico</a>
                     </div>
                 </li>
 
