@@ -52,7 +52,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="?page=sair/">Sair</a>
-                        <a class="dropdown-item" href="?page=colaborador/">Alter Dados</a>
+                        <a class="dropdown-item" href="?page=senha/">Alter Senha</a>
+                        <a class="dropdown-item" href="?page=sobre/">Sobre</a>
                         
                     </div>
                 </li>
