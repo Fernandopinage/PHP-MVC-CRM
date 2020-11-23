@@ -1,6 +1,9 @@
 <footer>
 <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-  
+    <div class="foot">
+        <p class="foottitle">Progride®</p> <p class="footbody"> é uma marca registrada. - © 2020 Todos os direitos reservados.</p>
+
+    </div>
 </nav>
 
 

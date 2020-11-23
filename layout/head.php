@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link href='../css/body.css' rel='stylesheet' />
     <link href='../css/main.css' rel='stylesheet' />
     <link href='../css/css.css' rel='stylesheet' />
     <script src='../js/main.js'></script>
@@ -44,7 +44,22 @@
 
             </ul>
         </div>
-        logaut
+        <div class="form-inline  my-lg-0" id="navbarNavDropdown" style="margin: 0px 80px;">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FF7F00;">
+                        Logout
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="?page=sair/">Sair</a>
+                        <a class="dropdown-item" href="?page=colaborador/">Alter Dados</a>
+                        
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
     </nav>
 
 </body>
