@@ -16,6 +16,27 @@ include_once "../layout/head.php";
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
       },
+
+      // inicio da alteração
+          eventClick: function(info) {
+            //alert('Event: ' + info.event.title);
+            //alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+            //alert('View: ' + info.view.type);
+
+            // change the border color just for fun
+            info.el.style.borderColor = 'red';
+          },
+
+          dateClick: function(info) {
+          alert('clicked ' + info.dateStr);
+          },
+          select: function(info) {
+            $('#myModal').modal('show');
+            
+          },
+      // aqui final da alteração
+
+      
       //initialDate: '2020-09-12',
       locale: initialLocaleCode,
       buttonIcons: false, // show the prev/next text
