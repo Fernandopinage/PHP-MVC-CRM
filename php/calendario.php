@@ -9,6 +9,7 @@ include_once "../layout/head.php";
     var initialLocaleCode = 'pt-br';
     var localeSelectorEl = document.getElementById('locale-selector');
     var calendarEl = document.getElementById('calendar');
+
     var calendar = new FullCalendar.Calendar(calendarEl, {
       headerToolbar: {
         left: 'prev,next today',
@@ -22,14 +23,17 @@ include_once "../layout/head.php";
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       dayMaxEvents: true, // allow "more" link when too many events
-      events: [
-        {
-          title: 'All Day Event',
-          start: '2020-09-01'
-        }
-      ]
+      events: [{
+        title: 'All Day Event',
+        start: '2020-09-01'
+      }],
+      eventClick: function(info) {
+        $('#visualizar').modal('show');
+      }
     });
+
     calendar.render();
+
     // build the locale selector's options
     calendar.getAvailableLocaleCodes().forEach(function(localeCode) {
       var optionEl = document.createElement('option');
@@ -38,12 +42,14 @@ include_once "../layout/head.php";
       optionEl.innerText = localeCode;
       localeSelectorEl.appendChild(optionEl);
     });
+
     // when the selected option changes, dynamically change the calendar option
     localeSelectorEl.addEventListener('change', function() {
       if (this.value) {
         calendar.setOption('locale', this.value);
       }
     });
+
   });
 </script>
 </head>
@@ -51,6 +57,25 @@ include_once "../layout/head.php";
 
 
 <div id='calendar'></div>
+<div class="modal fade" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Agendamento Técnico</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <?php
