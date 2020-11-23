@@ -3,14 +3,16 @@
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="color: #FF7F00;">Cadastro</a>
         <a class="nav-item nav-link" id="nav-endereco-tab" data-toggle="tab" href="#nav-endereco" role="tab" aria-controls="nav-endereco" aria-selected="false" style="color: #FF7F00;">Endereço</a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false" style="color: #FF7F00;">Outros</a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false" style="color: #FF7F00;">Contratos</a>
+        <a class="nav-item nav-link" id="nav-outro-tab" data-toggle="tab" href="#nav-outro" role="tab" aria-controls="nav-outro" aria-selected="false" style="color: #FF7F00;">Outros</a>
+        
     </div>
 </nav>
 <br>
 <hr><br>
 <form action="../telas/add.php" method="POST">
     <div class="tab-content" id="nav-tabContent">
+
+        <!-- ******************************* Cadastro ***************************************************-->
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
             <div class="form-row">
@@ -108,7 +110,9 @@
             </div>
 
         </div>
-        
+        <!-- **************************************************************************************************** -->
+
+        <!-- *************************************** Endereço *************************************************** -->
         <div class="tab-pane fade" id="nav-endereco" role="tabpanel" aria-labelledby="nav-endereco-tab">
 
             <div class="form-row">
@@ -130,7 +134,7 @@
                     <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
                 </div>
                 <div class="form-group col-md-7">
-                    <label for="inputEmail4">Endereço</label>
+                    <label for="inputEmail4">Municipio</label>
                     <input type="email" class="form-control" name="email" id="nome" placeholder="Endereço" required>
                 </div>
                 <div class="form-group col-md-12">
@@ -142,9 +146,43 @@
             </div>
 
         </div>
+        <!-- **************************************************************************************************** -->
+
+        <!-- ****************************************** Outros ************************************************** -->
+        <div class="tab-pane fade" id="nav-outro" role="tabpanel" aria-labelledby="nav-outro-tab">
+
+            <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Órgão Expedidor</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="inputEmail4">UF exp</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputEmail4">Data Expedição</label>
+                    <input type="date" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Iscrição INSS/CEI</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Nº PISS</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Endereço" required>
+                </div>
+                
+
+            </div>
+
+        </div>
+        <!-- **************************************************************************************************** -->
 
 
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+
+
 
 </form>
 </div>

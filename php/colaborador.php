@@ -4,14 +4,18 @@
         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="color: #FF7F00;">Cadastro</a>
         <a class="nav-item nav-link" id="nav-funcao-tab" data-toggle="tab" href="#nav-funcao" role="tab" aria-controls="nav-funcao" aria-selected="true" style="color: #FF7F00;">Função</a>
         <a class="nav-item nav-link" id="nav-documentos-tab" data-toggle="tab" href="#nav-documentos" role="tab" aria-controls="nav-documentos" aria-selected="false" style="color: #FF7F00;">Documentos</a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false" style="color: #FF7F00;">Outros</a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false" style="color: #FF7F00;">Contratos</a>
+        <a class="nav-item nav-link" id="nav-administrativo-tab" data-toggle="tab" href="#nav-administrativo" role="tab" aria-controls="nav-administrativo" aria-selected="false" style="color: #FF7F00;">Administrativo</a>
+        <a class="nav-item nav-link" id="nav-endereco-tab" data-toggle="tab" href="#nav-endereco" role="tab" aria-controls="nav-endereco" aria-selected="false" style="color: #FF7F00;">Endereço</a>
+        <a class="nav-item nav-link" id="nav-formacao-tab" data-toggle="tab" href="#nav-formacao" role="tab" aria-controls="nav-formacao" aria-selected="false" style="color: #FF7F00;">Formação Academica</a>
+        <a class="nav-item nav-link" id="nav-outro-tab" data-toggle="tab" href="#nav-outro" role="tab" aria-controls="nav-outro" aria-selected="false" style="color: #FF7F00;">Outros</a>
     </div>
 </nav>
 <br>
 <hr><br>
 <form action="../telas/add.php" method="POST">
     <div class="tab-content" id="nav-tabContent">
+
+        <!--- ******************************************* Cadastro ************************************************** -->
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
             <div class="form-row">
@@ -114,32 +118,131 @@
         <!--- ********************************************************************************************************* -->
         <div class="tab-pane fade" id="nav-funcao" role="tabpanel" aria-labelledby="nav-funcao-tab">
 
-            <div class="input-group mb-3 form-group col-md-3">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="btn-group-toggle" data-toggle="buttons">
-                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-                        ♣
-                    </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="form-row">
 
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Departamento</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Função</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Meio de Transporte</label>
+                    <input type="email" class="form-control" name="text" id="nome" placeholder="Email" required>
+                </div>
+
+            </div>
+
+
+        </div>
+        <!--- ********************************************************************************************************* -->
+        <!--- ******************************************* Documentos ************************************************** -->
+        <div class="tab-pane fade" id="nav-documentos" role="tabpanel" aria-labelledby="nav-documentos-tab">
+
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Nº RG</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Data Emissão</label>
+                    <input type="date" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Órgão de Emissão</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="inputEmail4">UF</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Nº Documento</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Zone Eleitoral</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Municipios</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="inputEmail4">UF</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Nº Documento</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Categoria</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Data de Emissão</label>
+                    <input type="date" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Data de Validade</label>
+                    <input type="date" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
+            </div>
+
+
+        </div>
+        <!--- ********************************************************************************************************* -->
+        <!--- ********************************************** administrativo ******************************************** -->
+        <div class="tab-pane fade" id="nav-administrativo" role="tabpanel" aria-labelledby="nav-administrativo-tab">
+
+            <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Data Inicio</label>
+                    <input type="date" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Status</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Data Rescisão</label>
+                    <input type="date" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Motivo</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Salario</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Banco</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Agêcia</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Conta</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
                 </div>
             </div>
 
@@ -147,14 +250,12 @@
 
         </div>
         <!--- ********************************************************************************************************* -->
-        <div class="tab-pane fade" id="nav-documentos" role="tabpanel" aria-labelledby="nav-documentos-tab">
 
+        <!--- ********************************************** Endereço ******************************************** -->
+        <div class="tab-pane fade" id="nav-endereco" role="tabpanel" aria-labelledby="nav-endereco-tab">
             <div class="form-row">
 
-                <div class="form-group col-md-12">
-                    <label for="inputEmail4">Ramo de Atividade</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Atividade" required>
-                </div>
+
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">CEP</label>
                     <input type="email" class="form-control" name="email" id="nome" placeholder="Cep" required>
@@ -168,7 +269,7 @@
                     <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
                 </div>
                 <div class="form-group col-md-7">
-                    <label for="inputEmail4">Endereço</label>
+                    <label for="inputEmail4">Municipio</label>
                     <input type="email" class="form-control" name="email" id="nome" placeholder="Endereço" required>
                 </div>
                 <div class="form-group col-md-12">
@@ -178,11 +279,74 @@
 
 
             </div>
+        </div>
+        <!--- ********************************************************************************************************* -->
 
+        <!--- ************************************************ Formação Academica *********************************************** -->
+        <div class="tab-pane fade" id="nav-formacao" role="tabpanel" aria-labelledby="nav-formacao-tab">
+            <div class="form-row">
+
+
+
+                <div class="form-group col-md-5">
+                    <label for="inputEmail4">Instituto de Ensino</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Escolaridade</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Curso</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Data de Conclusão</label>
+                    <input type="date" class="form-control" name="email" id="nome" placeholder="Complemento" required>
+                </div>
+
+
+            </div>
         </div>
 
+        <!--- ********************************************************************************************************* -->
+        <!--- ************************************************ Outros *********************************************** -->
 
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+        <div class="tab-pane fade" id="nav-outro" role="tabpanel" aria-labelledby="nav-outro-tab">
+            <div class="form-row">
 
+
+                <div class="form-group col-md-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sim" id="" value="S">
+                        <label class="form-check-label" for="pessoa">
+                            Sim
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="nao" id="" value="N">
+                        <label class="form-check-label" for="pessoa">
+                            Não
+                        </label>
+                    </div>
+                </div>
+                                
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Tipo</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                </div>
+            </div>
+            <div class="form-row">
+                
+
+                    <div class="form-group col-md-7">
+                        <label for="inputEmail4">Observação</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                    </div>
+
+            </div>
+        </div>
+        <!--- ********************************************************************************************************* -->
 </form>
 </div>

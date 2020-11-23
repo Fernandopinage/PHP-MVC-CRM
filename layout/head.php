@@ -16,7 +16,7 @@
 
 <body>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-        <a class="navbar-brand" href="?p=home" style="color: #FF7F00;">HOME</a>
+        <a class="navbar-brand" href="?page=home/" style="color: #FF7F00;">HOME</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
