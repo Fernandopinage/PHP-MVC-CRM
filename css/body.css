@@ -1,5 +1,5 @@
 
-.foottitle{
+.foottitle{                         /*  Foot da pagina com destaque no nome Progride  */
 
     text-decoration: none;
     margin-left: 500px;
@@ -15,7 +15,14 @@ input{
 
     text-transform: uppercase;
 }
+option{
+    text-transform: uppercase;
+}
 
+.fc-toolbar-title{                  /*  Titulo do calendario  */
+
+    text-transform: uppercase;
+}
 
 ::-webkit-input-placeholder {
     text-transform: initial;
