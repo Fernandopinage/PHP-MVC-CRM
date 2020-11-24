@@ -32,7 +32,9 @@ include_once "../layout/head.php";
       },selectable: true,
     select: function(info) {
       //alert('inicio ' + info.start.toLocaleString());
-      $('#long').modal('show');
+      $('#agendamento #start').val(info.start.toLocaleString());  // dia que inicia o agendamento
+      //$('#agendamento #end').val(info.end.toLocaleString());
+      $('#agendamento').modal('show');
     }
     });
 
@@ -81,11 +83,11 @@ include_once "../layout/head.php";
   </div>
 </div>
 
-<div class="modal fade" id="long" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div class="modal fade" id="agendamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Agendamento Técnico</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -94,7 +96,7 @@ include_once "../layout/head.php";
         <form>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="datetime" class="form-control" id="start">
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Message:</label>
