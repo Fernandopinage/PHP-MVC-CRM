@@ -11,7 +11,7 @@
     <script src='../js/main.js'></script>
     <script src='../js/locales-all.js'></script>
     <script src='../locales/pt-br.js'></script>
-    <title>Document</title>
+    <title>Konec® </title>
 </head>
 
 <body>
