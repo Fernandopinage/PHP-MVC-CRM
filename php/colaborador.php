@@ -1,4 +1,10 @@
+
 <br><br>
+<div class="card" style="margin-bottom: 20px;">
+  <div class="navbar navbar-dark bg-dark navbar-expand-lg" style=" color:#fff; ">
+    COLABORADOR
+  </div>
+</div>
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="color: #FF7F00;">Cadastro</a>

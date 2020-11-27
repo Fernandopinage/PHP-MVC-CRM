@@ -1,4 +1,10 @@
+
 <br><br>
+<div class="card" style="margin-bottom: 20px;">
+  <div class="navbar navbar-dark bg-dark navbar-expand-lg" style=" color:#fff; ">
+    PROJETO
+  </div>
+</div>
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-projeto-tab" data-toggle="tab" href="#nav-projeto" role="tab" aria-controls="nav-projeto" aria-selected="true" style="color: #FF7F00;">Projeto</a>

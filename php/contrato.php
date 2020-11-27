@@ -1,4 +1,10 @@
+
 <br><br>
+<div class="card" style="margin-bottom: 20px;">
+  <div class="navbar navbar-dark bg-dark navbar-expand-lg" style=" color:#fff; ">
+    CONTRATO
+  </div>
+</div>
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-contrato-tab" data-toggle="tab" href="#nav-contrato" role="tab" aria-controls="nav-contrato" aria-selected="true" style="color: #FF7F00;">Contrato</a>

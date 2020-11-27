@@ -1,4 +1,10 @@
+
 <br><br>
+<div class="card" style="margin-bottom: 20px;">
+  <div class="navbar navbar-dark bg-dark navbar-expand-lg" style=" color:#fff; ">
+    AGENDAMENTO TÉCNICO
+  </div>
+</div>
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-agendamento-tab" data-toggle="tab" href="#nav-agendamento" role="tab" aria-controls="nav-agendamento" aria-selected="true" style="color: #FF7F00;">Agendamento</a>
