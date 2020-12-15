@@ -77,14 +77,14 @@ if (isset($_POST['cadastrar'])) {
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pessoa" id="fisica" value="F">
-                        <label class="form-check-label" for="pessoa">
+                        <input class="pessoa" type="radio" name="pessoa" id="fisica" value="F">
+                        <label class="form-check-label" for="pessoa" id="Fisica">
                             Pessoa Fisica
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pessoa" id="juridica" value="J">
-                        <label class="form-check-label" for="pessoa">
+                        <input class="pessoa" type="radio" name="pessoa" id="juridica" value="J">
+                        <label class="form-check-label" for="pessoa" id="juridica">
                             Pessoa juridica
                         </label>
                     </div>
@@ -113,75 +113,60 @@ if (isset($_POST['cadastrar'])) {
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
-                    <label for="inputEmail4">Nome Completo</label>
-                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+                    <label for="inputEmail4" id="nome">Nome Completo</label>
+                    <input type="text" class="form-control form-control-sm" name="nome" id="nome" placeholder="Nome">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="inputEmail4">Nome Fantasia</label>
-                    <input type="text" class="form-control" name="fantasia" id="nome" placeholder="Fantasia">
+                    <label for="inputEmail4" id="CPF-CNPJ">CPF</label>
+                    <input type="email" class="form-control form-control-sm" name="cpf" id="nome" placeholder="CPF">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="inputEmail4">Data Nascimento</label>
-                    <input type="date" class="form-control" name="datanasc" id="nome" placeholder="Data Nascimento">
+                    <label for="inputEmail4" id="nascimento-label">Data Nascimento</label>
+                    <input type="date" class="form-control form-control-sm" name="datanasc" id="nome" placeholder="Data Nascimento">
                 </div>
+
             </div>
-
             <div class="form-row">
-
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-5">
                     <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email">
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="Email">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="inputEmail4">Nacionalidade</label>
-                    <input type="email" class="form-control" name="nacionalidade" id="nome" placeholder="Nacionalidade">
+                    <label for="inputEmail4" id="">Nacionalidade</label>
+                    <input type="email" class="form-control form-control-sm" name="nacionalidade" id="nacionalidade" placeholder="Nacionalidade">
                 </div>
-
-                <div class="form-group col-md-4">
-                    <label for="inputEmail4">CPF</label>
-                    <input type="email" class="form-control" name="cpf" id="nome" placeholder="CPF">
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4" id="fantasia-label">Nome Fantasia</label>
+                    <input type="text" class="form-control form-control-sm" name="fantasia" id="fantasia" placeholder="Fantasia">
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-2">
-                    <label for="inputEmail4">RG</label>
-                    <input type="text" class="form-control" name="rg" id="nome" placeholder="RG">
-                </div>
+
                 <div class="form-group col-md-4">
-                    <label for="inputEmail4">Incrição Estadual</label>
-                    <input type="email" class="form-control" name="estadual" id="nome" placeholder="Inscrição Estatual">
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="inputEmail4">Incrição Municipal</label>
-                    <input type="email" class="form-control" name="municipal" id="nome" placeholder="Inscrição Municipal">
-                </div>
-                <div class="form-group col-md-2">
                     <label for="inputEmail4">Naturalidade</label>
-                    <input type="email" class="form-control" name="naturalidade" id="nome" placeholder="Naturalidade">
+                    <input type="email" class="form-control form-control-sm" name="naturalidade" id="nome" placeholder="Naturalidade">
                 </div>
-            </div>
-
-            <div class="form-row">
-
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Telefone</label>
-                    <input type="email" class="form-control" name="telefone" id="nome" placeholder="Telefone">
+                    <input type="email" class="form-control form-control-sm" name="telefone" id="nome" placeholder="Telefone">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Celular</label>
-                    <input type="email" class="form-control" name="celular" id="nome" placeholder="Celular">
-                </div>
-
-                <div class="form-group col-md-2">
-                    <label for="inputEmail4">Suframa</label>
-                    <input type="email" class="form-control" name="suframa" id="nome" placeholder="Suframa">
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="inputEmail4">CNH</label>
-                    <input type="text" class="form-control" name="cnh" id="nome" placeholder="CNH">
+                    <input type="email" class="form-control form-control-sm" name="celular" id="nome" placeholder="Celular">
                 </div>
 
             </div>
+
+            <div class="div-fisico">
+
+
+            </div>
+            
+            <div class="div-juridico">
+
+
+            </div>
+
 
         </div>
         <!-- **************************************************************************************************** -->
@@ -193,35 +178,35 @@ if (isset($_POST['cadastrar'])) {
 
                 <div class="form-group col-md-12">
                     <label for="inputEmail4">Ramo de Atividade</label>
-                    <input type="email" class="form-control" name="atividade" id="nome" placeholder="Atividade">
+                    <input type="email" class="form-control form-control-sm" name="atividade" id="nome" placeholder="Atividade">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">CEP</label>
-                    <input type="email" class="form-control" name="cep2" id="nome" placeholder="Cep">
+                    <input type="email" class="form-control form-control-sm" name="cep2" id="nome" placeholder="Cep">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="email" class="form-control" name="uf2" id="nome" placeholder="UF">
+                    <input type="email" class="form-control form-control-sm" name="uf2" id="nome" placeholder="UF">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">Nº</label>
-                    <input type="email" class="form-control" name="numero2" id="nome" placeholder="Nº">
+                    <input type="email" class="form-control form-control-sm" name="numero2" id="nome" placeholder="Nº">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Municipio</label>
-                    <input type="email" class="form-control" name="municipio2" id="nome" placeholder="Municipio">
+                    <input type="email" class="form-control form-control-sm" name="municipio2" id="nome" placeholder="Municipio">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Endereço</label>
-                    <input type="email" class="form-control" name="endereco2" id="nome" placeholder="Endereço">
+                    <input type="email" class="form-control form-control-sm" name="endereco2" id="nome" placeholder="Endereço">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Bairro</label>
-                    <input type="email" class="form-control" name="bairro2" id="nome" placeholder="Bairro">
+                    <input type="email" class="form-control form-control-sm" name="bairro2" id="nome" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-8">
                     <label for="inputEmail4">Complemento</label>
-                    <input type="email" class="form-control" name="complemento2" id="nome" placeholder="Complemento">
+                    <input type="email" class="form-control form-control-sm" name="complemento2" id="nome" placeholder="Complemento">
                 </div>
 
 
@@ -237,31 +222,31 @@ if (isset($_POST['cadastrar'])) {
 
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">CEP</label>
-                    <input type="email" class="form-control" name="cep" id="nome" placeholder="Cep">
+                    <input type="email" class="form-control form-control-sm" name="cep" id="nome" placeholder="Cep">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="email" class="form-control" name="uf" id="nome" placeholder="UF">
+                    <input type="email" class="form-control form-control-sm" name="uf" id="nome" placeholder="UF">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">Nº</label>
-                    <input type="email" class="form-control" name="numero" id="nome" placeholder="Nº">
+                    <input type="email" class="form-control form-control-sm" name="numero" id="nome" placeholder="Nº">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Municipio</label>
-                    <input type="email" class="form-control" name="municipio" id="nome" placeholder="Municipio">
+                    <input type="email" class="form-control form-control-sm" name="municipio" id="nome" placeholder="Municipio">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Endereço</label>
-                    <input type="email" class="form-control" name="endereco" id="nome" placeholder="Endereço">
+                    <input type="email" class="form-control form-control-sm" name="endereco" id="nome" placeholder="Endereço">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Bairro</label>
-                    <input type="email" class="form-control" name="bairro" id="nome" placeholder="Bairro">
+                    <input type="email" class="form-control form-control-sm" name="bairro" id="nome" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-8">
                     <label for="inputEmail4">Complemento</label>
-                    <input type="email" class="form-control" name="complemento" id="nome" placeholder="Complemento">
+                    <input type="email" class="form-control form-control-sm" name="complemento" id="nome" placeholder="Complemento">
                 </div>
 
 
@@ -277,23 +262,23 @@ if (isset($_POST['cadastrar'])) {
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Órgão Expedidor</label>
-                    <input type="email" class="form-control" name="orgao" id="nome" placeholder="Órgão Expedidor">
+                    <input type="email" class="form-control form-control-sm" name="orgao" id="nome" placeholder="Órgão Expedidor">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF exp</label>
-                    <input type="email" class="form-control" name="ufexp" id="nome" placeholder="UF">
+                    <input type="email" class="form-control form-control-sm" name="ufexp" id="nome" placeholder="UF">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Data Expedição</label>
-                    <input type="date" class="form-control" name="dataexp" id="nome" placeholder="Data Expedição">
+                    <input type="date" class="form-control form-control-sm" name="dataexp" id="nome" placeholder="Data Expedição">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Iscrição INSS/CEI</label>
-                    <input type="email" class="form-control" name="inss" id="nome" placeholder="INSS/CEI">
+                    <input type="email" class="form-control form-control-sm" name="inss" id="nome" placeholder="INSS/CEI">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Nº PISS</label>
-                    <input type="email" class="form-control" name="piss" id="nome" placeholder="PISS">
+                    <input type="email" class="form-control form-control-sm" name="piss" id="nome" placeholder="PISS">
                 </div>
                 <input type="submit" class="btn btn-primary" value="cadastrar" name="cadastrar">
 
@@ -303,7 +288,35 @@ if (isset($_POST['cadastrar'])) {
         </div>
         <!-- **************************************************************************************************** -->
 
+        <script>
+            $(document).ready(function() {
+                $(".pessoa").change(function() {
+                    if ($(this).val() === 'F') {
+                        $('#nome').html('<label for="inputEmail4"  id="nome">Nome Completo</label>');
+                        $('#CPF-CNPJ').html('<label for="inputEmail4"  id="CPF-CNPJ">CPF</label>');
+                        $('#nascimento-label').html('<label for="inputEmail4"  id="CPF-CNPJ">Data Nascimento</label>');
+                        $('.div-juritico').hide(); /** */
+                        $('.div-fisico').show();
+                        $('.div-juridico').hide();
+                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder="RG"></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder="CNH"></div></div>');
+                        $('#fantasia-label').hide();
+                        $('#fantasia').hide();
+                    }
+                    if ($(this).val() === 'J') {
+                        $('#nome').html('<label for="inputEmail4" id="nome">Razão Social</label>');
+                        $('#CPF-CNPJ').html('<label for="inputEmail4"  id="CPF-CNPJ">CNPJ</label>');
+                        $('#nascimento-label').html('<label for="inputEmail4"  id="CPF-CNPJ">Data Função</label>');
+                        $('#fantasia').show();
+                        $('#fantasia-label').show();
+                        $('.div-juridico').show();
+                        $('.div-fisico').hide();
+                        $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="email" class="form-control form-control-sm" name="suframa" id="nome" placeholder="Suframa"></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="email" class="form-control form-control-sm" name="estadual" id="nome" placeholder="Inscrição Estatual"></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="email" class="form-control form-control-sm" name="municipal" id="nome" placeholder="Inscrição Municipal"></div></div>');
 
+                    }
+                });
+
+            });
+        </script>
 
 
 </form>
