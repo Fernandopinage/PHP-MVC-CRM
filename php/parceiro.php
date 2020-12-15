@@ -60,14 +60,14 @@ if (isset($_POST['cadastrar'])) {
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="color: #FF7F00;">Cadastro</a>
-        <a class="nav-item nav-link" id="nav-atividade-tab" data-toggle="tab" href="#nav-atividade" role="tab" aria-controls="nav-atividade" aria-selected="false" style="color: #FF7F00;">Ramo Atividade</a>
+        <a class="nav-item nav-link" id="nav-atividade-tab" data-toggle="tab" href="#nav-atividade" role="tab" aria-controls="nav-atividade" aria-selected="false" style="color: #FF7F00;">Atividade</a>
         <a class="nav-item nav-link" id="nav-endereco-tab" data-toggle="tab" href="#nav-endereco" role="tab" aria-controls="nav-endereco" aria-selected="false" style="color: #FF7F00;">Endereço</a>
         <a class="nav-item nav-link" id="nav-outro-tab" data-toggle="tab" href="#nav-outro" role="tab" aria-controls="nav-outro" aria-selected="false" style="color: #FF7F00;">Outros</a>
 
     </div>
 </nav>
 <br>
-<hr><br>
+
 <form action="parceiro.php" method="POST">
     <div class="tab-content" id="nav-tabContent">
 
@@ -118,7 +118,7 @@ if (isset($_POST['cadastrar'])) {
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4" id="CPF-CNPJ">CPF</label>
-                    <input type="email" class="form-control form-control-sm" name="cpf" id="nome" placeholder="CPF">
+                    <input type="text" class="form-control form-control-sm" name="cpf" id="nome" placeholder="CPF">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4" id="nascimento-label">Data Nascimento</label>
@@ -133,7 +133,7 @@ if (isset($_POST['cadastrar'])) {
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4" id="">Nacionalidade</label>
-                    <input type="email" class="form-control form-control-sm" name="nacionalidade" id="nacionalidade" placeholder="Nacionalidade">
+                    <input type="text" class="form-control form-control-sm" name="nacionalidade" id="nacionalidade" placeholder="Nacionalidade">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4" id="fantasia-label">Nome Fantasia</label>
@@ -144,15 +144,15 @@ if (isset($_POST['cadastrar'])) {
 
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Naturalidade</label>
-                    <input type="email" class="form-control form-control-sm" name="naturalidade" id="nome" placeholder="Naturalidade">
+                    <input type="text" class="form-control form-control-sm" name="naturalidade" id="nome" placeholder="Naturalidade">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Telefone</label>
-                    <input type="email" class="form-control form-control-sm" name="telefone" id="nome" placeholder="Telefone">
+                    <input type="text" class="form-control form-control-sm" name="telefone" id="nome" placeholder="Telefone">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Celular</label>
-                    <input type="email" class="form-control form-control-sm" name="celular" id="nome" placeholder="Celular">
+                    <input type="text" class="form-control form-control-sm" name="celular" id="nome" placeholder="Celular">
                 </div>
 
             </div>
@@ -173,40 +173,40 @@ if (isset($_POST['cadastrar'])) {
 
         <!-- *************************************** Ramo de Atividade *************************************************** -->
         <div class="tab-pane fade" id="nav-atividade" role="tabpanel" aria-labelledby="nav-atividade-tab">
-
+        <p class="text-white bg-secondary text-center">RAMO DE ATIVIDADE</p>
             <div class="form-row">
 
                 <div class="form-group col-md-12">
                     <label for="inputEmail4">Ramo de Atividade</label>
-                    <input type="email" class="form-control form-control-sm" name="atividade" id="nome" placeholder="Atividade">
+                    <input type="text" class="form-control form-control-sm" name="atividade" id="nome" placeholder="Atividade">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">CEP</label>
-                    <input type="email" class="form-control form-control-sm" name="cep2" id="nome" placeholder="Cep">
+                    <input type="text" class="form-control form-control-sm" name="cep2" id="nome" placeholder="Cep">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="email" class="form-control form-control-sm" name="uf2" id="nome" placeholder="UF">
+                    <input type="text" class="form-control form-control-sm" name="uf2" id="nome" placeholder="UF">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">Nº</label>
-                    <input type="email" class="form-control form-control-sm" name="numero2" id="nome" placeholder="Nº">
+                    <input type="text" class="form-control form-control-sm" name="numero2" id="nome" placeholder="Nº">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Municipio</label>
-                    <input type="email" class="form-control form-control-sm" name="municipio2" id="nome" placeholder="Municipio">
+                    <input type="text" class="form-control form-control-sm" name="municipio2" id="nome" placeholder="Municipio">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Endereço</label>
-                    <input type="email" class="form-control form-control-sm" name="endereco2" id="nome" placeholder="Endereço">
+                    <input type="text" class="form-control form-control-sm" name="endereco2" id="nome" placeholder="Endereço">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Bairro</label>
-                    <input type="email" class="form-control form-control-sm" name="bairro2" id="nome" placeholder="Bairro">
+                    <input type="text" class="form-control form-control-sm" name="bairro2" id="nome" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-8">
                     <label for="inputEmail4">Complemento</label>
-                    <input type="email" class="form-control form-control-sm" name="complemento2" id="nome" placeholder="Complemento">
+                    <input type="text" class="form-control form-control-sm" name="complemento2" id="nome" placeholder="Complemento">
                 </div>
 
 
@@ -217,36 +217,36 @@ if (isset($_POST['cadastrar'])) {
 
         <!-- *************************************** Endereço *************************************************** -->
         <div class="tab-pane fade" id="nav-endereco" role="tabpanel" aria-labelledby="nav-endereco-tab">
-
+        <p class="text-white bg-secondary text-center ">ENDEREÇO</p>
             <div class="form-row">
 
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">CEP</label>
-                    <input type="email" class="form-control form-control-sm" name="cep" id="nome" placeholder="Cep">
+                    <input type="text" class="form-control form-control-sm" name="cep" id="nome" placeholder="Cep">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="email" class="form-control form-control-sm" name="uf" id="nome" placeholder="UF">
+                    <input type="text" class="form-control form-control-sm" name="uf" id="nome" placeholder="UF">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">Nº</label>
-                    <input type="email" class="form-control form-control-sm" name="numero" id="nome" placeholder="Nº">
+                    <input type="text" class="form-control form-control-sm" name="numero" id="nome" placeholder="Nº">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Municipio</label>
-                    <input type="email" class="form-control form-control-sm" name="municipio" id="nome" placeholder="Municipio">
+                    <input type="text" class="form-control form-control-sm" name="municipio" id="nome" placeholder="Municipio">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Endereço</label>
-                    <input type="email" class="form-control form-control-sm" name="endereco" id="nome" placeholder="Endereço">
+                    <input type="text" class="form-control form-control-sm" name="endereco" id="nome" placeholder="Endereço">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Bairro</label>
-                    <input type="email" class="form-control form-control-sm" name="bairro" id="nome" placeholder="Bairro">
+                    <input type="text" class="form-control form-control-sm" name="bairro" id="nome" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-8">
                     <label for="inputEmail4">Complemento</label>
-                    <input type="email" class="form-control form-control-sm" name="complemento" id="nome" placeholder="Complemento">
+                    <input type="text" class="form-control form-control-sm" name="complemento" id="nome" placeholder="Complemento">
                 </div>
 
 
@@ -257,16 +257,16 @@ if (isset($_POST['cadastrar'])) {
 
         <!-- ****************************************** Outros ************************************************** -->
         <div class="tab-pane fade" id="nav-outro" role="tabpanel" aria-labelledby="nav-outro-tab">
-
+        <p class="text-white bg-secondary text-center">DOCUMENTO</p>
             <div class="form-row">
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Órgão Expedidor</label>
-                    <input type="email" class="form-control form-control-sm" name="orgao" id="nome" placeholder="Órgão Expedidor">
+                    <input type="text" class="form-control form-control-sm" name="orgao" id="nome" placeholder="Órgão Expedidor">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF exp</label>
-                    <input type="email" class="form-control form-control-sm" name="ufexp" id="nome" placeholder="UF">
+                    <input type="text" class="form-control form-control-sm" name="ufexp" id="nome" placeholder="UF">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Data Expedição</label>
@@ -274,13 +274,13 @@ if (isset($_POST['cadastrar'])) {
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Iscrição INSS/CEI</label>
-                    <input type="email" class="form-control form-control-sm" name="inss" id="nome" placeholder="INSS/CEI">
+                    <input type="text" class="form-control form-control-sm" name="inss" id="nome" placeholder="INSS/CEI">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Nº PISS</label>
-                    <input type="email" class="form-control form-control-sm" name="piss" id="nome" placeholder="PISS">
+                    <input type="text" class="form-control form-control-sm" name="piss" id="nome" placeholder="PISS">
                 </div>
-                <input type="submit" class="btn btn-primary" value="cadastrar" name="cadastrar">
+                <input type="submit" class="btn btn-primary" value="cadastrar" name="Salvar Registros">
 
 
             </div>
@@ -310,7 +310,7 @@ if (isset($_POST['cadastrar'])) {
                         $('#fantasia-label').show();
                         $('.div-juridico').show();
                         $('.div-fisico').hide();
-                        $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="email" class="form-control form-control-sm" name="suframa" id="nome" placeholder="Suframa"></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="email" class="form-control form-control-sm" name="estadual" id="nome" placeholder="Inscrição Estatual"></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="email" class="form-control form-control-sm" name="municipal" id="nome" placeholder="Inscrição Municipal"></div></div>');
+                        $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="text" class="form-control form-control-sm" name="suframa" id="nome" placeholder="Suframa"></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="text" class="form-control form-control-sm" name="estadual" id="nome" placeholder="Inscrição Estatual"></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="text" class="form-control form-control-sm" name="municipal" id="nome" placeholder="Inscrição Municipal"></div></div>');
 
                     }
                 });

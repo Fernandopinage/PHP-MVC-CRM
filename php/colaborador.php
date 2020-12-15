@@ -17,7 +17,7 @@
     </div>
 </nav>
 <br>
-<hr><br>
+
 <form action="../telas/add.php" method="POST">
     <div class="tab-content" id="nav-tabContent">
 
@@ -146,7 +146,7 @@
         <!--- ********************************************************************************************************* -->
         <!--- ******************************************* Documentos ************************************************** -->
         <div class="tab-pane fade" id="nav-documentos" role="tabpanel" aria-labelledby="nav-documentos-tab">
-
+            <p class="text-white bg-secondary text-center">RG</p>
             <div class="form-row">
 
                 <div class="form-group col-md-4">
@@ -157,16 +157,17 @@
                     <label for="inputEmail4">Data Emissão</label>
                     <input type="date" class="form-control" name="email" id="nome" placeholder="Cep" required>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputEmail4">Órgão de Emissão</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="UF" required>
-                </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
                     <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
                 </div>
-            </div>
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Órgão de Emissão</label>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
 
+            </div>
+            <br><br><p class="text-white bg-secondary text-center">Titulo Eleitor</p>
             <div class="form-row">
 
                 <div class="form-group col-md-4">
@@ -177,16 +178,17 @@
                     <label for="inputEmail4">Zone Eleitoral</label>
                     <input type="type" class="form-control" name="email" id="nome" placeholder="Cep" required>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputEmail4">Municipios</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
-                </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
                     <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
                 </div>
-            </div>
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Municipios</label>
+                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
+                </div>
 
+            </div>
+            <br><br><p class="text-white bg-secondary text-center">CNH</p>
             <div class="form-row">
 
                 <div class="form-group col-md-3">
@@ -213,6 +215,7 @@
         <!--- ********************************************** administrativo ******************************************** -->
         <div class="tab-pane fade" id="nav-administrativo" role="tabpanel" aria-labelledby="nav-administrativo-tab">
 
+            <p class="text-white bg-secondary text-center">INFORMAÇÔES</p>
             <div class="form-row">
 
                 <div class="form-group col-md-3">
@@ -232,6 +235,7 @@
                     <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
                 </div>
             </div>
+            <br><br><p class="text-white bg-secondary text-center">DADOS BANCARIOS</p>
             <div class="form-row">
 
                 <div class="form-group col-md-3">
@@ -259,9 +263,8 @@
 
         <!--- ********************************************** Endereço ******************************************** -->
         <div class="tab-pane fade" id="nav-endereco" role="tabpanel" aria-labelledby="nav-endereco-tab">
+        <p class="text-white bg-secondary text-center">ENDEREÇO</p>
             <div class="form-row">
-
-
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">CEP</label>
                     <input type="email" class="form-control" name="email" id="nome" placeholder="Cep" required>
@@ -290,10 +293,8 @@
 
         <!--- ************************************************ Formação Academica *********************************************** -->
         <div class="tab-pane fade" id="nav-formacao" role="tabpanel" aria-labelledby="nav-formacao-tab">
+        <p class="text-white bg-secondary text-center">FORMAÇÂO ACADÊMICA</p>
             <div class="form-row">
-
-
-
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Instituto de Ensino</label>
                     <input type="email" class="form-control" name="email" id="nome" placeholder="UF" required>
@@ -320,8 +321,8 @@
         <!--- ************************************************ Outros *********************************************** -->
 
         <div class="tab-pane fade" id="nav-outro" role="tabpanel" aria-labelledby="nav-outro-tab">
+        <p class="text-white bg-secondary text-center">OUTROS</p>
             <div class="form-row">
-
 
                 <div class="form-group col-md-1">
                     <div class="form-check">
@@ -339,7 +340,7 @@
                 </div>
                                 
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">Tipo</label>
+                    <label for="inputEmail4">Tipo PCD</label>
                     <input type="type" class="form-control" name="email" id="nome" placeholder="Cep" required>
                 </div>
             </div>

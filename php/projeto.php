@@ -12,7 +12,7 @@
     </div>
 </nav>
 <br>
-<hr><br>
+
 <form action="../telas/add.php" method="POST">
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-projeto" role="tabpanel" aria-labelledby="nav-projeto-tab">
