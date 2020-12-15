@@ -40,5 +40,5 @@
     ?>
 
 </div>
-
+<br><br><br>
 <?php include_once "../layout/footer.php"; ?>
