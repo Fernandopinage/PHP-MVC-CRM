@@ -46,6 +46,7 @@ if (isset($_POST['cadastrar'])) {
 
     $Parceiro = new ParceiroDao();
     $Parceiro->insert($ClassParceiro);
+   
 }
 
 ?>
@@ -280,7 +281,7 @@ if (isset($_POST['cadastrar'])) {
                     <label for="inputEmail4">Nº PISS</label>
                     <input type="text" class="form-control form-control-sm" name="piss" id="nome" placeholder="PISS">
                 </div>
-                <input type="submit" class="btn btn-primary" value="cadastrar" name="Salvar Registros">
+                <input type="submit" value="cadastra dadados" name="cadastrar">
 
 
             </div>

@@ -106,8 +106,9 @@ include_once "../class/classParceiro.php";
                 :excluido, 
                 :celular, 
                 :assinatura
-                ) ";    
-
+                ) ";   
+                
+ 
             $insert = $this->con->prepare($sql);
             $insert->bindValue(":codigo",'');
             $insert->bindValue(":opcao", $classParceiro->getOpcao());
@@ -155,6 +156,7 @@ include_once "../class/classParceiro.php";
             $insert->bindValue(":excluido", '');
             $insert->bindValue(":celular", $classParceiro->getCelular());
             $insert->bindValue(":assinatura", '');
+            var_dump($insert);
             $insert->execute();
             
 
