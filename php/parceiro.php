@@ -74,7 +74,7 @@ if (isset($_POST['cadastrar'])) {
 
         <!-- ******************************* Cadastro ***************************************************-->
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-
+        <p class="text-white bg-secondary text-center">DADOS PESSOAIS</p>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <div class="form-check">
@@ -281,7 +281,7 @@ if (isset($_POST['cadastrar'])) {
                     <label for="inputEmail4">Nº PISS</label>
                     <input type="text" class="form-control form-control-sm" name="piss" id="nome" placeholder="PISS">
                 </div>
-                <input type="submit" value="cadastra dadados" name="cadastrar">
+                <input type="submit" class="btn btn-success" value="cadastra dadados" name="cadastrar">
 
 
             </div>
