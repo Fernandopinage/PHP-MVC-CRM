@@ -27,7 +27,7 @@
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Codigo</label>
-                    <input type="text" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="text" class="form-control" name="codigo" id="nome" placeholder="Código" >
 
                 </div>
                 <div class="form-group col-md-1">
@@ -54,15 +54,15 @@
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Nome Completo</label>
-                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" required>
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome Completo">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Gênero</label>
-                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" required>
+                    <input type="text" class="form-control" name="genero" id="genero" placeholder="Gênero" >
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Usúario</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="usuario" id="usuario" placeholder="Usúario" >
                 </div>
             </div>
 
@@ -70,19 +70,19 @@
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Data Nascimento</label>
-                    <input type="date" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="date" class="form-control" name="nascimento" id="nascimento" placeholder="Data Nascimento" >
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Estato Civil</label>
-                    <input type="email" class="form-control" name="text" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="estato" id="estato" placeholder="Estato Civil" >
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">UF Natal</label>
-                    <input type="email" class="form-control" name="text" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="uf" id="uf" placeholder="UF Natal" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Cidade Natal</label>
-                    <input type="email" class="form-control" name="text" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="cidade" id="cidade" placeholder="Cidade Natal" >
                 </div>
 
             </div>
@@ -90,19 +90,19 @@
 
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Naturalidade</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="naturalidade" id="naturalidade" placeholder="Naturalidade" >
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Cor Racial</label>
-                    <input type="email" class="form-control" name="text" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="cor" id="cor" placeholder="Cor Racial" required>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Telefone</label>
-                    <input type="email" class="form-control" name="text" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Celular</label>
-                    <input type="email" class="form-control" name="text" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="celular" id="celular" placeholder="Celular" required>
                 </div>
             </div>
 
@@ -110,11 +110,11 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Nome Mãe</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="mae" id="mae" placeholder="Nome Mãe" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Nome Pai</label>
-                    <input type="email" class="form-control" name="text" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="pai" id="pai" placeholder="Nome Pai" required>
                 </div>
 
 
@@ -128,15 +128,15 @@
 
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Departamento</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="departamento" id="departamento" placeholder="Departamento" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Função</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="funcao" id="funcao" placeholder="Função" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Meio de Transporte</label>
-                    <input type="email" class="form-control" name="text" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="transporte" id="transporte" placeholder="Meio de Transporte" required>
                 </div>
 
             </div>
