@@ -78,7 +78,7 @@ if (isset($_POST['cadastrar'])) {
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <div class="form-check">
-                        <input class="pessoa" type="radio" name="pessoa" id="fisica" value="F">
+                        <input class="pessoa" type="radio" name="pessoa" id="fisica" value="F" CHECKED>
                         <label class="form-check-label" for="pessoa" id="Fisica">
                             Pessoa Fisica
                         </label>
@@ -288,9 +288,40 @@ if (isset($_POST['cadastrar'])) {
 
         </div>
         <!-- **************************************************************************************************** -->
+        <script>
+             
+
+                var opt = document.getElementById('fisica').value;
+                if(opt === 'F'){
+                    $('#nome').html('<label for="inputEmail4"  id="nome">Nome Completo</label>');
+                        $('#CPF-CNPJ').html('<label for="inputEmail4"  id="CPF-CNPJ">CPF</label>');
+                        $('#nascimento-label').html('<label for="inputEmail4"  id="CPF-CNPJ">Data Nascimento</label>');
+                        $('.div-juritico').hide(); /** */
+                        $('.div-fisico').show();
+                        $('.div-juridico').hide();
+                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder="RG"></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder="CNH"></div></div>');
+                        $('#fantasia-label').hide();
+                        $('#fantasia').hide();
+
+                }else{
+
+                    $('#nome').html('<label for="inputEmail4" id="nome">Razão Social</label>');
+                        $('#CPF-CNPJ').html('<label for="inputEmail4"  id="CPF-CNPJ">CNPJ</label>');
+                        $('#nascimento-label').html('<label for="inputEmail4"  id="CPF-CNPJ">Data Função</label>');
+                        $('#fantasia').show();
+                        $('#fantasia-label').show();
+                        $('.div-juridico').show();
+                        $('.div-fisico').hide();
+                        $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="text" class="form-control form-control-sm" name="suframa" id="nome" placeholder="Suframa"></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="text" class="form-control form-control-sm" name="estadual" id="nome" placeholder="Inscrição Estatual"></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="text" class="form-control form-control-sm" name="municipal" id="nome" placeholder="Inscrição Municipal"></div></div>');
+
+                }
+            
+        </script>
+
 
         <script>
             $(document).ready(function() {
+                
                 $(".pessoa").change(function() {
                     if ($(this).val() === 'F') {
                         $('#nome').html('<label for="inputEmail4"  id="nome">Nome Completo</label>');
