@@ -23,11 +23,6 @@
         case 'contrato/':
             include_once "../php/contrato.php";
             break;
-
-        case 'projeto/':
-            include_once "../php/projeto.php";
-            break;
-
         case 'tecnico/':
             include_once "../php/tecnico.php";
             break;

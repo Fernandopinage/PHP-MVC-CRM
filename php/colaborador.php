@@ -27,7 +27,7 @@
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Codigo</label>
-                    <input type="text" class="form-control" name="codigo" id="nome" placeholder="Código" >
+                    <input type="text" class="form-control form-control-sm" name="codigo" id="nome" placeholder="" >
 
                 </div>
                 <div class="form-group col-md-1">
@@ -54,15 +54,15 @@
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Nome Completo</label>
-                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome Completo">
+                    <input type="text" class="form-control form-control-sm" name="nome" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Gênero</label>
-                    <input type="text" class="form-control" name="genero" id="genero" placeholder="Gênero" >
+                    <input type="text" class="form-control form-control-sm" name="genero" id="genero" placeholder="" >
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Usúario</label>
-                    <input type="email" class="form-control" name="usuario" id="usuario" placeholder="Usúario" >
+                    <input type="email" class="form-control form-control-sm" name="usuario" id="usuario" placeholder="" >
                 </div>
             </div>
 
@@ -70,19 +70,19 @@
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Data Nascimento</label>
-                    <input type="date" class="form-control" name="nascimento" id="nascimento" placeholder="Data Nascimento" >
+                    <input type="date" class="form-control form-control-sm" name="nascimento" id="nascimento" placeholder="" >
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Estato Civil</label>
-                    <input type="email" class="form-control" name="estato" id="estato" placeholder="Estato Civil" >
+                    <input type="email" class="form-control form-control-sm" name="estato" id="estato" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">UF Natal</label>
-                    <input type="email" class="form-control" name="uf" id="uf" placeholder="UF Natal" >
+                    <input type="email" class="form-control form-control-sm" name="uf" id="uf" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Cidade Natal</label>
-                    <input type="email" class="form-control" name="cidade" id="cidade" placeholder="Cidade Natal" >
+                    <input type="email" class="form-control form-control-sm" name="cidade" id="cidade" placeholder="" >
                 </div>
 
             </div>
@@ -90,19 +90,19 @@
 
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Naturalidade</label>
-                    <input type="email" class="form-control" name="naturalidade" id="naturalidade" placeholder="Naturalidade" >
+                    <input type="email" class="form-control form-control-sm" name="naturalidade" id="naturalidade" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Cor Racial</label>
-                    <input type="email" class="form-control" name="cor" id="cor" placeholder="Cor Racial" required>
+                    <input type="email" class="form-control form-control-sm" name="cor" id="cor" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Telefone</label>
-                    <input type="email" class="form-control" name="telefone" id="telefone" placeholder="Telefone" required>
+                    <input type="email" class="form-control form-control-sm" name="telefone" id="telefone" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Celular</label>
-                    <input type="email" class="form-control" name="celular" id="celular" placeholder="Celular" required>
+                    <input type="email" class="form-control form-control-sm" name="celular" id="celular" placeholder="" >
                 </div>
             </div>
 
@@ -110,11 +110,11 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Nome Mãe</label>
-                    <input type="email" class="form-control" name="mae" id="mae" placeholder="Nome Mãe" required>
+                    <input type="email" class="form-control form-control-sm" name="mae" id="mae" placeholder="" >
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Nome Pai</label>
-                    <input type="email" class="form-control" name="pai" id="pai" placeholder="Nome Pai" required>
+                    <input type="email" class="form-control form-control-sm" name="pai" id="pai" placeholder="" >
                 </div>
 
 
@@ -128,15 +128,15 @@
 
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Departamento</label>
-                    <input type="email" class="form-control" name="departamento" id="departamento" placeholder="Departamento" required>
+                    <input type="email" class="form-control form-control-sm" name="departamento" id="departamento" placeholder="" >
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Função</label>
-                    <input type="email" class="form-control" name="funcao" id="funcao" placeholder="Função" required>
+                    <input type="email" class="form-control form-control-sm" name="funcao" id="funcao" placeholder="" >
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Meio de Transporte</label>
-                    <input type="email" class="form-control" name="transporte" id="transporte" placeholder="Meio de Transporte" required>
+                    <input type="email" class="form-control form-control-sm" name="transporte" id="transporte" placeholder="" >
                 </div>
 
             </div>
@@ -151,19 +151,19 @@
 
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Nº RG</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Data Emissão</label>
-                    <input type="date" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                    <input type="date" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Órgão de Emissão</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
 
             </div>
@@ -172,19 +172,19 @@
 
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Nº Documento</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Zone Eleitoral</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Municipios</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
 
             </div>
@@ -193,19 +193,19 @@
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Nº Documento</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Categoria</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Data de Emissão</label>
-                    <input type="date" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="date" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Data de Validade</label>
-                    <input type="date" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="date" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
             </div>
 
@@ -220,19 +220,19 @@
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Data Inicio</label>
-                    <input type="date" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                    <input type="date" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Status</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Data Rescisão</label>
-                    <input type="date" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="date" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Motivo</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
             </div>
             <br><br><p class="text-white bg-secondary text-center">DADOS BANCARIOS</p>
@@ -240,19 +240,19 @@
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Salario</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Banco</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="Atividade" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Agêcia</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Conta</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
             </div>
 
@@ -267,23 +267,23 @@
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">CEP</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">Nº</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
+                    <input type="email" class="form-control form-control-sm"  name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-7">
                     <label for="inputEmail4">Municipio</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Endereço" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-12">
                     <label for="inputEmail4">Complemento</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Complemento" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
 
 
@@ -297,20 +297,20 @@
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Instituto de Ensino</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="UF" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Escolaridade</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Curso</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Nº" required>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Data de Conclusão</label>
-                    <input type="date" class="form-control" name="email" id="nome" placeholder="Complemento" required>
+                    <input type="date" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
 
 
@@ -326,13 +326,13 @@
 
                 <div class="form-group col-md-1">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sim" id="" value="S">
+                        <input class="form-check-input" type="radio" name="deficiencia" id="" value="S">
                         <label class="form-check-label" for="pessoa">
                             Sim
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="nao" id="" value="N">
+                        <input class="form-check-input" type="radio" name="deficiencia" id="" value="N">
                         <label class="form-check-label" for="pessoa">
                             Não
                         </label>
@@ -341,15 +341,15 @@
                                 
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Tipo PCD</label>
-                    <input type="type" class="form-control" name="email" id="nome" placeholder="Cep" required>
+                    <input type="type" class="form-control form-control-sm" name="email" id="nome" placeholder="" >
                 </div>
             </div>
             <div class="form-row">
                 
 
-                    <div class="form-group col-md-7">
+                    <div class="form-group col-md-12">
                         <label for="inputEmail4">Observação</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                        <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="6"></textarea>
                     </div>
 
             </div>

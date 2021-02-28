@@ -78,15 +78,15 @@ if (isset($_POST['cadastrar'])) {
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <div class="form-check">
-                        <input class="pessoa" type="radio" name="pessoa" id="fisica" value="F" CHECKED>
-                        <label class="form-check-label" for="pessoa" id="Fisica">
-                            Pessoa Fisica
+                        <input class="pessoa" type="radio" name="pessoa" id="opt" value="J" CHECKED>
+                        <label class="form-check-label" for="pessoa" id="juridica">
+                            Pessoa juridica
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="pessoa" type="radio" name="pessoa" id="juridica" value="J">
-                        <label class="form-check-label" for="pessoa" id="juridica">
-                            Pessoa juridica
+                        <input class="pessoa" type="radio" name="pessoa" id="opt" value="F">
+                        <label class="form-check-label" for="pessoa" id="Fisica">
+                            Pessoa Fisica
                         </label>
                     </div>
                 </div>
@@ -115,45 +115,45 @@ if (isset($_POST['cadastrar'])) {
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="inputEmail4" id="nome">Nome Completo</label>
-                    <input type="text" class="form-control form-control-sm" name="nome" id="nome" placeholder="Nome">
+                    <input type="text" class="form-control form-control-sm" name="nome" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4" id="CPF-CNPJ">CPF</label>
-                    <input type="text" class="form-control form-control-sm" name="cpf" id="nome" placeholder="CPF">
+                    <input type="text" class="form-control form-control-sm" name="cpf" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4" id="nascimento-label">Data Nascimento</label>
-                    <input type="date" class="form-control form-control-sm" name="datanasc" id="nome" placeholder="Data Nascimento">
+                    <input type="date" class="form-control form-control-sm" name="datanasc" id="nome" placeholder="">
                 </div>
 
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="Email">
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4" id="">Nacionalidade</label>
-                    <input type="text" class="form-control form-control-sm" name="nacionalidade" id="nacionalidade" placeholder="Nacionalidade">
+                    <input type="text" class="form-control form-control-sm" name="nacionalidade" id="nacionalidade" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4" id="fantasia-label">Nome Fantasia</label>
-                    <input type="text" class="form-control form-control-sm" name="fantasia" id="fantasia" placeholder="Fantasia">
+                    <input type="text" class="form-control form-control-sm" name="fantasia" id="fantasia" placeholder="">
                 </div>
             </div>
             <div class="form-row">
 
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Naturalidade</label>
-                    <input type="text" class="form-control form-control-sm" name="naturalidade" id="nome" placeholder="Naturalidade">
+                    <input type="text" class="form-control form-control-sm" name="naturalidade" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Telefone</label>
-                    <input type="text" class="form-control form-control-sm" name="telefone" id="nome" placeholder="Telefone">
+                    <input type="text" class="form-control form-control-sm" name="telefone" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Celular</label>
-                    <input type="text" class="form-control form-control-sm" name="celular" id="nome" placeholder="Celular">
+                    <input type="text" class="form-control form-control-sm" name="celular" id="nome" placeholder="">
                 </div>
 
             </div>
@@ -179,35 +179,35 @@ if (isset($_POST['cadastrar'])) {
 
                 <div class="form-group col-md-12">
                     <label for="inputEmail4">Ramo de Atividade</label>
-                    <input type="text" class="form-control form-control-sm" name="atividade" id="nome" placeholder="Atividade">
+                    <input type="text" class="form-control form-control-sm" name="atividade" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">CEP</label>
-                    <input type="text" class="form-control form-control-sm" name="cep2" id="nome" placeholder="Cep">
+                    <input type="text" class="form-control form-control-sm" name="cep2" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="text" class="form-control form-control-sm" name="uf2" id="nome" placeholder="UF">
+                    <input type="text" class="form-control form-control-sm" name="uf2" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">Nº</label>
-                    <input type="text" class="form-control form-control-sm" name="numero2" id="nome" placeholder="Nº">
+                    <input type="text" class="form-control form-control-sm" name="numero2" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Municipio</label>
-                    <input type="text" class="form-control form-control-sm" name="municipio2" id="nome" placeholder="Municipio">
+                    <input type="text" class="form-control form-control-sm" name="municipio2" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Endereço</label>
-                    <input type="text" class="form-control form-control-sm" name="endereco2" id="nome" placeholder="Endereço">
+                    <input type="text" class="form-control form-control-sm" name="endereco2" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Bairro</label>
-                    <input type="text" class="form-control form-control-sm" name="bairro2" id="nome" placeholder="Bairro">
+                    <input type="text" class="form-control form-control-sm" name="bairro2" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-8">
                     <label for="inputEmail4">Complemento</label>
-                    <input type="text" class="form-control form-control-sm" name="complemento2" id="nome" placeholder="Complemento">
+                    <input type="text" class="form-control form-control-sm" name="complemento2" id="nome" placeholder="">
                 </div>
 
 
@@ -223,31 +223,31 @@ if (isset($_POST['cadastrar'])) {
 
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">CEP</label>
-                    <input type="text" class="form-control form-control-sm" name="cep" id="nome" placeholder="Cep">
+                    <input type="text" class="form-control form-control-sm" name="cep" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="text" class="form-control form-control-sm" name="uf" id="nome" placeholder="UF">
+                    <input type="text" class="form-control form-control-sm" name="uf" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">Nº</label>
-                    <input type="text" class="form-control form-control-sm" name="numero" id="nome" placeholder="Nº">
+                    <input type="text" class="form-control form-control-sm" name="numero" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Municipio</label>
-                    <input type="text" class="form-control form-control-sm" name="municipio" id="nome" placeholder="Municipio">
+                    <input type="text" class="form-control form-control-sm" name="municipio" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Endereço</label>
-                    <input type="text" class="form-control form-control-sm" name="endereco" id="nome" placeholder="Endereço">
+                    <input type="text" class="form-control form-control-sm" name="endereco" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Bairro</label>
-                    <input type="text" class="form-control form-control-sm" name="bairro" id="nome" placeholder="Bairro">
+                    <input type="text" class="form-control form-control-sm" name="bairro" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-8">
                     <label for="inputEmail4">Complemento</label>
-                    <input type="text" class="form-control form-control-sm" name="complemento" id="nome" placeholder="Complemento">
+                    <input type="text" class="form-control form-control-sm" name="complemento" id="nome" placeholder="">
                 </div>
 
 
@@ -263,23 +263,23 @@ if (isset($_POST['cadastrar'])) {
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Órgão Expedidor</label>
-                    <input type="text" class="form-control form-control-sm" name="orgao" id="nome" placeholder="Órgão Expedidor">
+                    <input type="text" class="form-control form-control-sm" name="orgao" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF exp</label>
-                    <input type="text" class="form-control form-control-sm" name="ufexp" id="nome" placeholder="UF">
+                    <input type="text" class="form-control form-control-sm" name="ufexp" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Data Expedição</label>
-                    <input type="date" class="form-control form-control-sm" name="dataexp" id="nome" placeholder="Data Expedição">
+                    <input type="date" class="form-control form-control-sm" name="dataexp" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Iscrição INSS/CEI</label>
-                    <input type="text" class="form-control form-control-sm" name="inss" id="nome" placeholder="INSS/CEI">
+                    <input type="text" class="form-control form-control-sm" name="inss" id="nome" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Nº PISS</label>
-                    <input type="text" class="form-control form-control-sm" name="piss" id="nome" placeholder="PISS">
+                    <input type="text" class="form-control form-control-sm" name="piss" id="nome" placeholder="">
                 </div>
                 <input type="submit" class="btn btn-success" value="cadastra dadados" name="cadastrar">
 
@@ -291,7 +291,8 @@ if (isset($_POST['cadastrar'])) {
         <script>
              
 
-                var opt = document.getElementById('fisica').value;
+                var opt = document.getElementById('opt').value;
+                
                 if(opt === 'F'){
                     $('#nome').html('<label for="inputEmail4"  id="nome">Nome Completo</label>');
                         $('#CPF-CNPJ').html('<label for="inputEmail4"  id="CPF-CNPJ">CPF</label>');
@@ -299,7 +300,7 @@ if (isset($_POST['cadastrar'])) {
                         $('.div-juritico').hide(); /** */
                         $('.div-fisico').show();
                         $('.div-juridico').hide();
-                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder="RG"></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder="CNH"></div></div>');
+                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder="RG"></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder=""></div></div>');
                         $('#fantasia-label').hide();
                         $('#fantasia').hide();
 
@@ -330,7 +331,7 @@ if (isset($_POST['cadastrar'])) {
                         $('.div-juritico').hide(); /** */
                         $('.div-fisico').show();
                         $('.div-juridico').hide();
-                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder="RG"></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder="CNH"></div></div>');
+                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder="RG"></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder=""></div></div>');
                         $('#fantasia-label').hide();
                         $('#fantasia').hide();
                     }

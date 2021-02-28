@@ -29,11 +29,11 @@
 
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Data Agendamento</label>
-                    <input type="date" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="date" class="form-control" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Resumo</label>
-                    <input type="text" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="text" class="form-control" name="email" id="nome" placeholder="" >
                 </div>
             </div>
 
@@ -41,19 +41,19 @@
 
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Evento</label>
-                    <input type="text" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="text" class="form-control" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Hora Inicio</label>
-                    <input type="time" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="time" class="form-control" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Hora Final</label>
-                    <input type="time" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="time" class="form-control" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Duração</label>
-                    <input type="time" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="time" class="form-control" name="email" id="nome" placeholder="" >
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">Nº Contrato</label>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Contato do Cliente</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="Email" required>
+                    <input type="email" class="form-control" name="email" id="nome" placeholder="" >
                 </div>
 
             </div>
