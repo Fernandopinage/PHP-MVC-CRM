@@ -19,7 +19,7 @@
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="" id="projeto" >
                         <label class="form-check-label" for="flexCheckDefault">
                             Projeto
                         </label>
@@ -110,7 +110,8 @@
         </div>
 
         <!----------------------------------------- PROJETO ---------------------------------------->
-        <div class="tab-pane fade" id="nav-projeto" role="tabpanel" aria-labelledby="nav-projeto-tab">
+
+        <div class="tab-pane fade" id="nav-projeto" name="tabprojeto" role="tabpanel" aria-labelledby="nav-projeto-tab">
 
             <div class="form-row">
                 <div class="form-group col-md-5">
@@ -131,10 +132,27 @@
                 </div>
             </div>
 
+
         </div>
         <!----------------------------------------- -------------------------------------------------->
 </form>
 </div>
 <script>
-    
+
+    $("#projeto").click(function() {
+
+
+        if (projeto.checked) {
+            console.log("S");
+          
+        } else {
+
+            console.log("N");
+            
+        }
+
+    });
+
+  
+
 </script>
