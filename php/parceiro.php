@@ -300,7 +300,7 @@ if (isset($_POST['cadastrar'])) {
                         $('.div-juritico').hide(); /** */
                         $('.div-fisico').show();
                         $('.div-juridico').hide();
-                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder="RG"></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder=""></div></div>');
+                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder=""></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder=""></div></div>');
                         $('#fantasia-label').hide();
                         $('#fantasia').hide();
 
@@ -313,7 +313,7 @@ if (isset($_POST['cadastrar'])) {
                         $('#fantasia-label').show();
                         $('.div-juridico').show();
                         $('.div-fisico').hide();
-                        $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="text" class="form-control form-control-sm" name="suframa" id="nome" placeholder="Suframa"></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="text" class="form-control form-control-sm" name="estadual" id="nome" placeholder="Inscrição Estatual"></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="text" class="form-control form-control-sm" name="municipal" id="nome" placeholder="Inscrição Municipal"></div></div>');
+                        $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="text" class="form-control form-control-sm" name="suframa" id="nome" placeholder=""></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="text" class="form-control form-control-sm" name="estadual" id="nome" placeholder=""></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="text" class="form-control form-control-sm" name="municipal" id="nome" placeholder=""></div></div>');
 
                 }
             
@@ -331,7 +331,7 @@ if (isset($_POST['cadastrar'])) {
                         $('.div-juritico').hide(); /** */
                         $('.div-fisico').show();
                         $('.div-juridico').hide();
-                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder="RG"></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder=""></div></div>');
+                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder=""></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder=""></div></div>');
                         $('#fantasia-label').hide();
                         $('#fantasia').hide();
                     }
@@ -343,7 +343,7 @@ if (isset($_POST['cadastrar'])) {
                         $('#fantasia-label').show();
                         $('.div-juridico').show();
                         $('.div-fisico').hide();
-                        $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="text" class="form-control form-control-sm" name="suframa" id="nome" placeholder="Suframa"></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="text" class="form-control form-control-sm" name="estadual" id="nome" placeholder="Inscrição Estatual"></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="text" class="form-control form-control-sm" name="municipal" id="nome" placeholder="Inscrição Municipal"></div></div>');
+                        $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="text" class="form-control form-control-sm" name="suframa" id="nome" placeholder=""></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="text" class="form-control form-control-sm" name="estadual" id="nome" placeholder=""></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="text" class="form-control form-control-sm" name="municipal" id="nome" placeholder=""></div></div>');
 
                     }
                 });
