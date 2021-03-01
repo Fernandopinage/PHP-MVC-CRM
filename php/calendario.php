@@ -28,7 +28,7 @@ include_once "../layout/head.php";
         start: '2020-09-01'
       }],
       eventClick: function(info) {
-        $('#visualizar').modal('show');
+        $('#visualizar').modal('show'); // chamando modal
       },selectable: true,
     select: function(info) {
       //alert('inicio ' + info.start.toLocaleString());
@@ -105,8 +105,8 @@ include_once "../layout/head.php";
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
       </div>
     </div>
   </div>
