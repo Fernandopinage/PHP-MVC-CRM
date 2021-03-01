@@ -29,13 +29,14 @@ include_once "../layout/head.php";
       }],
       eventClick: function(info) {
         $('#visualizar').modal('show'); // chamando modal
-      },selectable: true,
-    select: function(info) {
-      //alert('inicio ' + info.start.toLocaleString());
-      $('#agendamento #start').val(info.start.toLocaleString());  // dia que inicia o agendamento
-      //$('#agendamento #end').val(info.end.toLocaleString());
-      $('#agendamento').modal('show');
-    }
+      },
+      selectable: true,
+      select: function(info) {
+        //alert('inicio ' + info.start.toLocaleString());
+        $('#agendamento #start').val(info.start.toLocaleString()); // dia que inicia o agendamento
+        //$('#agendamento #end').val(info.end.toLocaleString());
+        $('#agendamento').modal('show');
+      }
     });
 
     calendar.render();
