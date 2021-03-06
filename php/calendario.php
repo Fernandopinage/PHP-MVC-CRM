@@ -228,14 +228,6 @@ include_once "../layout/head.php";
 
         </form>
       </div>
-<<<<<<< HEAD
-
-=======
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
-      </div>
->>>>>>> 318dfb6f01278ac3f859136f52022cba7164ba73
     </div>
   </div>
 </div>
