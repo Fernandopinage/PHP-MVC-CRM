@@ -77,14 +77,15 @@ if (isset($_POST['cadastrar'])) {
         <p class="text-white bg-secondary text-center">DADOS PESSOAIS</p>
             <div class="form-row">
                 <div class="form-group col-md-4">
+                <label for="inputEmail4" id="nome">Tipo Pessoa</label>
                     <div class="form-check">
-                        <input class="pessoa" type="radio" name="pessoa" id="opt" value="J" CHECKED>
+                        <input class="pessoa form-check-input" type="radio" name="pessoa" id="opt" value="J" CHECKED>
                         <label class="form-check-label" for="pessoa" id="juridica">
                             Pessoa juridica
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="pessoa" type="radio" name="pessoa" id="opt" value="F">
+                        <input class="pessoa form-check-input" type="radio" name="pessoa" id="opt" value="F">
                         <label class="form-check-label" for="pessoa" id="Fisica">
                             Pessoa Fisica
                         </label>

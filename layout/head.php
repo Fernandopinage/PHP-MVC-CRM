@@ -31,7 +31,7 @@
                         <a class="dropdown-item" href="?page=parceiro/">Parceiros</a>
                         <a class="dropdown-item" href="?page=colaborador/">Colaborador</a>
                         <a class="dropdown-item" href="?page=contrato/">Negócios</a>
- 
+                        <a class="dropdown-item" href="?page=usuario/">Usuário</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
