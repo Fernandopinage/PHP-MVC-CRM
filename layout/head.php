@@ -42,11 +42,6 @@
                         <a class="dropdown-item" href="?page=tecnico/">Agendamento Tecnico</a>
                     </div>
                 </li>
-
-            </ul>
-        </div>
-        <div class="form-inline  my-lg-0" id="navbarNavDropdown" style="margin: 0px 80px;">
-            <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FF7F00;">
                         Logout
@@ -59,9 +54,9 @@
                     </div>
                 </li>
 
-
             </ul>
         </div>
+        
     </nav>
 
 </body>
