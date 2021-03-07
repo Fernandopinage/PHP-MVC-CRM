@@ -1,6 +1,6 @@
 <?php 
 
-class ClassEmpresa{
+class ClassGrupo{
 
 
     private $codigo = null;
