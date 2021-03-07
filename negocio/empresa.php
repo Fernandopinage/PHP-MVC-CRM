@@ -16,6 +16,7 @@
 </head>
 
 <body>
+ 
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <a class="navbar-brand" href="?page=home/" style="color: #FF7F00;">HOME</a>
 
@@ -124,7 +125,7 @@
                         </div>
                     </div>
                     <div class=text-right>
-                    <button type="submit" class="btn btn-primary">Cadastro Grupo</button>
+                        <button type="submit" class="btn btn-primary">Cadastro Grupo</button>
                     </div>
                 </div>
             </div>
@@ -145,26 +146,48 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <div class="recebidos">
+                    </div>
+                    <form class="form-empresa" method="POST" action="../negocio/empresa.php?">
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <label for="inputEmail4">Código</label>
-                                <input type="type" class="form-control form-control-sm" id="codigo" placeholder="">
+                                <label for="inputCodigo">Código</label>
+                                <input type="type" class="form-control form-control-sm" name="codigo" id="codigo" placeholder="">
                             </div>
                             <div class="form-group col-md-10">
-                                <label for="inputPassword4">Descrição</label>
-                                <input type="type" class="form-control form-control-sm" id="descricao" placeholder="">
+                                <label for="inputDescricao">Descrição</label>
+                                <input type="type" class="form-control form-control-sm" name="descricao" id="descricao" placeholder="">
                             </div>
                         </div>
                         <div class=text-right>
-                        <button type="submit" class="btn btn-primary">Cadastro Grupo</button>
+                            <button type="submit"  class="btn btn-primary">Cadastro Grupo</button>
                         </div>
                     </form>
                 </div>
-                
+
             </div>
         </div>
     </div>
+
+    <script>
+        $(function(){
+
+            $('.form-empresa').submit(function(){
+
+                $.ajax({
+
+                    url:'../ajax/grupo.php',                        // URL para onde vai ser enviados
+                    type: 'POST',                                   // Formado de envio
+                    data: $('.form-empresa').serialize(),           // class do formulario 
+                    success: function(data){                        // caso der certo vai aparecer os dados dentro de uma div
+                        $('.recebidos').html(data);                 // imprimindo os dados do formulario na div
+                    }
+
+                });
+                return false;
+            });
+        });
+    </script>
 
 </body>
 <footer>

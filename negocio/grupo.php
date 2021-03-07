@@ -24,7 +24,7 @@
             <div class="card-header bg-transparent ">Grupo de Empresa</div>
             <div class="card-body text-dark">
                 
-                <form>
+                <form action="" method="$_POST">
                     <div class="form-row">
                         <div class="form-group col-md-1">
                             <label for="inputEmail4">Código</label>

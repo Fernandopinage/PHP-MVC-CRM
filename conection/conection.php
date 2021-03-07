@@ -13,7 +13,8 @@ class ConnectFactory{
         $con = new PDO($host,$root, $senha);
         //echo "________________________conectou"."<br>";
     } catch (PDOException $exc) {
-        echo                      $exc->getMessage();
+
+        echo                      "<br><br><br><br>".$exc->getMessage();
     }
 
         return $con;
