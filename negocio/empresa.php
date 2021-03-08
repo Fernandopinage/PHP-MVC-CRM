@@ -31,7 +31,8 @@
             </button>
         </div>
 
-        <div >
+        <div>
+        <br>
             <?php
 
             include_once "../dao/GrupoDAO.php";
