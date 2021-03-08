@@ -26,13 +26,13 @@
 
         <br><br>
         <div class=text-right>
-            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
                 Cadastro Grupo
             </button>
         </div>
 
         <div>
-        <br>
+            <br>
             <?php
 
             include_once "../dao/GrupoDAO.php";
@@ -83,21 +83,19 @@
                 $empresa->insertUnidade($ClassUnidade);
                 if ($empresa == TRUE) {
                     echo '<div class="alert alert-success alert-dismissible fade show" role="alert" id="msg">  Registro salvo com sucesso!.  <button type="button" class="close" data-dismiss="alert" aria-label="Close">    <span aria-hidden="true">&times;</span>  </button></div>';
-                    ?>
+            ?>
                     <script>
-                    
-                    $(document).ready(function(){
+                        $(document).ready(function() {
 
-                        setTimeout(function(){
+                            setTimeout(function() {
 
-                            $("#msg").alert('close');
-                        },3000);
+                                $("#msg").alert('close');
+                            }, 3000);
 
-                    });
-                    
+                        });
                     </script>
-                    <?php
-                   
+            <?php
+
                 }
             }
             ?>
@@ -207,7 +205,7 @@
                         </div>
                     </div>
                     <div class=text-right>
-                        <button type="submit" name="cadastrogrupo" class="btn btn-primary">Cadastro Grupo</button>
+                        <button type="submit" name="cadastrogrupo" class="btn btn-success">Cadastro Grupo</button>
                     </div>
                 </div>
             </div>
@@ -242,7 +240,7 @@
                             </div>
                         </div>
                         <div class=text-right>
-                            <button type="submit" class="btn btn-primary">Cadastro Grupo</button>
+                            <button type="submit" class="btn btn-success">Cadastro Grupo</button>
                         </div>
                     </form>
                 </div>

@@ -103,7 +103,7 @@
         <p class="text-white bg-secondary text-center">APLICAÇÃO</p>
         <div class="form-row">
             <div class="text-right">
-                <input  class="btn btn-success" type="submit" value="Salvar registro">
+                <input class="btn btn-success" type="submit" value="Salvar registro">
             </div>
         </div>
 
@@ -115,35 +115,63 @@
 
 <!--************************************ Modal Nova Funçao ****************************************************-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Nova Função</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Novo Função</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Código</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                <div class="recebidos">
+                </div>
+                <form class="form-funcao" method="POST" action="">
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="inputCodigo">Código</label>
+                            <input type="type" class="form-control form-control-sm" name="codigo" id="codigo" placeholder="">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message-text" class="col-form-label">Sigla:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="inputCodigo">Sigle</label>
+                            <input type="type" class="form-control form-control-sm" name="sigla" id="sigla" placeholder="">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message-text" class="col-form-label">Descrição:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="inputDescricao">Descrição</label>
+                            <input type="type" class="form-control form-control-sm" name="descricao" id="descricao" placeholder="">
+                        </div>
+                    </div>
+                    <div class=text-right>
+                        <button type="submit" class="btn btn-success">Cadastro Função</button>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
-            </div>
+
         </div>
     </div>
 </div>
+
+<script>
+        $(function() {
+
+            $('.form-funcao').submit(function() {
+
+                $.ajax({
+
+                    url: '../ajax/funcao.php', // URL para onde vai ser enviados
+                    type: 'POST', // Formado de envio
+                    data: $('.form-funcao').serialize(), // class do formulario 
+                    success: function(data) { // caso der certo vai aparecer os dados dentro de uma div
+                        $('.recebidos').html('<div class="alert alert-success alert-dismissible fade show" role="alert">Registro salvo com sucesso  <button type="button" class="close" data-dismiss="alert" aria-label="Close">    <span aria-hidden="true">&times;</span>  </button></div>'); // imprimindo os dados do formulario na div
+                        //document.location.reload(true);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
 <!-- **************************************************************************************************** -->
