@@ -156,7 +156,7 @@ include_once "../class/classParceiro.php";
             $insert->bindValue(":excluido", '');
             $insert->bindValue(":celular", $classParceiro->getCelular());
             $insert->bindValue(":assinatura", '');
-            var_dump($insert);
+            //var_dump($insert);
             $insert->execute();
             
 

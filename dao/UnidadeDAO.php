@@ -30,6 +30,9 @@ include_once "../class/classUnidade.php";
             $insert->bindValue(":nomefan",$ClassUnidade->getReduzido());
             $insert->execute();
 
+           if($insert->rowCount()){
+            return true;
+           }
 
         }
 

@@ -1,56 +1,3 @@
-<?php 
-
-include_once "../dao/GrupoDAO.php";
-include_once "../dao/UnidadeDAO.php";
-include_once "../class/classGrupo.php";
-include_once "../class/classUnidade.php";
-
-$grupo = new GrupoDao();
-$registro = $grupo->selectGrupo();
-
-
-    if(isset($_POST['cadastrogrupo'])){
-    
-    $empresa = $_POST['empresa'];
-    $codigo = $_POST['codigo'];
-    $descricao = $_POST['descricao'];
-    $razao = $_POST['razao'];
-    $reduzido = $_POST['reduzido'];
-    $tipo = $_POST['tipo'];
-    $foto = $_POST['foto'];
-    $inscricao = $_POST['inscricao'];
-    $barra = $_POST['barra'];
-    $suframa = $_POST['suframa'];
-    $cep = $_POST['cep'];
-    $uf = $_POST['uf'];
-    $logradouro = $_POST['logradouro'];
-    $bairro = $_POST['bairro'];
-    $complemento = $_POST['complemento'];
-
-    $ClassUnidade = new ClassUnidade();
-    $ClassUnidade->setEmpresa($empresa);
-    $ClassUnidade->setCodigo($codigo);
-    $ClassUnidade->setDescricao($descricao);
-    $ClassUnidade->setRazao($razao);
-    $ClassUnidade->setReduzido($reduzido);
-    $ClassUnidade->setTipo($tipo);
-    $ClassUnidade->setFoto($foto);
-    $ClassUnidade->setInscricao($inscricao);
-    $ClassUnidade->setBarra($barra);
-    $ClassUnidade->setSuframa($suframa);
-    $ClassUnidade->setCep($cep);
-    $ClassUnidade->setUf($uf);
-    $ClassUnidade->setLogradouro($logradouro);
-    $ClassUnidade->setBairro($bairro);
-    $ClassUnidade->setComplemento($complemento);
-
-    $empresa = new UnidadeDao();
-    $empresa->insertUnidade($ClassUnidade);
-
-
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -69,7 +16,7 @@ $registro = $grupo->selectGrupo();
 </head>
 
 <body>
- 
+
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <a class="navbar-brand" href="?page=home/" style="color: #FF7F00;">HOME</a>
 
@@ -83,6 +30,80 @@ $registro = $grupo->selectGrupo();
                 Cadastro Grupo
             </button>
         </div>
+
+        <div >
+            <?php
+
+            include_once "../dao/GrupoDAO.php";
+            include_once "../dao/UnidadeDAO.php";
+            include_once "../class/classGrupo.php";
+            include_once "../class/classUnidade.php";
+
+            $grupo = new GrupoDao();
+            $registro = $grupo->selectGrupo();
+
+
+            if (isset($_POST['cadastrogrupo'])) {
+
+                $empresa = $_POST['empresa'];
+                $codigo = $_POST['codigo'];
+                $descricao = $_POST['descricao'];
+                $razao = $_POST['razao'];
+                $reduzido = $_POST['reduzido'];
+                $tipo = $_POST['tipo'];
+                $foto = $_POST['foto'];
+                $inscricao = $_POST['inscricao'];
+                $barra = $_POST['barra'];
+                $suframa = $_POST['suframa'];
+                $cep = $_POST['cep'];
+                $uf = $_POST['uf'];
+                $logradouro = $_POST['logradouro'];
+                $bairro = $_POST['bairro'];
+                $complemento = $_POST['complemento'];
+
+                $ClassUnidade = new ClassUnidade();
+                $ClassUnidade->setEmpresa($empresa);
+                $ClassUnidade->setCodigo($codigo);
+                $ClassUnidade->setDescricao($descricao);
+                $ClassUnidade->setRazao($razao);
+                $ClassUnidade->setReduzido($reduzido);
+                $ClassUnidade->setTipo($tipo);
+                $ClassUnidade->setFoto($foto);
+                $ClassUnidade->setInscricao($inscricao);
+                $ClassUnidade->setBarra($barra);
+                $ClassUnidade->setSuframa($suframa);
+                $ClassUnidade->setCep($cep);
+                $ClassUnidade->setUf($uf);
+                $ClassUnidade->setLogradouro($logradouro);
+                $ClassUnidade->setBairro($bairro);
+                $ClassUnidade->setComplemento($complemento);
+
+                $empresa = new UnidadeDao();
+                $empresa->insertUnidade($ClassUnidade);
+                if ($empresa == TRUE) {
+                    echo '<div class="alert alert-success alert-dismissible fade show" role="alert" id="msg">  Registro salvo com sucesso!.  <button type="button" class="close" data-dismiss="alert" aria-label="Close">    <span aria-hidden="true">&times;</span>  </button></div>';
+                    ?>
+                    <script>
+                    
+                    $(document).ready(function(){
+
+                        setTimeout(function(){
+
+                            $("#msg").alert('close');
+                        },3000);
+
+                    });
+                    
+                    </script>
+                    <?php
+                   
+                }
+            }
+            ?>
+        </div>
+
+
+
         <br><br>
         <form method="POST" action="">
             <div class="card border-dark mb-3" style="max-width: 118rem;">
@@ -94,16 +115,15 @@ $registro = $grupo->selectGrupo();
                         <div class="form-group col-md-4">
                             <label for="inputState">Grupo Empresa</label>
                             <select id="empresa" class="form-control" name="empresa">
-                            <option selected></option>
-                            <?php 
-                            foreach($registro as $registros){
+                                <option selected></option>
+                                <?php
+                                foreach ($registro as $registros) {
 
-                                echo "<option value= '".$registros->getCodigo()."'> ".$registros->getCodigo()." - ".$registros->getDescricao()."</option>";
-                            
-                            }
-                           
-                            
-                            ?>
+                                    echo "<option value= '" . $registros->getCodigo() . "'> " . $registros->getCodigo() . " - " . $registros->getDescricao() . "</option>";
+                                }
+
+
+                                ?>
 
                             </select>
                         </div>
@@ -221,7 +241,7 @@ $registro = $grupo->selectGrupo();
                             </div>
                         </div>
                         <div class=text-right>
-                            <button type="submit"  class="btn btn-primary">Cadastro Grupo</button>
+                            <button type="submit" class="btn btn-primary">Cadastro Grupo</button>
                         </div>
                     </form>
                 </div>
@@ -231,22 +251,22 @@ $registro = $grupo->selectGrupo();
     </div>
 
     <script>
-        $(function(){
+        $(function() {
 
-            $('.form-empresa').submit(function(){
+            $('.form-empresa').submit(function() {
 
                 $.ajax({
 
-                    url:'../ajax/grupo.php',                        // URL para onde vai ser enviados
-                    type: 'POST',                                   // Formado de envio
-                    data: $('.form-empresa').serialize(),           // class do formulario 
-                    success: function(data){                        // caso der certo vai aparecer os dados dentro de uma div
-                        $('.recebidos').html('<div class="alert alert-success alert-dismissible fade show" role="alert">Registro salvo com sucesso  <button type="button" class="close" data-dismiss="alert" aria-label="Close">    <span aria-hidden="true">&times;</span>  </button></div>');                 // imprimindo os dados do formulario na div
+                    url: '../ajax/grupo.php', // URL para onde vai ser enviados
+                    type: 'POST', // Formado de envio
+                    data: $('.form-empresa').serialize(), // class do formulario 
+                    success: function(data) { // caso der certo vai aparecer os dados dentro de uma div
+                        $('.recebidos').html('<div class="alert alert-success alert-dismissible fade show" role="alert">Registro salvo com sucesso  <button type="button" class="close" data-dismiss="alert" aria-label="Close">    <span aria-hidden="true">&times;</span>  </button></div>'); // imprimindo os dados do formulario na div
                         document.location.reload(true);
                     }
                 });
                 return false;
-                
+
             });
         });
     </script>
