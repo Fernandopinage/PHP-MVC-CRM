@@ -11,6 +11,9 @@ input{
 
     text-transform: uppercase;
 }
+select{
+    text-transform: uppercase;
+}
 option{
     text-transform: uppercase;
 }

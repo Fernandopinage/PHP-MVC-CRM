@@ -1,3 +1,18 @@
+<?php 
+
+include_once "../dao/GrupoDAO.php";
+include_once "../class/classGrupo.php";
+
+$grupo = new GrupoDao();
+$registro = $grupo->selectGrupo();
+
+
+    if(isset($_POST['cadastrogrupo'])){
+        echo" ok";
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,7 +46,7 @@
             </button>
         </div>
         <br><br>
-        <form>
+        <form method="POST" action="">
             <div class="card border-dark mb-3" style="max-width: 118rem;">
                 <div class="card-header bg-transparent ">Empresa</div>
                 <div class="card-body text-dark">
@@ -41,9 +56,17 @@
                         <div class="form-group col-md-4">
                             <label for="inputState">Grupo Empresa</label>
                             <select id="inputState" class="form-control">
-                                <option selected>Grupo 01</option>
-                                <option>Grupo 02</option>
-                                <option>Grupo 03</option>
+                            <option selected></option>
+                            <?php 
+                            foreach($registro as $registros){
+
+                                echo "<option value= '".$registros->getCodigo()."'> ".$registros->getCodigo()." - ".$registros->getDescricao()."</option>";
+                            
+                            }
+                           
+                            
+                            ?>
+
                             </select>
                         </div>
                         <div class="form-group col-md-1">
@@ -76,8 +99,8 @@
                             <label for="inputState">Tipo</label>
                             <select id="inputState" class="form-control form-control-sm">
                                 <option selected>CNPJ</option>
-                                <option>CPF</option>
-                                <option>CEI</option>
+                                <option value="CPF">CPF</option>
+                                <option value="CEI">CEI</option>
                             </select>
                         </div>
                         <div class="form-group col-md-5">
@@ -125,7 +148,7 @@
                         </div>
                     </div>
                     <div class=text-right>
-                        <button type="submit" class="btn btn-primary">Cadastro Grupo</button>
+                        <button type="submit" name="cadastrogrupo" class="btn btn-primary">Cadastro Grupo</button>
                     </div>
                 </div>
             </div>
@@ -180,10 +203,11 @@
                     type: 'POST',                                   // Formado de envio
                     data: $('.form-empresa').serialize(),           // class do formulario 
                     success: function(data){                        // caso der certo vai aparecer os dados dentro de uma div
-                        $('.recebidos').html(data);                 // imprimindo os dados do formulario na div
+                        $('.recebidos').html('<div class="alert alert-success alert-dismissible fade show" role="alert">Registro salvo com sucesso  <button type="button" class="close" data-dismiss="alert" aria-label="Close">    <span aria-hidden="true">&times;</span>  </button></div>');                 // imprimindo os dados do formulario na div
+                        document.location.reload(true);
                     }
-
                 });
+                return false;
                 
             });
         });

@@ -5,7 +5,16 @@ class ClassGrupo{
 
     private $codigo = null;
     private $descricao = null;
+    private $ID = null;
 
+    public function setID($ID){
+        $this->ID = $ID;
+
+    }
+    public function getID(){
+
+        return $this->ID;
+    }
 
     public function setCodigo($codigo){
         $this->codigo = $codigo;
