@@ -3,6 +3,7 @@
 
 class ClassUnidade{
 
+    private $key;
     private $empresa;
     private $codigo;
     private $descricao;
@@ -18,6 +19,12 @@ class ClassUnidade{
     private $bairro;
     private $complemento; 
 
+    public function setKey($key){
+        $this->key = $key;
+    }
+    public function getKey(){
+        return $this->key;
+    }
     public function setEmpresa($empresa){
         $this->empresa = $empresa;
     }
