@@ -1,9 +1,9 @@
 <?php 
 
 
-class ClassEmpresa{
+class ClassUnidade{
 
-    private $grupo;
+    private $empresa;
     private $codigo;
     private $descricao;
     private $razao;
@@ -18,11 +18,11 @@ class ClassEmpresa{
     private $bairro;
     private $complemento; 
 
-    public function setGrupo($grupo){
-        $this->grupo = $grupo;
+    public function setEmpresa($empresa){
+        $this->empresa = $empresa;
     }
-    public function getGrupo(){
-        return $this->grupo;
+    public function getEmpresa(){
+        return $this->empresa;
     }
     public function setCodigo($codigo){
         $this->codigo = $codigo;
@@ -42,6 +42,12 @@ class ClassEmpresa{
     public function getRazao(){
         return $this->razao;
     }
+    public function setReduzido($reduzido){
+        $this->reduzido = $reduzido;
+    }
+    public function getReduzido(){
+        return $this->reduzido;
+    }
     public function setTipo($tipo){
         $this->tipo = $tipo;
     }
@@ -60,7 +66,7 @@ class ClassEmpresa{
     public function getInscricao(){
         return $this->inscricao;
     }
-    public function setBarrao($barra){
+    public function setBarra($barra){
         $this->barra = $barra;
     }
     public function getBarra(){

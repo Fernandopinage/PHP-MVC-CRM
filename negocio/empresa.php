@@ -1,14 +1,52 @@
 <?php 
 
 include_once "../dao/GrupoDAO.php";
+include_once "../dao/UnidadeDAO.php";
 include_once "../class/classGrupo.php";
+include_once "../class/classUnidade.php";
 
 $grupo = new GrupoDao();
 $registro = $grupo->selectGrupo();
 
 
     if(isset($_POST['cadastrogrupo'])){
-        echo" ok";
+    
+    $empresa = $_POST['empresa'];
+    $codigo = $_POST['codigo'];
+    $descricao = $_POST['descricao'];
+    $razao = $_POST['razao'];
+    $reduzido = $_POST['reduzido'];
+    $tipo = $_POST['tipo'];
+    $foto = $_POST['foto'];
+    $inscricao = $_POST['inscricao'];
+    $barra = $_POST['barra'];
+    $suframa = $_POST['suframa'];
+    $cep = $_POST['cep'];
+    $uf = $_POST['uf'];
+    $logradouro = $_POST['logradouro'];
+    $bairro = $_POST['bairro'];
+    $complemento = $_POST['complemento'];
+
+    $ClassUnidade = new ClassUnidade();
+    $ClassUnidade->setEmpresa($empresa);
+    $ClassUnidade->setCodigo($codigo);
+    $ClassUnidade->setDescricao($descricao);
+    $ClassUnidade->setRazao($razao);
+    $ClassUnidade->setReduzido($reduzido);
+    $ClassUnidade->setTipo($tipo);
+    $ClassUnidade->setFoto($foto);
+    $ClassUnidade->setInscricao($inscricao);
+    $ClassUnidade->setBarra($barra);
+    $ClassUnidade->setSuframa($suframa);
+    $ClassUnidade->setCep($cep);
+    $ClassUnidade->setUf($uf);
+    $ClassUnidade->setLogradouro($logradouro);
+    $ClassUnidade->setBairro($bairro);
+    $ClassUnidade->setComplemento($complemento);
+
+    $empresa = new UnidadeDao();
+    $empresa->insertUnidade($ClassUnidade);
+
 
     }
 ?>
@@ -55,7 +93,7 @@ $registro = $grupo->selectGrupo();
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputState">Grupo Empresa</label>
-                            <select id="inputState" class="form-control">
+                            <select id="empresa" class="form-control" name="empresa">
                             <option selected></option>
                             <?php 
                             foreach($registro as $registros){
@@ -71,11 +109,11 @@ $registro = $grupo->selectGrupo();
                         </div>
                         <div class="form-group col-md-1">
                             <label for="inputEmail4">Código</label>
-                            <input type="type" class="form-control" id="codigo" placeholder="">
+                            <input type="type" class="form-control" name="codigo" id="codigo" placeholder="">
                         </div>
                         <div class="form-group col-md-7">
                             <label for="inputPassword4">Descrição</label>
-                            <input type="type" class="form-control" id="descricao" placeholder="">
+                            <input type="type" class="form-control" name="descricao" id="descricao" placeholder="">
                         </div>
                     </div>
 
@@ -89,15 +127,15 @@ $registro = $grupo->selectGrupo();
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputRazao">Razão Social</label>
-                            <input type="type" class="form-control form-control-sm" id="codigo" placeholder="">
+                            <input type="type" class="form-control form-control-sm" name="razao" id="razao" placeholder="">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputReduzido">Nome Reduzido</label>
-                            <input type="type" class="form-control form-control-sm" id="descricao" placeholder="">
+                            <input type="type" class="form-control form-control-sm" name="reduzido" id="reduzido" placeholder="">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputState">Tipo</label>
-                            <select id="inputState" class="form-control form-control-sm">
+                            <select id="tipo" class="form-control form-control-sm" name="tipo">
                                 <option selected>CNPJ</option>
                                 <option value="CPF">CPF</option>
                                 <option value="CEI">CEI</option>
@@ -105,46 +143,46 @@ $registro = $grupo->selectGrupo();
                         </div>
                         <div class="form-group col-md-5">
                             <label for="inputFoto">Foto</label>
-                            <input type="file" class="form-control form-control-sm" id="descricao" placeholder="">
+                            <input type="file" class="form-control form-control-sm" id="foto" name="foto" placeholder="">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputRazao">Nº Inscrição</label>
-                            <input type="type" class="form-control form-control-sm" id="codigo" placeholder="">
+                            <input type="type" class="form-control form-control-sm" id="inscricao" name="inscricao" placeholder="">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputRazao">Barra</label>
-                            <input type="type" class="form-control form-control-sm" id="codigo" placeholder="">
+                            <input type="type" class="form-control form-control-sm" id="barra" name="barra" placeholder="">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputReduzido">Inscrição Suframa</label>
-                            <input type="type" class="form-control form-control-sm" id="descricao" placeholder="">
+                            <input type="type" class="form-control form-control-sm" id="suframa" name="suframa" placeholder="">
                         </div>
 
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-2">
                             <label for="inputRazao">CEP</label>
-                            <input type="type" class="form-control form-control-sm" id="codigo" placeholder="">
+                            <input type="type" class="form-control form-control-sm" id="cep" name="cep" placeholder="">
                         </div>
                         <div class="form-group col-md-1">
                             <label for="inputRazao">UF</label>
-                            <input type="type" class="form-control form-control-sm" id="codigo" placeholder="">
+                            <input type="type" class="form-control form-control-sm" id="uf" name="uf" placeholder="">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputReduzido">Logradouro</label>
-                            <input type="type" class="form-control form-control-sm" id="descricao" placeholder="">
+                            <input type="type" class="form-control form-control-sm" id="logradouro" name="logradouro" placeholder="">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputReduzido">Bairro</label>
-                            <input type="type" class="form-control form-control-sm" id="descricao" placeholder="">
+                            <input type="type" class="form-control form-control-sm" id="bairro" name="bairro" placeholder="">
                         </div>
                         <div class="form-group col-md-5">
                             <label for="inputReduzido">Complemento</label>
-                            <input type="type" class="form-control form-control-sm" id="descricao" placeholder="">
+                            <input type="type" class="form-control form-control-sm" id="complemento" name="complemento" placeholder="">
                         </div>
                     </div>
                     <div class=text-right>
