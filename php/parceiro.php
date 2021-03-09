@@ -69,7 +69,7 @@ if (isset($_POST['cadastrar'])) {
 </nav>
 <br>
 
-<form action="parceiro.php" method="POST">
+<form action="" method="POST">
     <div class="tab-content" id="nav-tabContent">
 
         <!-- ******************************* Cadastro ***************************************************-->
@@ -92,6 +92,7 @@ if (isset($_POST['cadastrar'])) {
                     </div>
                 </div>
                 <div class="form-group col-md-4">
+                <label for="inputEmail4" id="nome">Tipo Cadastro</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="option" id="exampleRadios1" value="fornecedor">
                         <label class="form-check-label" for="exampleRadios1">
