@@ -1,3 +1,13 @@
+<?php 
+
+    include_once "../class/classGrupoUsuario.php";
+    include_once "../dao/GrupoUsuarioDAO.php";
+
+   $GrupoUsuario = new ClassGrupoUsuarioDAO();
+   $dado =  $GrupoUsuario->selectGrupoUsuario();
+
+?>
+
 <br><br>
 <div class="card" style="margin-bottom: 20px;">
     <div class="navbar navbar-dark bg-dark navbar-expand-lg" style=" color:#fff; ">
@@ -10,7 +20,7 @@
         <a class="nav-item nav-link" id="nav-acesso-tab" data-toggle="tab" href="#nav-acesso" role="tab" aria-controls="nav-acesso" aria-selected="false" style="color: #FF7F00;">Acesso</a>
         <a class="nav-item nav-link" id="nav-aplicacao-tab" data-toggle="tab" href="#nav-aplicacao" role="tab" aria-controls="nav-aplicacao" aria-selected="false" style="color: #FF7F00;">Aplicação</a>
     </div>
-</nav>
+</nav><br>
 
 <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-usuario" role="tabpanel" aria-labelledby="nav-usuario-tab">
@@ -50,7 +60,15 @@
                     <label for="inputState" id="funcao">Função</label>
                     <select id="funcao" name="funcao" class="form-control form-control-sm">
                         <option selected></option>
-                        <option></option>
+                        <?php
+                        
+                            foreach($dado as $dados){
+
+                                echo " <option value='".$dados->getId()."'>".$dados->getSigla()." - ".$dados->getDesc()." </option>";
+                            }
+                        
+                        
+                        ?>
                     </select>
                 </div>
                 <div class="form-group col-md-3">
@@ -128,18 +146,14 @@
                 </div>
                 <form class="form-funcao" method="POST" action="">
                     <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-2">
                             <label for="inputCodigo">Código</label>
                             <input type="type" class="form-control form-control-sm" name="codigo" id="codigo" placeholder="">
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-2">
                             <label for="inputCodigo">Sigle</label>
                             <input type="type" class="form-control form-control-sm" name="sigla" id="sigla" placeholder="">
                         </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group col-md-8">
                             <label for="inputDescricao">Descrição</label>
                             <input type="type" class="form-control form-control-sm" name="descricao" id="descricao" placeholder="">
@@ -156,22 +170,26 @@
 </div>
 
 <script>
-        $(function() {
+    $(function() {
 
-            $('.form-funcao').submit(function() {
+        $('.form-funcao').submit(function() {
 
-                $.ajax({
+            $.ajax({
 
-                    url: '../ajax/funcao.php', // URL para onde vai ser enviados
-                    type: 'POST', // Formado de envio
-                    data: $('.form-funcao').serialize(), // class do formulario 
-                    success: function(data) { // caso der certo vai aparecer os dados dentro de uma div
-                        $('.recebidos').html('<div class="alert alert-success alert-dismissible fade show" role="alert">Registro salvo com sucesso  <button type="button" class="close" data-dismiss="alert" aria-label="Close">    <span aria-hidden="true">&times;</span>  </button></div>'); // imprimindo os dados do formulario na div
-                        //document.location.reload(true);
-                    }
-                });
-                return false;
+                url: '../ajax/funcao.php', // URL para onde vai ser enviados
+                type: 'POST', // Formado de envio
+                data: $('.form-funcao').serialize(), // class do formulario 
+                success: function(data) { // caso der certo vai aparecer os dados dentro de uma div
+                    $('.recebidos').html('<div class="alert alert-success alert-dismissible fade show" role="alert" id="msg">Registro salvo com sucesso  <button type="button" class="close" data-dismiss="alert" aria-label="Close">    <span aria-hidden="true">&times;</span>  </button></div>'); // imprimindo os dados do formulario na div
+                    //document.location.reload(true);
+                    setTimeout(function() {
+
+                        $("#msg").alert('close');
+                    }, 3000);
+                }
             });
+            return false;
         });
-    </script>
+    });
+</script>
 <!-- **************************************************************************************************** -->
