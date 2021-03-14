@@ -1,10 +1,40 @@
-<?php 
+<?php
 
-    include_once "../class/classGrupoUsuario.php";
-    include_once "../dao/GrupoUsuarioDAO.php";
+include_once "../class/classGrupoUsuario.php";
+include_once "../dao/GrupoUsuarioDAO.php";
+include_once "../class/classUsuario.php";
+include_once "../dao/UsuarioDao.php";
 
-   $GrupoUsuario = new ClassGrupoUsuarioDAO();
-   $dado =  $GrupoUsuario->selectGrupoUsuario();
+session_start();
+
+$GrupoUsuario = new ClassGrupoUsuarioDAO();
+$dado =  $GrupoUsuario->selectGrupoUsuario();
+/*************************************************************** */
+
+
+
+if (isset($_POST['usuario'])) {
+
+    $A = $_POST['senha'];
+    $B = $_POST['confsenha'];
+    if ($A != $B) {
+        $_SESSION['danger'] = '<div class="alert alert-danger alert-dismissible fade show" role="alert" id="danger">Senha diferente <button type="button" class="close" data-dismiss="alert" aria-label="Close">    <span aria-hidden="true">&times;</span>  </button></div>';
+    } else {
+
+        $ClassUsuario = new ClassUsuario();
+        $ClassUsuario->setNome($_POST['nome']);
+        $ClassUsuario->setEmail($_POST['email']);
+        $ClassUsuario->setFoto($_POST['foto']);
+        $ClassUsuario->setSenha($_POST['senha']);
+        $ClassUsuario->setFuncao($_POST['funcao']);
+        $ClassUsuario->setData($_POST['data']);
+        $ClassUsuario->setOption($_POST['option']);
+
+        $usuario = new UsuarioDao();
+        $usuario->insertUsuario($ClassUsuario);
+    }
+}
+
 
 ?>
 
@@ -31,8 +61,35 @@
             </button>
 
         </div>
+        <div>
+            <?php
+            if (!empty($_SESSION['danger'])) {
 
-        <form action="" method="$_POST">
+                echo $_SESSION['danger'];
+                $_SESSION['danger'] = '';
+            }
+            if (!empty($_SESSION['MSG'])) {
+            ?>
+                <script>
+                    $(document).ready(function() {
+
+                        setTimeout(function() {
+
+                            $("#msg").alert('close');
+                        }, 3000);
+
+                    });
+                </script>
+            <?php
+                echo $_SESSION['MSG'];
+                $_SESSION['MSG'] = '';
+            }
+
+            ?>
+
+        </div>
+
+        <form action="" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="inputNome" id="nome">Nome Completo</label>
@@ -53,21 +110,20 @@
                     <input type="password" class="form-control form-control-sm" name="senha" id="senha" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="inputNovasenha" id="novasenha">Confirmar senha</label>
-                    <input type="password" class="form-control form-control-sm" name="novasenha" id="novasenha" placeholder="">
+                    <label for="inputNovasenha" id="confsenha">Confirmar senha</label>
+                    <input type="password" class="form-control form-control-sm" name="confsenha" id="confsenha" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputState" id="funcao">Função</label>
                     <select id="funcao" name="funcao" class="form-control form-control-sm">
                         <option selected></option>
                         <?php
-                        
-                            foreach($dado as $dados){
+                        foreach ($dado as $dados) {
 
-                                echo " <option value='".$dados->getId()."'>".$dados->getSigla()." - ".$dados->getDesc()." </option>";
-                            }
-                        
-                        
+                            echo "<option value=' . $dados->getId() . '>" . $dados->getDesc() . "</option>";
+                        }
+
+
                         ?>
                     </select>
                 </div>
@@ -121,7 +177,7 @@
         <p class="text-white bg-secondary text-center">APLICAÇÃO</p>
         <div class="form-row">
             <div class="text-right">
-                <input class="btn btn-success" type="submit" value="Salvar registro">
+                <input class="btn btn-success" name="usuario" type="submit" value="Salvar registro">
             </div>
         </div>
 
