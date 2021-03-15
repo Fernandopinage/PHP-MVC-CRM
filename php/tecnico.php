@@ -2,17 +2,17 @@
 
 if (isset($_POST['agendamento'])) {
 
-    $_POST[''];
-    $_POST[''];
-    $_POST[''];
-    $_POST[''];
-    $_POST[''];
-    $_POST[''];
-    $_POST[''];
-    $_POST[''];
-    $_POST[''];
-    $_POST[''];
-    $_POST[''];
+    $_POST['cliente'];
+    $_POST['data'];
+    $_POST['resumo'];
+    $_POST['contrato'];
+    $_POST['horainicio'];
+    $_POST['horafim'];
+    $_POST['duracao'];
+    $_POST['evento'];
+    $_POST['projeto'];
+    $_POST['contato'];
+    $_POST['detalhe'];
 }
 
 
@@ -94,7 +94,7 @@ if (isset($_POST['agendamento'])) {
 
                 <div class="form-group col-md-4">
                     <label for="projeto">Projeto</label>
-                    <select id="projeto" class="form-control">
+                    <select id="projeto" name="projeto" class="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>
@@ -110,7 +110,7 @@ if (isset($_POST['agendamento'])) {
 
                 <div class="form-group col-md-12">
                     <label for="detalhe">Detalhe</label>
-                    <textarea class="form-control" id="detalhe" rows="6"></textarea>
+                    <textarea class="form-control" name="detalhe" id="detalhe" rows="6"></textarea>
                 </div>
 
             </div>
