@@ -1,9 +1,29 @@
+<?php
+
+if (isset($_POST['agendamento'])) {
+
+    $_POST[''];
+    $_POST[''];
+    $_POST[''];
+    $_POST[''];
+    $_POST[''];
+    $_POST[''];
+    $_POST[''];
+    $_POST[''];
+    $_POST[''];
+    $_POST[''];
+    $_POST[''];
+}
+
+
+?>
+
 
 <br><br>
 <div class="card" style="margin-bottom: 20px;">
-  <div class="navbar navbar-dark bg-dark navbar-expand-lg" style=" color:#fff; ">
-    AGENDAMENTO TÉCNICO
-  </div>
+    <div class="navbar navbar-dark bg-dark navbar-expand-lg" style=" color:#fff; ">
+        AGENDAMENTO TÉCNICO
+    </div>
 </div>
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -19,8 +39,8 @@
 
             <div class="form-row">
                 <div class="form-group col-md-5">
-                    <label for="inputState">Cliente Agendado</label>
-                    <select id="inputState" class="form-control">
+                    <label for="cliente">Cliente Agendado</label>
+                    <select id="cliente" name="cliente" class="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>
@@ -28,38 +48,43 @@
                 </div>
 
                 <div class="form-group col-md-2">
-                    <label for="inputEmail4">Data Agendamento</label>
-                    <input type="date" class="form-control" name="email" id="nome" placeholder="" >
+                    <label for="data">Data Agendamento</label>
+                    <input type="date" class="form-control" name="data" id="data" placeholder="">
                 </div>
                 <div class="form-group col-md-5">
-                    <label for="inputEmail4">Resumo</label>
-                    <input type="text" class="form-control" name="email" id="nome" placeholder="" >
+                    <label for="resumo">Resumo</label>
+                    <input type="text" class="form-control" name="resumo" id="resumo" placeholder="">
                 </div>
             </div>
 
             <div class="form-row">
 
-                <div class="form-group col-md-2">
-                    <label for="inputEmail4">Evento</label>
-                    <input type="text" class="form-control" name="email" id="nome" placeholder="" >
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="inputEmail4">Hora Inicio</label>
-                    <input type="time" class="form-control" name="email" id="nome" placeholder="" >
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="inputEmail4">Hora Final</label>
-                    <input type="time" class="form-control" name="email" id="nome" placeholder="" >
-                </div>
-                <div class="form-group col-md-2">
-                    <label for="inputEmail4">Duração</label>
-                    <input type="time" class="form-control" name="email" id="nome" placeholder="" >
-                </div>
                 <div class="form-group col-md-4">
-                    <label for="inputState">Nº Contrato</label>
-                    <select id="inputState" class="form-control">
+                    <label for="contrato">Nº Contrato</label>
+                    <select id="contrato" name="contrato" class="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label for="horainicio">Hora Inicio</label>
+                    <input type="time" class="form-control" name="horainicio" id="horainicio" placeholder="">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="horafim">Hora Final</label>
+                    <input type="time" class="form-control" name="horafim" id="horafim" placeholder="">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="duracao">Duração</label>
+                    <input type="time" class="form-control" name="duracao" id="duracao" placeholder="">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="cliente">Evento</label>
+                    <select id="cliente" name="evento" class="form-control">
+                        <option selected value="com hora">Com Hora</option>
+                        <option value="sem hora">Sem Hora</option>
                     </select>
 
                 </div>
@@ -68,66 +93,40 @@
             <div class="form-row">
 
                 <div class="form-group col-md-4">
-                    <label for="inputState">Projeto</label>
-                    <select id="inputState" class="form-control">
+                    <label for="projeto">Projeto</label>
+                    <select id="projeto" class="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>
 
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="inputEmail4">Contato do Cliente</label>
-                    <input type="email" class="form-control" name="email" id="nome" placeholder="" >
+                    <label for="contato">Contato do Cliente</label>
+                    <input type="type" class="form-control" name="contato" id="contato" placeholder="">
                 </div>
 
             </div>
             <div class="form-row">
 
                 <div class="form-group col-md-12">
-                <label for="inputEmail4">Resumo</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                    <label for="detalhe">Detalhe</label>
+                    <textarea class="form-control" id="detalhe" rows="6"></textarea>
                 </div>
 
             </div>
         </div>
-   
-        
-
-
+        <!---*******************************************************************************************************************-->
         <div class="tab-pane fade" id="nav-participante" role="tabpanel" aria-labelledby="nav-participante-tab">
 
             <div class="input-group mb-3 form-group col-md-3">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="btn-group-toggle" data-toggle="buttons">
-                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-                        ♣
-                    </button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="text-right">
+                    <input class="btn btn-success" name="agendamento" type="submit" value="Salvar Agendamento">
                 </div>
             </div>
 
-    </div>
-    
-  
+        </div>
+
+
 
 
 </form>

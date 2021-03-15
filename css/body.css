@@ -6,7 +6,7 @@
     margin-bottom: -20px;
     color: #FF7F00;
 }
-
+/*
 input{
 
     text-transform: uppercase;
@@ -18,11 +18,11 @@ option{
     text-transform: uppercase;
 }
 
-.fc-toolbar-title{                  /*  Titulo do calendario  */
+.fc-toolbar-title{                 
 
     text-transform: uppercase;
 }
-
+*/
 ::-webkit-input-placeholder {
     text-transform: initial;
  }
