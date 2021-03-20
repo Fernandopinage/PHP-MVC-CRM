@@ -2,6 +2,7 @@
 
     class ClassParceiro{
 
+        private $id = null;
         private $pessoa = null;
         private $opcao = null;
         private $nome = null;
@@ -38,6 +39,15 @@
         private $municipal = null;
         private $suframa = null;
         private $orgao = null;
+
+
+        public function setID($id){
+            $this->id = $id;
+        }
+        public function getID(){
+
+            return $this->id;
+        }
 
         public function setPessoa($pessoa){
             $this->pessoa = $pessoa;

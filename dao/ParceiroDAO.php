@@ -165,6 +165,26 @@ include_once "../class/classParceiro.php";
 
         }
 
+        public function contratoParceiro(){
+
+            $sql = "SELECT * from `tab_cad` ";
+
+            $select = $this->con->prepare($sql);
+            $select->execute();
+            $array = array();
+            while($row = $select->fetch(PDO::FETCH_ASSOC)){
+
+                $classParceiro = new ClassParceiro();
+
+                $classParceiro->setID($row['TAB_CAD_ID']);
+                $classParceiro->setNome($row['TAB_CAD_NOME']);
+
+                $array[] = $classParceiro;
+            }
+               
+                return $array;
+
+        }
 
 
     }

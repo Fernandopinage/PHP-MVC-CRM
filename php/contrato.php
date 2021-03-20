@@ -1,3 +1,16 @@
+<?php
+
+include_once '../function/function.php';
+include_once '../class/classParceiro.php';
+include_once '../dao/ParceiroDAO.php';
+
+$numOS = new Função();
+
+    $ClassParceiro = new ParceiroDao();
+    $dado = $ClassParceiro->contratoParceiro();
+
+?>
+
 <br><br>
 <div class="card" style="margin-bottom: 20px;">
     <div class="navbar navbar-dark bg-dark navbar-expand-lg" style=" color:#fff; ">
@@ -7,7 +20,7 @@
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-contrato-tab" data-toggle="tab" href="#nav-contrato" role="tab" aria-controls="nav-contrato" aria-selected="true" style="color: #FF7F00;">Contrato</a>
-        <a class="nav-item nav-link" id="nav-projeto-tab" data-toggle="tab" href="#nav-projeto" role="tab" aria-controls="nav-projeto" aria-selected="true" style="color: #FF7F00;">Projeto</a>
+        <a class="nav-item nav-link" id="nav-projeto-tab" data-toggle="tab" href="#nav-projeto" name="projection" role="tab" aria-controls="nav-projeto" aria-selected="true" style="color: #FF7F00;">Projeto</a>
     </div>
 </nav>
 <br>
@@ -19,7 +32,7 @@
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="projeto" >
+                        <input class="form-check-input" type="checkbox" value="" id="projeto">
                         <label class="form-check-label" for="flexCheckDefault">
                             Projeto
                         </label>
@@ -29,7 +42,7 @@
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Número do Contrato</label>
-                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="" readonly>
+                    <input type="email" class="form-control form-control-sm" name="email" id="nome" value="<?php $numOS->NumOS(); ?>" placeholder="" readonly>
 
                 </div>
 
@@ -38,10 +51,15 @@
                 <div class="form-group col-md-5">
                     <label for="inputState">Cliente Agendado</label>
                     <select id="inputState" class="form-control form-control-sm">
-                        <option selected> CLIENTE 01</option>
-                        <option> CLIENTE 02</option>
-                        <option> CLIENTE 03</option>
-                        <option> CLIENTE 04</option>
+                        <option selected> </option>
+                        <?php
+                        foreach ($dado as $dados) {
+
+                            echo "<option value=' ". $dados->getID() ." '>" . $dados->getNome() . "</option>";
+                        }
+
+
+                        ?>
                     </select>
 
                 </div>
@@ -111,6 +129,7 @@
 
         <!----------------------------------------- PROJETO ---------------------------------------->
 
+
         <div class="tab-pane fade" id="nav-projeto" name="tabprojeto" role="tabpanel" aria-labelledby="nav-projeto-tab">
 
             <div class="form-row">
@@ -133,26 +152,26 @@
             </div>
 
 
+
         </div>
         <!----------------------------------------- -------------------------------------------------->
 </form>
 </div>
 <script>
+    $(document).ready(function() {
 
-    $("#projeto").click(function() {
+        $("#projeto").change(function() {
+            if (projeto.checked) {
 
+                var a = document.getElementById('nav-projeto-tab').style.display = "block"
+                console.log(a)
+            } else {
 
-        if (projeto.checked) {
-            console.log("S");
-          
-        } else {
+                var b = document.getElementById('nav-projeto-tab').style.display = "none"
+                console.log(b)
+            }
 
-            console.log("N");
-            
-        }
+        });
 
     });
-
-  
-
 </script>
