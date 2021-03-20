@@ -14,39 +14,43 @@ if (isset($_POST['cadastrar'])) {
     $ClassParceiro->setPessoa($_POST['pessoa']);
     $ClassParceiro->setOpcao($_POST['option']);
     $ClassParceiro->setNome($_POST['nome']);
-    $ClassParceiro->setFantasia($_POST['fantasia']);
+    $ClassParceiro->setCpf($_POST['cpf']);
+    $ClassParceiro->setDatanasc($_POST['datanasc']);
     $ClassParceiro->setEmail($_POST['email']);
     $ClassParceiro->setNacionalidade($_POST['nacionalidade']);
-    $ClassParceiro->setCpf($_POST['cpf']);
-    $ClassParceiro->setRg($_POST['rg']);
-    $ClassParceiro->setEstadual($_POST['estadual']);
-    $ClassParceiro->setMunicipal($_POST['municipal']);
-    $ClassParceiro->setTelefone($_POST['telefone']);
+    $ClassParceiro->setFantasia($_POST['fantasia']);
     $ClassParceiro->setNacionalidade($_POST['naturalidade']);
-    $ClassParceiro->setSuframa($_POST['suframa']);
-    $ClassParceiro->setCnh($_POST['cnh']);
+    $ClassParceiro->setTelefone($_POST['telefone']);
+    $ClassParceiro->setCelular($_POST['celular']);
     $ClassParceiro->setAtividade($_POST['atividade']);
-    $ClassParceiro->setCep($_POST['cep']);
-    $ClassParceiro->setUf($_POST['uf']);
-    $ClassParceiro->setNumero($_POST['numero']);
-    $ClassParceiro->setMunicipio($_POST['municipio']);
-    $ClassParceiro->setEndereco($_POST['endereco']);
-    $ClassParceiro->setComplemento($_POST['complemento']);
     $ClassParceiro->setCep2($_POST['cep2']);
     $ClassParceiro->setUf2($_POST['uf2']);
     $ClassParceiro->setNumero2($_POST['numero2']);
     $ClassParceiro->setMunicipio2($_POST['municipio2']);
     $ClassParceiro->setEndereco2($_POST['endereco2']);
     $ClassParceiro->setComplemento2($_POST['complemento2']);
+    $ClassParceiro->setCep($_POST['cep']);
+    $ClassParceiro->setUf($_POST['uf']);
+    $ClassParceiro->setNumero($_POST['numero']);
+    $ClassParceiro->setMunicipio($_POST['municipio']);
+    $ClassParceiro->setEndereco($_POST['endereco']);
+    $ClassParceiro->setComplemento($_POST['complemento']);
     $ClassParceiro->setOrgao($_POST['orgao']);
     $ClassParceiro->setUfexp($_POST['ufexp']);
     $ClassParceiro->setDataexp($_POST['dataexp']);
     $ClassParceiro->setInss($_POST['inss']);
     $ClassParceiro->setPiss($_POST['piss']);
 
+    if ($_POST['pessoa'] != 'J') {
+        $ClassParceiro->setCnh($_POST['cnh']);
+        $ClassParceiro->setRg($_POST['rg']);
+    }
+    $ClassParceiro->setSuframa($_POST['suframa']);
+    $ClassParceiro->setEstadual($_POST['estadual']);
+    $ClassParceiro->setMunicipal($_POST['municipal']);
+
     $Parceiro = new ParceiroDao();
     $Parceiro->insert($ClassParceiro);
-   
 }
 
 ?>
@@ -74,10 +78,10 @@ if (isset($_POST['cadastrar'])) {
 
         <!-- ******************************* Cadastro ***************************************************-->
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <p class="text-white bg-secondary text-center">DADOS PESSOAIS</p>
+            <p class="text-white bg-secondary text-center">DADOS PESSOAIS</p>
             <div class="form-row">
                 <div class="form-group col-md-4">
-                <label for="inputEmail4" id="nome">Tipo Pessoa</label>
+                    <label for="inputEmail4" id="pessoa">Tipo Pessoa</label>
                     <div class="form-check">
                         <input class="pessoa form-check-input" type="radio" name="pessoa" id="opt" value="J" CHECKED>
                         <label class="form-check-label" for="pessoa" id="juridica">
@@ -92,7 +96,7 @@ if (isset($_POST['cadastrar'])) {
                     </div>
                 </div>
                 <div class="form-group col-md-4">
-                <label for="inputEmail4" id="nome">Tipo Cadastro</label>
+                    <label for="inputEmail4" id="option">Tipo Cadastro</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="option" id="exampleRadios1" value="fornecedor">
                         <label class="form-check-label" for="exampleRadios1">
@@ -106,7 +110,7 @@ if (isset($_POST['cadastrar'])) {
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="option" id="exampleRadios2" value="ambos">
+                        <input class="form-check-input" type="radio" name="option" id="exampleRadios2" value="ambos" CHECKED>
                         <label class="form-check-label" for="exampleRadios2">
                             Ambos For/CLi
                         </label>
@@ -121,21 +125,21 @@ if (isset($_POST['cadastrar'])) {
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4" id="CPF-CNPJ">CPF</label>
-                    <input type="text" class="form-control form-control-sm" name="cpf" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cpf" id="cpf" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4" id="nascimento-label">Data Nascimento</label>
-                    <input type="date" class="form-control form-control-sm" name="datanasc" id="nome" placeholder="">
+                    <input type="date" class="form-control form-control-sm" name="datanasc" id="datanasc" placeholder="">
                 </div>
 
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control form-control-sm" name="email" id="nome" placeholder="">
+                    <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="inputEmail4" id="">Nacionalidade</label>
+                    <label for="inputEmail4" id="nacionalidade">Nacionalidade</label>
                     <input type="text" class="form-control form-control-sm" name="nacionalidade" id="nacionalidade" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
@@ -147,15 +151,15 @@ if (isset($_POST['cadastrar'])) {
 
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Naturalidade</label>
-                    <input type="text" class="form-control form-control-sm" name="naturalidade" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="naturalidade" id="naturalidade" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Telefone</label>
-                    <input type="text" class="form-control form-control-sm" name="telefone" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="telefone" id="telefone" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Celular</label>
-                    <input type="text" class="form-control form-control-sm" name="celular" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="celular" id="celular" placeholder="">
                 </div>
 
             </div>
@@ -164,7 +168,7 @@ if (isset($_POST['cadastrar'])) {
 
 
             </div>
-            
+
             <div class="div-juridico">
 
 
@@ -176,40 +180,40 @@ if (isset($_POST['cadastrar'])) {
 
         <!-- *************************************** Ramo de Atividade *************************************************** -->
         <div class="tab-pane fade" id="nav-atividade" role="tabpanel" aria-labelledby="nav-atividade-tab">
-        <p class="text-white bg-secondary text-center">RAMO DE ATIVIDADE</p>
+            <p class="text-white bg-secondary text-center">RAMO DE ATIVIDADE</p>
             <div class="form-row">
 
                 <div class="form-group col-md-12">
                     <label for="inputEmail4">Ramo de Atividade</label>
-                    <input type="text" class="form-control form-control-sm" name="atividade" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="atividade" id="atividade" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">CEP</label>
-                    <input type="text" class="form-control form-control-sm" name="cep2" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cep2" id="cep2" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="text" class="form-control form-control-sm" name="uf2" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="uf2" id="uf2" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">Nº</label>
-                    <input type="text" class="form-control form-control-sm" name="numero2" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="numero2" id="numero2" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Municipio</label>
-                    <input type="text" class="form-control form-control-sm" name="municipio2" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="municipio2" id="municipio2" placeholder="">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Endereço</label>
-                    <input type="text" class="form-control form-control-sm" name="endereco2" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="endereco2" id="endereco2" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Bairro</label>
-                    <input type="text" class="form-control form-control-sm" name="bairro2" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="bairro2" id="bairro2" placeholder="">
                 </div>
                 <div class="form-group col-md-8">
                     <label for="inputEmail4">Complemento</label>
-                    <input type="text" class="form-control form-control-sm" name="complemento2" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="complemento2" id="complemento2" placeholder="">
                 </div>
 
 
@@ -220,36 +224,36 @@ if (isset($_POST['cadastrar'])) {
 
         <!-- *************************************** Endereço *************************************************** -->
         <div class="tab-pane fade" id="nav-endereco" role="tabpanel" aria-labelledby="nav-endereco-tab">
-        <p class="text-white bg-secondary text-center ">ENDEREÇO</p>
+            <p class="text-white bg-secondary text-center ">ENDEREÇO</p>
             <div class="form-row">
 
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">CEP</label>
-                    <input type="text" class="form-control form-control-sm" name="cep" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cep" id="cep" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF</label>
-                    <input type="text" class="form-control form-control-sm" name="uf" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="uf" id="uf" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">Nº</label>
-                    <input type="text" class="form-control form-control-sm" name="numero" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="numero" id="numero" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Municipio</label>
-                    <input type="text" class="form-control form-control-sm" name="municipio" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="municipio" id="municipio" placeholder="">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputEmail4">Endereço</label>
-                    <input type="text" class="form-control form-control-sm" name="endereco" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="endereco" id="endereco" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Bairro</label>
-                    <input type="text" class="form-control form-control-sm" name="bairro" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="bairro" id="bairro" placeholder="">
                 </div>
                 <div class="form-group col-md-8">
                     <label for="inputEmail4">Complemento</label>
-                    <input type="text" class="form-control form-control-sm" name="complemento" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="complemento" id="complemento" placeholder="">
                 </div>
 
 
@@ -260,28 +264,28 @@ if (isset($_POST['cadastrar'])) {
 
         <!-- ****************************************** Outros ************************************************** -->
         <div class="tab-pane fade" id="nav-outro" role="tabpanel" aria-labelledby="nav-outro-tab">
-        <p class="text-white bg-secondary text-center">DOCUMENTO</p>
+            <p class="text-white bg-secondary text-center">DOCUMENTO</p>
             <div class="form-row">
 
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Órgão Expedidor</label>
-                    <input type="text" class="form-control form-control-sm" name="orgao" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="orgao" id="orgao" placeholder="">
                 </div>
                 <div class="form-group col-md-1">
                     <label for="inputEmail4">UF exp</label>
-                    <input type="text" class="form-control form-control-sm" name="ufexp" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="ufexp" id="ufexp" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Data Expedição</label>
-                    <input type="date" class="form-control form-control-sm" name="dataexp" id="nome" placeholder="">
+                    <input type="date" class="form-control form-control-sm" name="dataexp" id="dataexp" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Iscrição INSS/CEI</label>
-                    <input type="text" class="form-control form-control-sm" name="inss" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="inss" id="inss" placeholder="">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">Nº PISS</label>
-                    <input type="text" class="form-control form-control-sm" name="piss" id="nome" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="piss" id="piss" placeholder="">
                 </div>
                 <input type="submit" class="btn btn-success" value="cadastra dadados" name="cadastrar">
 
@@ -291,40 +295,37 @@ if (isset($_POST['cadastrar'])) {
         </div>
         <!-- **************************************************************************************************** -->
         <script>
-             
+            var opt = document.getElementById('opt').value;
 
-                var opt = document.getElementById('opt').value;
-                
-                if(opt === 'F'){
-                    $('#nome').html('<label for="inputEmail4"  id="nome">Nome Completo</label>');
-                        $('#CPF-CNPJ').html('<label for="inputEmail4"  id="CPF-CNPJ">CPF</label>');
-                        $('#nascimento-label').html('<label for="inputEmail4"  id="CPF-CNPJ">Data Nascimento</label>');
-                        $('.div-juritico').hide(); /** */
-                        $('.div-fisico').show();
-                        $('.div-juridico').hide();
-                        $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder=""></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder=""></div></div>');
-                        $('#fantasia-label').hide();
-                        $('#fantasia').hide();
+            if (opt === 'F') {
+                $('#nome').html('<label for="inputEmail4"  id="nome">Nome Completo</label>');
+                $('#CPF-CNPJ').html('<label for="inputEmail4"  id="CPF-CNPJ">CPF</label>');
+                $('#nascimento-label').html('<label for="inputEmail4"  id="CPF-CNPJ">Data Nascimento</label>');
+                $('.div-juritico').hide(); /** */
+                $('.div-fisico').show();
+                $('.div-juridico').hide();
+                $('.div-fisico').html('<div class="form-row"> <div class="form-group col-md-4"> <label for="inputEmail4">RG</label> <input type="text" class="form-control form-control-sm" name="rg" id="rg" placeholder=""></div><div class="form-group col-md-4"><label for="inputEmail4">CNH</label><input type="text" class="form-control form-control-sm" name="cnh" id="nome" placeholder=""></div></div>');
+                $('#fantasia-label').hide();
+                $('#fantasia').hide();
 
-                }else{
+            } else {
 
-                    $('#nome').html('<label for="inputEmail4" id="nome">Razão Social</label>');
-                        $('#CPF-CNPJ').html('<label for="inputEmail4"  id="CPF-CNPJ">CNPJ</label>');
-                        $('#nascimento-label').html('<label for="inputEmail4"  id="CPF-CNPJ">Data Função</label>');
-                        $('#fantasia').show();
-                        $('#fantasia-label').show();
-                        $('.div-juridico').show();
-                        $('.div-fisico').hide();
-                        $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="text" class="form-control form-control-sm" name="suframa" id="nome" placeholder=""></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="text" class="form-control form-control-sm" name="estadual" id="nome" placeholder=""></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="text" class="form-control form-control-sm" name="municipal" id="nome" placeholder=""></div></div>');
+                $('#nome').html('<label for="inputEmail4" id="nome">Razão Social</label>');
+                $('#CPF-CNPJ').html('<label for="inputEmail4"  id="CPF-CNPJ">CNPJ</label>');
+                $('#nascimento-label').html('<label for="inputEmail4"  id="CPF-CNPJ">Data Função</label>');
+                $('#fantasia').show();
+                $('#fantasia-label').show();
+                $('.div-juridico').show();
+                $('.div-fisico').hide();
+                $('.div-juridico').html('<div class="form-row"><div class="form-group col-md-2"> <label for="inputEmail4">Suframa</label> <input type="text" class="form-control form-control-sm" name="suframa" id="suframa" placeholder=""></div><div class="form-group col-md-4"><label for="inputEmail4">Incrição Estadual</label> <input type="text" class="form-control form-control-sm" name="estadual" id="nome" placeholder=""></div><div class="form-group col-md-4"> <label for="inputEmail4">Incrição Municipal</label> <input type="text" class="form-control form-control-sm" name="municipal" id="nome" placeholder=""></div></div>');
 
-                }
-            
+            }
         </script>
 
 
         <script>
             $(document).ready(function() {
-                
+
                 $(".pessoa").change(function() {
                     if ($(this).val() === 'F') {
                         $('#nome').html('<label for="inputEmail4"  id="nome">Nome Completo</label>');
