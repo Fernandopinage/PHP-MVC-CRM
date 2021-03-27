@@ -224,7 +224,7 @@ if (isset($_POST['salvarcontrato'])) {
 
         });
 
-    });
+   
 </script>
 
 <script>
