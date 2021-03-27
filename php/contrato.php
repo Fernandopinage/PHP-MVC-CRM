@@ -242,7 +242,6 @@ $(document).ready(function() {
 
         });
 
-<<<<<<< HEAD
     });
 </script>
 
@@ -255,7 +254,4 @@ $("#cliente").change(function(){
 });
 
 
-=======
-  
->>>>>>> 745dfd00fa972700aa8ec8c30a582ba4b5df5633
 </script>
