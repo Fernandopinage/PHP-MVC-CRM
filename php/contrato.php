@@ -209,24 +209,6 @@ if (isset($_POST['salvarcontrato'])) {
     });
 </script>
 <script>
-
-$(document).ready(function() {
-
-    var projeto = document.getElementById('projeto');
-    
-    if(projeto.checked){
-        var b = document.getElementById('nav-projeto-tab').style.display = "none"
-        console.log(b)
-    }else{
-        var a = document.getElementById('nav-projeto-tab').style.display = "block"
-        console.log(a)
-    }
-});
-
-
-</script>
-
-<script>
     
 
         $("#projeto").change(function() {
