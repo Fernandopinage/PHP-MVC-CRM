@@ -44,6 +44,26 @@ Class ContratoDao extends Dao{
 
     }
 
+    public function AgendaTecnicoContrato($id){
+
+        $sql = "SELECT CRM_CTR_NUMERO, CRM_CTR_DESCRICAO from CRM_CTR where CRM_CTR_TIPOCTR='$id'";
+        $select = $this->con->prepare($sql);
+        $select->execute();
+        $array = array();
+        while ($row = $select->fetch(PDO::FETCH_ASSOC)) {
+        
+            $ClassContrato = new ClassContrato();
+        
+            $ClassContrato->setNumerocontrato($row['CRM_CTR_NUMERO']);
+            $ClassContrato->setDescricao($row['CRM_CTR_DESCRICAO']);
+        
+            $array[] = $ClassContrato;
+        }
+        
+        return $array;
+
+    }
+
    
 }
 

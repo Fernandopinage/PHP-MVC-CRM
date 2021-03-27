@@ -156,6 +156,7 @@ $("#cliente").change(function(){
 
     var a = document.getElementById('cliente').value
     console.log(a)
+    window.location = "../ajax/contrato.php/?id="+a;
 });
 
 </script>
