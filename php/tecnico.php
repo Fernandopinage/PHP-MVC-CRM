@@ -55,7 +55,7 @@ if (isset($_POST['agendamento'])) {
                         <?php
                         foreach ($cliente as $clientes) {
 
-                            echo "<option value=' . $clientes->getID() . '>" . $clientes->getNome() . "</option>";
+                            echo "<option value='".$clientes->getID()."'>" . $clientes->getNome() . "</option>";
                         }
 
 
@@ -149,3 +149,13 @@ if (isset($_POST['agendamento'])) {
 
 </form>
 </div>
+
+<script>
+
+$("#cliente").change(function(){
+
+    var a = document.getElementById('cliente').value
+    console.log(a)
+});
+
+</script>

@@ -226,14 +226,3 @@ if (isset($_POST['salvarcontrato'])) {
 
    
 </script>
-
-<script>
-
-$("#cliente").change(function(){
-
-    var cliente = document.getElementById('cliente').value;
-    console.log(cliente)
-});
-
-
-</script>
