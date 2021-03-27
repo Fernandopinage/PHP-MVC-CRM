@@ -43,6 +43,8 @@ Class ContratoDao extends Dao{
         $insert->execute();
 
     }
+
+   
 }
 
 

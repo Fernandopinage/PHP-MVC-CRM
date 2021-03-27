@@ -15,7 +15,7 @@ $dado = $ClassParceiro->contratoParceiro();
 
 
 if (isset($_POST['salvarcontrato'])) {
-    
+
     $ClassContrato = new ClassContrato();
     if (!empty($_POST['projeto'])) {
 
@@ -62,7 +62,7 @@ if (isset($_POST['salvarcontrato'])) {
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="projeto" value="S" id="projeto">
+                        <input class="form-check-input" type="checkbox" name="projeto" id="projeto">
                         <label class="form-check-label" for="flexCheckDefault">
                             Projeto
                         </label>
@@ -156,7 +156,7 @@ if (isset($_POST['salvarcontrato'])) {
 
 
         </div>
-      
+
         <!----------------------------------------- PROJETO ---------------------------------------->
 
 
@@ -193,6 +193,21 @@ if (isset($_POST['salvarcontrato'])) {
         <!----------------------------------------- -------------------------------------------------->
 </form>
 </div>
+
+<script>
+    $(document).ready(function() {
+
+        var elemento = document.getElementById('projeto').value;
+
+
+        if (elemento != elemento.checked) {
+            var b = document.getElementById('nav-projeto-tab').style.display = "none"
+        } else {
+            var b = document.getElementById('nav-projeto-tab').style.display = "block"
+        }
+
+    });
+</script>
 <script>
     $(document).ready(function() {
 
@@ -200,14 +215,25 @@ if (isset($_POST['salvarcontrato'])) {
             if (projeto.checked) {
 
                 var a = document.getElementById('nav-projeto-tab').style.display = "block"
-                console.log(a)
+
             } else {
 
                 var b = document.getElementById('nav-projeto-tab').style.display = "none"
-                console.log(b)
+
             }
 
         });
 
     });
+</script>
+
+<script>
+
+$("#cliente").change(function(){
+
+    var cliente = document.getElementById('cliente').value;
+    console.log(cliente)
+});
+
+
 </script>

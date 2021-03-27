@@ -1,5 +1,15 @@
 <?php
 
+include_once "../class/classParceiro.php";
+include_once "../dao/ParceiroDAO.php";
+
+
+$cliente = new ParceiroDao();
+$cliente = $cliente->contratoParceiro();
+
+
+
+
 if (isset($_POST['agendamento'])) {
 
     $_POST['cliente'];
@@ -41,8 +51,16 @@ if (isset($_POST['agendamento'])) {
                 <div class="form-group col-md-5">
                     <label for="cliente">Cliente Agendado</label>
                     <select id="cliente" name="cliente" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                        <option selected></option>
+                        <?php
+                        foreach ($cliente as $clientes) {
+
+                            echo "<option value=' . $clientes->getID() . '>" . $clientes->getNome() . "</option>";
+                        }
+
+
+                        ?>
+
                     </select>
 
                 </div>
