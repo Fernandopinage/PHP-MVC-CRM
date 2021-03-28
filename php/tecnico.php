@@ -55,7 +55,7 @@ if (isset($_POST['agendamento'])) {
                         <?php
                         foreach ($cliente as $clientes) {
 
-                            echo "<option value='".$clientes->getID()."'>" . $clientes->getNome() . "</option>";
+                            echo "<option value='" . $clientes->getID() . "'>" . $clientes->getNome() . "</option>";
                         }
 
 
@@ -80,8 +80,8 @@ if (isset($_POST['agendamento'])) {
                 <div class="form-group col-md-4">
                     <label for="contrato">Nº Contrato</label>
                     <select id="contrato" name="contrato" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                        <option selected></option>
+                     
                     </select>
 
                 </div>
@@ -144,19 +144,34 @@ if (isset($_POST['agendamento'])) {
 
         </div>
 
-
+                        
 
 
 </form>
 </div>
+<!-- Função responsavel por preencher o campo do contrato de acordo com a consulta do cliente -->
 
 <script>
+    $("#cliente").change(function() {
 
-$("#cliente").change(function(){
+        var id = document.getElementById('cliente').value
+        
+        $('#contrato').html('');
 
-    var a = document.getElementById('cliente').value
-    console.log(a)
-    window.location = "../ajax/contrato.php/?id="+a;
-});
+        $.ajax({
 
+            type: 'POST', // Formado de envio
+            url: '../ajax/contrato.php', // URL para onde vai ser enviados
+            data: {id:id},
+            success: function(data){
+                $('#contrato').html(data);
+            }
+            
+
+        });
+        return false;
+
+
+    });
 </script>
+<!-- -------------------------------------------------------------------------------------- -->

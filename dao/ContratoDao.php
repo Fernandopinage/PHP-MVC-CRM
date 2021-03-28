@@ -52,15 +52,10 @@ Class ContratoDao extends Dao{
         $array = array();
         while ($row = $select->fetch(PDO::FETCH_ASSOC)) {
         
-            $ClassContrato = new ClassContrato();
-        
-            $ClassContrato->setNumerocontrato($row['CRM_CTR_NUMERO']);
-            $ClassContrato->setDescricao($row['CRM_CTR_DESCRICAO']);
-        
-            $array[] = $ClassContrato;
+            echo" <option value=".$row['CRM_CTR_ID '].">".$row['CRM_CTR_NUMERO']." - ".$row['CRM_CTR_DESCRICAO']."</option>";
         }
         
-        return $array;
+        return json_encode($array);
 
     }
 
