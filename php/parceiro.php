@@ -287,8 +287,8 @@ if (isset($_POST['cadastrar'])) {
                     <label for="inputEmail4">Nº PISS</label>
                     <input type="text" class="form-control form-control-sm" name="piss" id="piss" placeholder="">
                 </div>
-                <input type="submit" class="btn btn-success" value="cadastra dadados" name="cadastrar">
-
+                
+                <button type="submit" class="btn btn-success" value="cadastra dadados" name="cadastrar">cadastra dadados </button>
 
             </div>
 
