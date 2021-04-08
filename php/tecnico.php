@@ -113,7 +113,7 @@ if (isset($_POST['agendamento'])) {
                     <label for="projeto">Projeto</label>
                     <select id="projeto" name="projeto" class="form-control form-control-sm">
                         <option selected></option>
-                       
+
                     </select>
 
                 </div>
@@ -181,13 +181,12 @@ if (isset($_POST['agendamento'])) {
 <!-- --------------------------------------------------------------------------------------- -->
 <!-- Função responsavel por preencher o campo do numero cadastro  ----------------------------->
 <script>
+    $('#contrato').change(function() {
 
-$('#contrato').change(function(){
+        var id = document.getElementById('contrato').value
 
-    var id = document.getElementById('contrato').value
-    
-   
-    $('#projeto').html('');
+
+        $('#projeto').html('');
 
         $.ajax({
 
@@ -197,16 +196,15 @@ $('#contrato').change(function(){
                 id: id
             },
             success: function(data) {
-               $('#projeto').html(data);
-              
+                $('#projeto').html(data);
+
             }
 
 
         });
         return false;
-        
-        });
 
+    });
 </script>
 
 
