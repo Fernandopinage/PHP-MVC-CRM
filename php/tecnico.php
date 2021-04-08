@@ -139,7 +139,10 @@ if (isset($_POST['agendamento'])) {
             <div class="input-group mb-3 form-group col-md-3">
                 <div class="text-right">
                     <input class="btn btn-success" name="agendamento" type="submit" value="Salvar Agendamento">
+
                 </div>
+
+             <!--   <a class="dropdown-item" class="btn btn-success" href="../pdf/os.php">Usuário</a> -->
             </div>
 
         </div>
