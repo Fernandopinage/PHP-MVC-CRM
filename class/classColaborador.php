@@ -205,6 +205,7 @@ Class CLassColaborador{
         return $this->pai;
 
     }
+    /*
     public function setEmail($email){
         $this->email = $email;
 
@@ -213,6 +214,7 @@ Class CLassColaborador{
         return $this->email;
 
     }
+    */
     public function setDepartamento($departamento){
         $this->departamento = $departamento;
 
@@ -229,6 +231,7 @@ Class CLassColaborador{
         return $this->funcao;
 
     }
+    /*
     public function setFoto($foto){
         $this->foto = $foto;
 
@@ -237,6 +240,8 @@ Class CLassColaborador{
         return $this->foto;
 
     }
+    */
+    /*
     public function setCpf($cpf){
         $this->cpf = $cpf;
 
@@ -245,6 +250,8 @@ Class CLassColaborador{
         return $this->cpf;
 
     }
+    */
+    /*
     public function setCnh($cnh){
         $this->cnh = $cnh;
 
@@ -253,6 +260,8 @@ Class CLassColaborador{
         return $this->cnh;
 
     }
+    */
+    /*
     public function setCnhcat($cnhcat){
         $this->cnhcat = $cnhcat;
 
@@ -260,7 +269,8 @@ Class CLassColaborador{
     public function getCnhcat(){
         return $this->cnhcat;
 
-    }
+    }*/
+    /*
     public function setCnhvalid($cnhvalid){
         $this->cnhvalid = $cnhvalid;
 
@@ -269,6 +279,8 @@ Class CLassColaborador{
         return $this->cnhvalid;
 
     }
+    */
+    /*
     public function setCnhemis($cnhemis){
         $this->cnhemis = $cnhemis;
 
@@ -277,6 +289,7 @@ Class CLassColaborador{
         return $this->cnhemis;
 
     }
+    */
     public function setTransporte($transporte){
         $this->transporte = $transporte;
 
@@ -293,6 +306,7 @@ Class CLassColaborador{
         return $this->rg;
 
     }
+    /*
     public function setRgemis($rgemis){
         $this->rgemis = $rgemis;
 
@@ -301,6 +315,8 @@ Class CLassColaborador{
         return $this->rgemis;
 
     }
+    */
+    /*
     public function setRguf($rguf){
         $this->rguf = $rguf;
 
@@ -309,6 +325,7 @@ Class CLassColaborador{
         return $this->rguf;
 
     }
+    */
     public function setDataemissao($dataemissao){
         $this->dataemissao = $dataemissao;
 
@@ -343,6 +360,7 @@ Class CLassColaborador{
         return $this->titulo;
 
     }
+    /*
     public function setTitulonum($titulonum){
         $this->titulonum = $titulonum;
 
@@ -351,6 +369,8 @@ Class CLassColaborador{
         return $this->titulonum;
 
     }
+    */
+    /*
     public function setTitulozon($titulozon){
         $this->titulozon = $titulozon;
 
@@ -359,6 +379,8 @@ Class CLassColaborador{
         return $this->titulozon;
 
     }
+    */
+    /*
     public function setTitulouf($titulouf){
         $this->titulouf = $titulouf;
 
@@ -367,6 +389,7 @@ Class CLassColaborador{
         return $this->titulouf;
 
     }
+    */
     public function setZona($zona){
         $this->zona = $zona;
 

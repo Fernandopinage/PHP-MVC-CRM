@@ -54,6 +54,7 @@ if (isset($_POST['cadastrar'])) {
     $ClassColaborador->getCurso($_POST['curso']);
     $ClassColaborador->getDataacad($_POST['dataacad']);
     $ClassColaborador->getDeficiencia($_POST['deficiencia']);
+    $ClassColaborador->getDefitipo($_POST['tipo']);
     $ClassColaborador->getObservacao($_POST['observacao']);
     $Colaborador = new Colaborador();
     $Colaborador->insertColaborador($ClassColaborador);
@@ -447,7 +448,7 @@ if (isset($_POST['cadastrar'])) {
 
                 <div class="form-group col-md-12">
                     <label for="inputEmail4">Observação</label>
-                    <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="6" name="observacao"></textarea>
+                    <textarea class="form-control form-control-sm" id="observacao" rows="6" name="observacao"></textarea>
                 </div>
 
             </div>

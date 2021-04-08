@@ -81,7 +81,7 @@ if (isset($_POST['agendamento'])) {
                     <label for="contrato">Nº Contrato</label>
                     <select id="contrato" name="contrato" class="form-control">
                         <option selected></option>
-                     
+
                     </select>
 
                 </div>
@@ -142,12 +142,12 @@ if (isset($_POST['agendamento'])) {
 
                 </div>
 
-             <!--   <a class="dropdown-item" class="btn btn-success" href="../pdf/os.php">Usuário</a> -->
+                <!--   <a class="dropdown-item" class="btn btn-success" href="../pdf/os.php">Usuário</a> -->
             </div>
 
         </div>
 
-                        
+
 
 
 </form>
@@ -158,18 +158,20 @@ if (isset($_POST['agendamento'])) {
     $("#cliente").change(function() {
 
         var id = document.getElementById('cliente').value
-        
+
         $('#contrato').html('');
 
         $.ajax({
 
             type: 'POST', // Formado de envio
             url: '../ajax/contrato.php', // URL para onde vai ser enviados
-            data: {id:id},
-            success: function(data){
+            data: {
+                id: id
+            },
+            success: function(data) {
                 $('#contrato').html(data);
             }
-            
+
 
         });
         return false;
