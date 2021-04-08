@@ -3,6 +3,7 @@
 Class CLassColaborador{
 
 
+    private $id;
     private $codigo;
     private $pessoa;
     private $nome;
@@ -67,7 +68,13 @@ Class CLassColaborador{
     private $defitipo;
     private $observacao;
 
+    public function setID($id){
+        $this->id = $id;
+    }
+    public function getID(){
 
+        return $this->id;
+    }
     /*
     public function setCodigo($codigo){
         $this->codigo = $codigo;

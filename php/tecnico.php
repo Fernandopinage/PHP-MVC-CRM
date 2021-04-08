@@ -1,12 +1,16 @@
 <?php
 
 include_once "../class/classParceiro.php";
+include_once "../class/classColaborador.php";
 include_once "../dao/ParceiroDAO.php";
+include_once "../dao/Colaborador.php";
 
 
 $cliente = new ParceiroDao();
 $cliente = $cliente->contratoParceiro();
 
+$colaborador = new Colaborador();
+$dado = $colaborador->selectColaborador(); 
 
 
 
@@ -64,12 +68,27 @@ if (isset($_POST['agendamento'])) {
                     </select>
 
                 </div>
+                <div class="form-group col-md-3">
+                    <label for="cliente">Técnico/Usuario</label>
+                    <select id="cliente" name="usuario" class="form-control form-control-sm">
+                        <option selected></option>
+                        <?php
+                        foreach ($dado as $dados) {
+
+                            echo "<option value=' . $dados->getId() . '>" . $dados->getNome() . "</option>";
+                        }
+
+
+                        ?>
+                    </select>
+
+                </div>
 
                 <div class="form-group col-md-2">
                     <label for="data">Data Agendamento</label>
                     <input type="date" class="form-control form-control-sm" name="data" id="data" placeholder="">
                 </div>
-                <div class="form-group col-md-5">
+                <div class="form-group col-md-2">
                     <label for="resumo">Resumo</label>
                     <input type="text" class="form-control form-control-sm" name="resumo" id="resumo" placeholder="">
                 </div>

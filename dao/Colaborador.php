@@ -83,4 +83,22 @@ class Colaborador extends Dao
 
        
     }
+    public function selectColaborador(){
+
+        $sql = "SELECT TAB_COL_ID,TAB_COL_NOMESOCIAL FROM `TAB_COL`";
+        $select = $this->con->prepare($sql);
+        $select->execute();
+        $array = array();
+        while($row = $select->fetch(PDO::FETCH_ASSOC)){
+
+            $classColaborador = new CLassColaborador();
+
+            $classColaborador->setID($row['TAB_COL_ID']);
+            $classColaborador->setNome($row['TAB_COL_NOMESOCIAL']);
+
+            $array[] = $classColaborador;
+        }
+           
+            return $array;
+    }
 }
