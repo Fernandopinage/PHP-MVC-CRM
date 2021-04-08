@@ -51,8 +51,26 @@ Class ContratoDao extends Dao{
         $select->execute();
         $array = array();
         while ($row = $select->fetch(PDO::FETCH_ASSOC)) {
+
+
+            echo  "<option value=".$row['CRM_CTR_NUMERO'].">".$row['CRM_CTR_NUMERO']." - ".$row['CRM_CTR_DESCRICAO']."</option>";
+            //echo "<option value='".$row['CRM_CTR_NUMERO ']."'>".$row['CRM_CTR_NUMERO']." - ".$row['CRM_CTR_DESCRICAO']."</option>";
+        }
         
-            echo" <option value=".$row['CRM_CTR_ID '].">".$row['CRM_CTR_NUMERO']." - ".$row['CRM_CTR_DESCRICAO']."</option>";
+        return json_encode($array);
+
+    }
+
+    /*** corrigir aqui */
+    public function NumeroContrato($id){
+
+        $sql = "SELECT  CRM_CTR_DESCRICAO from CRM_CTR where CRM_CTR_NUMERO='$id'";
+        $select = $this->con->prepare($sql);
+        $select->execute();
+        $array = array();
+        while ($row = $select->fetch(PDO::FETCH_ASSOC)) {
+        
+            echo" <option>".$row['CRM_CTR_DESCRICAO']."</option>";
         }
         
         return json_encode($array);

@@ -68,6 +68,7 @@ Class CLassColaborador{
     private $observacao;
 
 
+    /*
     public function setCodigo($codigo){
         $this->codigo = $codigo;
 
@@ -76,7 +77,7 @@ Class CLassColaborador{
         return $this->codigo;
 
     }
-
+    */
     public function setPessoa($pessoa){
         $this->pessoa = $pessoa;
 

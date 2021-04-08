@@ -50,12 +50,12 @@ if (isset($_POST['agendamento'])) {
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="cliente">Cliente Agendado</label>
-                    <select id="cliente" name="cliente" class="form-control">
+                    <select id="cliente" name="cliente" class="form-control form-control-sm">
                         <option selected></option>
                         <?php
                         foreach ($cliente as $clientes) {
 
-                            echo "<option value='" . $clientes->getID() . "'>" . $clientes->getNome() . "</option>";
+                            echo "<option  value='" . $clientes->getID() . "'>" . $clientes->getNome() . "</option>";
                         }
 
 
@@ -67,11 +67,11 @@ if (isset($_POST['agendamento'])) {
 
                 <div class="form-group col-md-2">
                     <label for="data">Data Agendamento</label>
-                    <input type="date" class="form-control" name="data" id="data" placeholder="">
+                    <input type="date" class="form-control form-control-sm" name="data" id="data" placeholder="">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="resumo">Resumo</label>
-                    <input type="text" class="form-control" name="resumo" id="resumo" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="resumo" id="resumo" placeholder="">
                 </div>
             </div>
 
@@ -79,28 +79,27 @@ if (isset($_POST['agendamento'])) {
 
                 <div class="form-group col-md-4">
                     <label for="contrato">Nº Contrato</label>
-                    <select id="contrato" name="contrato" class="form-control">
+                    <select id="contrato" name="contrato" class="form-control form-control-sm">
                         <option selected></option>
-
                     </select>
 
                 </div>
 
                 <div class="form-group col-md-2">
                     <label for="horainicio">Hora Inicio</label>
-                    <input type="time" class="form-control" name="horainicio" id="horainicio" placeholder="">
+                    <input type="time" class="form-control form-control-sm" name="horainicio" id="horainicio" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="horafim">Hora Final</label>
-                    <input type="time" class="form-control" name="horafim" id="horafim" placeholder="">
+                    <input type="time" class="form-control form-control-sm" name="horafim" id="horafim" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="duracao">Duração</label>
-                    <input type="time" class="form-control" name="duracao" id="duracao" placeholder="">
+                    <input type="time" class="form-control form-control-sm" name="duracao" id="duracao" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="cliente">Evento</label>
-                    <select id="cliente" name="evento" class="form-control">
+                    <select id="hora" name="evento" class="form-control form-control-sm">
                         <option selected value="com hora">Com Hora</option>
                         <option value="sem hora">Sem Hora</option>
                     </select>
@@ -112,15 +111,15 @@ if (isset($_POST['agendamento'])) {
 
                 <div class="form-group col-md-4">
                     <label for="projeto">Projeto</label>
-                    <select id="projeto" name="projeto" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                    <select id="projeto" name="projeto" class="form-control form-control-sm">
+                        <option selected></option>
+                       
                     </select>
 
                 </div>
                 <div class="form-group col-md-4">
                     <label for="contato">Contato do Cliente</label>
-                    <input type="type" class="form-control" name="contato" id="contato" placeholder="">
+                    <input type="type" class="form-control form-control-sm" name="contato" id="contato" placeholder="">
                 </div>
 
             </div>
@@ -128,7 +127,7 @@ if (isset($_POST['agendamento'])) {
 
                 <div class="form-group col-md-12">
                     <label for="detalhe">Detalhe</label>
-                    <textarea class="form-control" name="detalhe" id="detalhe" rows="6"></textarea>
+                    <textarea class="form-control form-control-sm" name="detalhe" id="detalhe" rows="6"></textarea>
                 </div>
 
             </div>
@@ -179,4 +178,36 @@ if (isset($_POST['agendamento'])) {
 
     });
 </script>
+<!-- --------------------------------------------------------------------------------------- -->
+<!-- Função responsavel por preencher o campo do numero cadastro  ----------------------------->
+<script>
+
+$('#contrato').change(function(){
+
+    var id = document.getElementById('contrato').value
+    
+   
+    $('#projeto').html('');
+
+        $.ajax({
+
+            type: 'POST', // Formado de envio
+            url: '../ajax/numerocontrato.php', // URL para onde vai ser enviados
+            data: {
+                id: id
+            },
+            success: function(data) {
+               $('#projeto').html(data);
+              
+            }
+
+
+        });
+        return false;
+        
+        });
+
+</script>
+
+
 <!-- -------------------------------------------------------------------------------------- -->

@@ -17,7 +17,6 @@ private $valorhora;
 private $valoradicional;
 private $opcao;
 private $complemento;
-
 private $descricao;
 private $modalidade2;
 private $dataprojeto;

@@ -6,7 +6,7 @@ $ClassColaborador  = new  CLassColaborador();
 
 if (isset($_POST['cadastrar'])) {
 
-    $ClassColaborador->getCodigo($_POST['codigo']);
+    //$ClassColaborador->getCodigo($_POST['codigo']);
     $ClassColaborador->getPessoa($_POST['pessoa']);
     $ClassColaborador->getNome($_POST['nome']);
     $ClassColaborador->getGenero($_POST['genero']);
@@ -94,14 +94,13 @@ if (isset($_POST['cadastrar'])) {
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
             <div class="form-row">
+            <!--
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Codigo</label>
                     <input type="text" class="form-control form-control-sm" name="codigo" id="codigo" placeholder="">
 
                 </div>
-                <div class="form-group col-md-1">
-
-                </div>
+            -->
 
                 <div class="form-group col-md-4">
                     <div class="form-check">
