@@ -206,14 +206,16 @@ if (isset($_POST['cadastroagenda'])) {
 </script>
 <script>
     var cliente = document.getElementById('cliente').value
+
     $("#cliente").change(function() {
 
 
         console.log(cliente);
+        
 
     });
 </script>
-<!-- --------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------  $("#cliente").removeClass('is-valid');-->
 <!-- Função responsavel por preencher o campo do numero cadastro  ----------------------------->
 
 
