@@ -27,7 +27,7 @@ if (isset($_POST['cadastroagenda'])) {
     $ClassTecnico->getHorafim($_POST['horafim']);
     $ClassTecnico->getDuracao($_POST['duracao']);
     $ClassTecnico->getEvento($_POST['evento']);
-    $ClassTecnico->getProjeto($_POST['status']);
+    $ClassTecnico->getStatus($_POST['status']);
     $ClassTecnico->getContato($_POST['contato']);
     $ClassTecnico->getDetalhe($_POST['detalhe']);
     $tecnico = new Tecnico();
@@ -60,9 +60,9 @@ if (isset($_POST['cadastroagenda'])) {
 
             <div class="form-row">
                 <div class="form-group col-md-5">
-                    <label for="cliente">Cliente Agendado</label>
+                    <label for="cliente">Cliente Agendado <span style="color: red;">*</span></label>
                     <select id="cliente" name="cliente" class="form-control form-control-sm">
-                        <option selected></option>
+                     
                         <?php
                         foreach ($cliente as $clientes) {
 
@@ -76,9 +76,9 @@ if (isset($_POST['cadastroagenda'])) {
 
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="usuario">Técnico/Usuario</label>
+                    <label for="usuario">Técnico/Usuario <span style="color: red;">*</span></label>
                     <select id="usuario" name="usuario" class="form-control form-control-sm">
-                        <option selected></option>
+                        
                         <?php
                         foreach ($dado as $dados) {
 
@@ -104,23 +104,23 @@ if (isset($_POST['cadastroagenda'])) {
             <div class="form-row">
 
                 <div class="form-group col-md-4">
-                    <label for="contrato">Nº Contrato</label>
+                    <label for="contrato">Nº Contrato <span style="color: red;">*</span></label>
                     <select id="contrato" name="contrato" class="form-control form-control-sm">
-                        <option selected></option>
+                       <option value=""></option>
                     </select>
 
                 </div>
 
                 <div class="form-group col-md-2">
-                    <label for="horainicio">Hora Inicio</label>
+                    <label for="horainicio">Hora Inicio <span style="color: red;">*</span></label>
                     <input type="time" class="form-control form-control-sm" name="horainicio" id="horainicio" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="horafim">Hora Final</label>
+                    <label for="horafim">Hora Final <span style="color: red;">*</span></label>
                     <input type="time" class="form-control form-control-sm" name="horafim" id="horafim" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="duracao">Duração</label>
+                    <label for="duracao">Duração <span style="color: red;">*</span></label>
                     <input type="time" class="form-control form-control-sm" name="duracao" id="duracao" placeholder="">
                 </div>
                 <div class="form-group col-md-2">

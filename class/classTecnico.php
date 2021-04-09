@@ -12,7 +12,7 @@ class ClassTecnico{
     private $horafim;
     private $duracao;
     private $evento;
-    private $projeto;
+    private $status;
     private $contato;
     private $detalhe;
 
@@ -80,12 +80,12 @@ class ClassTecnico{
     public function getEvento(){
         return $this->evento;  
     }
-    public function setProjeto($projeto){
-        $this->projeto = $projeto;
+    public function setStatus($status){
+        $this->status = $status;
     }
     
-    public function getProjeto(){
-        return $this->projeto;  
+    public function getStatus(){
+        return $this->status;  
     }
     public function setContato($contato){
         $this->contato = $contato;

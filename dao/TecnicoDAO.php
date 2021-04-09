@@ -15,35 +15,33 @@ public function insertAgendaTecnico (ClassTecnico $ClassTecnico){
 
     $insert = $this->con->prepare($sql);
     $insert->bindValue(":CRM_AGT_IDEMP",'');
-    $insert->bindValue(":CRM_AGT_HORA",'');
-    $insert->bindValue(":CRM_AGT_CODCAD",'');
+    $insert->bindValue(":CRM_AGT_HORA",$ClassTecnico->getHorainicio());
+    $insert->bindValue(":CRM_AGT_CODCAD",$ClassTecnico->getCliente());
     $insert->bindValue(":CRM_AGT_GRUPOPART",'');
-    $insert->bindValue(":CRM_AGT_RESUMO",'');
+    $insert->bindValue(":CRM_AGT_RESUMO",$ClassTecnico->getResumo());
     $insert->bindValue(":CRM_AGT_RESUMO2",'');
-    $insert->bindValue(":CRM_AGT_DETALHETEC",'');
-    $insert->bindValue(":CRM_AGT_DURACAO",'');
+    $insert->bindValue(":CRM_AGT_DETALHETEC",$ClassTecnico->getDetalhe());
+    $insert->bindValue(":CRM_AGT_DURACAO",$ClassTecnico->getDuracao());
     $insert->bindValue(":CRM_AGT_INCPOR",'');
     $insert->bindValue(":CRM_AGT_STATUS",'');
-    $insert->bindValue(":CRM_AGT_EVENTO",'');
+    $insert->bindValue(":CRM_AGT_EVENTO",$ClassTecnico->getEvento());
     $insert->bindValue(":CRM_AGT_OK",'');
     $insert->bindValue(":CRM_AGT_DTENVIO",'');
-    $insert->bindValue(":CRM_AGT_CONTATO",'');
+    $insert->bindValue(":CRM_AGT_CONTATO",$ClassTecnico->getContato());
     $insert->bindValue(":CRM_AGT_BLOQ",'');
     $insert->bindValue(":CRM_AGT_CONTROLE",'');
     $insert->bindValue(":CRM_AGT_EXCLUIDO",'');
     $insert->bindValue(":CRM_AGT_DTENVTEC",'');
-    $insert->bindValue(":CRM_AGT_HORA2",'');
-    $insert->bindValue(":CRM_AGT_NUMCTR",'');
+    $insert->bindValue(":CRM_AGT_HORA2",$ClassTecnico->getHorafim());
+    $insert->bindValue(":CRM_AGT_NUMCTR",$ClassTecnico->getContrato());
     $insert->bindValue(":CRM_AGT_ID",'');
-    $insert->bindValue(":CRM_AGT_CODUSU",'');
-    $insert->bindValue(":CRM_AGT_DATA",'');
+    $insert->bindValue(":CRM_AGT_CODUSU", $ClassTecnico->getUsuario());
+    $insert->bindValue(":CRM_AGT_DATA",$ClassTecnico->getData());
     $insert->bindValue(":CRM_AGT_IDPRJ",'');
     $insert->bindValue(":CRM_AGT_DETALHECLI",'');
     $insert->execute();
     
-    echo "<pre>";
-    var_dump($ClassTecnico);
-    echo "</pre>";
+   
 
 }
 
