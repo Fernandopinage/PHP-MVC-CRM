@@ -18,22 +18,20 @@ $dado = $colaborador->selectColaborador();
 if (isset($_POST['cadastroagenda'])) {
 
     $ClassTecnico = new ClassTecnico();
-    $ClassTecnico->getCliente($_POST['cliente']);
-    $ClassTecnico->getUsuario($_POST['usuario']);
-    $ClassTecnico->getData($_POST['data']);
-    $ClassTecnico->getResumo($_POST['resumo']);
-    $ClassTecnico->getContrato($_POST['contrato']);
-    $ClassTecnico->getHorainicio($_POST['horainicio']);
-    $ClassTecnico->getHorafim($_POST['horafim']);
-    $ClassTecnico->getDuracao($_POST['duracao']);
-    $ClassTecnico->getEvento($_POST['evento']);
-    $ClassTecnico->getStatus($_POST['status']);
-    $ClassTecnico->getContato($_POST['contato']);
-    $ClassTecnico->getDetalhe($_POST['detalhe']);
+    $ClassTecnico->setCliente($_POST['cliente']);
+    $ClassTecnico->setUsuario($_POST['usuario']);
+    $ClassTecnico->setData($_POST['data']);
+    $ClassTecnico->setResumo($_POST['resumo']);
+    $ClassTecnico->setContrato($_POST['contrato']);
+    $ClassTecnico->setHorainicio($_POST['horainicio']);
+    $ClassTecnico->setHorafim($_POST['horafim']);
+    $ClassTecnico->setDuracao($_POST['duracao']);
+    $ClassTecnico->setEvento($_POST['evento']);
+    $ClassTecnico->setStatus($_POST['status']);
+    $ClassTecnico->setContato($_POST['contato']);
+    $ClassTecnico->setDetalhe($_POST['detalhe']);
     $tecnico = new Tecnico();
     $tecnico->insertAgendaTecnico($ClassTecnico);
-
-
 }
 
 
@@ -61,15 +59,13 @@ if (isset($_POST['cadastroagenda'])) {
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="cliente">Cliente Agendado <span style="color: red;">*</span></label>
-                    <select id="cliente" name="cliente" class="form-control form-control-sm">
-                     
+                    <select id="cliente" name="cliente" class="form-control form-control-sm is-invalid">
+                        <option value=""></option>
                         <?php
                         foreach ($cliente as $clientes) {
 
                             echo "<option  value='" . $clientes->getID() . "'>" . $clientes->getNome() . "</option>";
                         }
-
-
                         ?>
 
                     </select>
@@ -77,8 +73,8 @@ if (isset($_POST['cadastroagenda'])) {
                 </div>
                 <div class="form-group col-md-3">
                     <label for="usuario">Técnico/Usuario <span style="color: red;">*</span></label>
-                    <select id="usuario" name="usuario" class="form-control form-control-sm">
-                        
+                    <select id="usuario" name="usuario" class="form-control form-control-sm is-invalid" required>
+                        <option value=""></option>
                         <?php
                         foreach ($dado as $dados) {
 
@@ -105,19 +101,19 @@ if (isset($_POST['cadastroagenda'])) {
 
                 <div class="form-group col-md-4">
                     <label for="contrato">Nº Contrato <span style="color: red;">*</span></label>
-                    <select id="contrato" name="contrato" class="form-control form-control-sm">
-                       <option value=""></option>
+                    <select id="contrato" name="contrato" class="form-control form-control-sm is-invalid">
+                        <option value=""></option>
                     </select>
 
                 </div>
 
                 <div class="form-group col-md-2">
                     <label for="horainicio">Hora Inicio <span style="color: red;">*</span></label>
-                    <input type="time" class="form-control form-control-sm" name="horainicio" id="horainicio" placeholder="">
+                    <input type="time" class="form-control form-control-sm is-invalid" name="horainicio" id="horainicio" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="horafim">Hora Final <span style="color: red;">*</span></label>
-                    <input type="time" class="form-control form-control-sm" name="horafim" id="horafim" placeholder="">
+                    <input type="time" class="form-control form-control-sm is-invalid" name="horafim" id="horafim" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="duracao">Duração <span style="color: red;">*</span></label>
@@ -168,17 +164,15 @@ if (isset($_POST['cadastroagenda'])) {
         <div class="tab-pane fade" id="nav-participante" role="tabpanel" aria-labelledby="nav-participante-tab">
 
             <div class="input-group mb-3 form-group col-md-3">
-                <div class="text-right">
-                    <input class="btn btn-success" name="cadastroagenda" type="submit" value="Salvar Agendamento">
-
-                </div>
 
                 <!--   <a class="dropdown-item" class="btn btn-success" href="../pdf/os.php">Usuário</a> -->
             </div>
 
         </div>
+        <div class="text-right">
+            <input class="btn btn-success" name="cadastroagenda" type="submit" value="Salvar Agendamento">
 
-
+        </div>
 
 
 </form>
@@ -207,6 +201,15 @@ if (isset($_POST['cadastroagenda'])) {
         });
         return false;
 
+
+    });
+</script>
+<script>
+    var cliente = document.getElementById('cliente').value
+    $("#cliente").change(function() {
+
+
+        console.log(cliente);
 
     });
 </script>
