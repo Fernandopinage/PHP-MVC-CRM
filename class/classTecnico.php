@@ -4,6 +4,7 @@
 class ClassTecnico{
 
     private $cliente;
+    private $usuario;
     private $data;
     private $resumo;
     private $contrato;
@@ -22,6 +23,13 @@ class ClassTecnico{
     
     public function getCliente(){
         return $this->cliente;      
+    }
+    public function setUsuario($usuario){
+        $this->usuario = $usuario;
+    }
+    
+    public function getUsuario(){
+        return $this->usuario;      
     }
     public function setData($data){
         $this->data = $data;

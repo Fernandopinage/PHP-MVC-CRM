@@ -2,31 +2,38 @@
 
 include_once "../class/classParceiro.php";
 include_once "../class/classColaborador.php";
+include_once "../class/classTecnico.php";
 include_once "../dao/ParceiroDAO.php";
 include_once "../dao/Colaborador.php";
-
+include_once "../dao/TecnicoDAO.php";
 
 $cliente = new ParceiroDao();
 $cliente = $cliente->contratoParceiro();
 
 $colaborador = new Colaborador();
-$dado = $colaborador->selectColaborador(); 
+$dado = $colaborador->selectColaborador();
 
 
 
-if (isset($_POST['agendamento'])) {
+if (isset($_POST['cadastroagenda'])) {
 
-    $_POST['cliente'];
-    $_POST['data'];
-    $_POST['resumo'];
-    $_POST['contrato'];
-    $_POST['horainicio'];
-    $_POST['horafim'];
-    $_POST['duracao'];
-    $_POST['evento'];
-    $_POST['projeto'];
-    $_POST['contato'];
-    $_POST['detalhe'];
+    $ClassTecnico = new ClassTecnico();
+    $ClassTecnico->getCliente($_POST['cliente']);
+    $ClassTecnico->getUsuario($_POST['usuario']);
+    $ClassTecnico->getData($_POST['data']);
+    $ClassTecnico->getResumo($_POST['resumo']);
+    $ClassTecnico->getContrato($_POST['contrato']);
+    $ClassTecnico->getHorainicio($_POST['horainicio']);
+    $ClassTecnico->getHorafim($_POST['horafim']);
+    $ClassTecnico->getDuracao($_POST['duracao']);
+    $ClassTecnico->getEvento($_POST['evento']);
+    $ClassTecnico->getProjeto($_POST['status']);
+    $ClassTecnico->getContato($_POST['contato']);
+    $ClassTecnico->getDetalhe($_POST['detalhe']);
+    $tecnico = new Tecnico();
+    $tecnico->insertAgendaTecnico($ClassTecnico);
+
+
 }
 
 
@@ -47,7 +54,7 @@ if (isset($_POST['agendamento'])) {
 </nav>
 <br>
 <hr><br>
-<form action="../telas/add.php" method="POST">
+<form action="" method="POST">
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-agendamento" role="tabpanel" aria-labelledby="nav-agendamento-tab">
 
@@ -69,8 +76,8 @@ if (isset($_POST['agendamento'])) {
 
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="cliente">Técnico/Usuario</label>
-                    <select id="cliente" name="usuario" class="form-control form-control-sm">
+                    <label for="usuario">Técnico/Usuario</label>
+                    <select id="usuario" name="usuario" class="form-control form-control-sm">
                         <option selected></option>
                         <?php
                         foreach ($dado as $dados) {
@@ -118,7 +125,7 @@ if (isset($_POST['agendamento'])) {
                 </div>
                 <div class="form-group col-md-2">
                     <label for="cliente">Evento</label>
-                    <select id="hora" name="evento" class="form-control form-control-sm">
+                    <select id="evento" name="evento" class="form-control form-control-sm">
                         <option selected value="com hora">Com Hora</option>
                         <option value="sem hora">Sem Hora</option>
                     </select>
@@ -129,9 +136,15 @@ if (isset($_POST['agendamento'])) {
             <div class="form-row">
 
                 <div class="form-group col-md-4">
-                    <label for="projeto">Projeto</label>
-                    <select id="projeto" name="projeto" class="form-control form-control-sm">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" class="form-control form-control-sm">
                         <option selected></option>
+                        <option value="G">Geral em aberto</option>
+                        <option value="A">Aguardando confirmação</option>
+                        <option value="P">Particular ou cancelado</option>
+                        <option value="M">Em atentimento</option>
+                        <option value="E">Encerrado atendimento</option>
+                        <option value="F">Finalizado</option>
 
                     </select>
 
@@ -156,7 +169,7 @@ if (isset($_POST['agendamento'])) {
 
             <div class="input-group mb-3 form-group col-md-3">
                 <div class="text-right">
-                    <input class="btn btn-success" name="agendamento" type="submit" value="Salvar Agendamento">
+                    <input class="btn btn-success" name="cadastroagenda" type="submit" value="Salvar Agendamento">
 
                 </div>
 
@@ -199,32 +212,7 @@ if (isset($_POST['agendamento'])) {
 </script>
 <!-- --------------------------------------------------------------------------------------- -->
 <!-- Função responsavel por preencher o campo do numero cadastro  ----------------------------->
-<script>
-    $('#contrato').change(function() {
 
-        var id = document.getElementById('contrato').value
-
-
-        $('#projeto').html('');
-
-        $.ajax({
-
-            type: 'POST', // Formado de envio
-            url: '../ajax/numerocontrato.php', // URL para onde vai ser enviados
-            data: {
-                id: id
-            },
-            success: function(data) {
-                $('#projeto').html(data);
-
-            }
-
-
-        });
-        return false;
-
-    });
-</script>
 
 
 <!-- -------------------------------------------------------------------------------------- -->
