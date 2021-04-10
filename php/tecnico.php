@@ -64,7 +64,7 @@ if (isset($_POST['cadastroagenda'])) {
                         <?php
                         foreach ($cliente as $clientes) {
 
-                            echo "<option  value='" . $clientes->getID() . "'>" . $clientes->getNome() . "</option>";
+                            echo "<option   value='" . $clientes->getID() . "'>" . $clientes->getNome() . "</option>";
                         }
                         ?>
 
@@ -117,7 +117,7 @@ if (isset($_POST['cadastroagenda'])) {
                 </div>
                 <div class="form-group col-md-2">
                     <label for="duracao">Duração <span style="color: red;">*</span></label>
-                    <input type="time" class="form-control form-control-sm" name="duracao" id="duracao" placeholder="">
+                    <input type="time" class="form-control form-control-sm is-invalid" name="duracao" id="duracao" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="cliente">Evento</label>
@@ -135,7 +135,7 @@ if (isset($_POST['cadastroagenda'])) {
                     <label for="status">Status</label>
                     <select id="status" name="status" class="form-control form-control-sm">
                         <option selected></option>
-                        <option value="G">Geral em aberto</option>
+                        <option value="G" selected>Geral em aberto</option>
                         <option value="A">Aguardando confirmação</option>
                         <option value="P">Particular ou cancelado</option>
                         <option value="M">Em atentimento</option>
@@ -205,13 +205,42 @@ if (isset($_POST['cadastroagenda'])) {
     });
 </script>
 <script>
-    var cliente = document.getElementById('cliente').value
-
+  
     $("#cliente").change(function() {
 
+        $('#cliente').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
 
-        console.log(cliente);
-        
+
+    });
+    $("#usuario").change(function() {
+
+        $('#usuario').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+
+        var usuario = document.getElementById('usuario').value
+        console.log(usuario);
+    });
+    $("#contrato").change(function() {
+
+        $('#contrato').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+
+
+    });
+    $("#horainicio").change(function() {
+
+        $('#horainicio').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+
+
+    });
+    $("#horafim").change(function() {
+
+        $('#horafim').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+
+
+    });
+    $("#duracao").change(function() {
+
+        $('#duracao').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+
 
     });
 </script>

@@ -50,6 +50,7 @@ Class ContratoDao extends Dao{
         $select = $this->con->prepare($sql);
         $select->execute();
         $array = array();
+        echo  "<option value=''></option>";
         while ($row = $select->fetch(PDO::FETCH_ASSOC)) {
 
 
@@ -57,7 +58,7 @@ Class ContratoDao extends Dao{
             //echo "<option value='".$row['CRM_CTR_NUMERO ']."'>".$row['CRM_CTR_NUMERO']." - ".$row['CRM_CTR_DESCRICAO']."</option>";
         }
         
-        return json_encode($array);
+       // return json_encode($array);
 
     }
 
