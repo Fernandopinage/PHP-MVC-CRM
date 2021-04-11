@@ -205,7 +205,6 @@ if (isset($_POST['cadastroagenda'])) {
     });
 </script>
 <script>
-  
     $("#cliente").change(function() {
 
         $('#cliente').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");

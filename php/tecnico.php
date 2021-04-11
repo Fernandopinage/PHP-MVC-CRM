@@ -53,7 +53,7 @@ $dado = $classTecnico->selectAgendaTecnico();
                 <td><?php echo $obj->getResumo(); ?></td>
                 <td><?php echo $obj->getHorainicio(); ?></td>
                 <td><?php echo $obj->getHorafim(); ?></td>
-               
+
                 <td><a class="btn btn-primary btn-sm" type="button" value="Editar"><img src="../img/baseline_edit_white_24dp.png"></a></td>
                 <td><a class="btn btn-danger btn-sm" type="button" value="Deletar"><img src="../img/baseline_delete_forever_white_24dp.png"></a></td>
                 <td><a class="btn btn-info btn-sm" type="button" value="Visualizar"><img src="../img/baseline_remove_red_eye_white_24dp.png"></a></td>
