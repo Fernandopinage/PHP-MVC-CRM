@@ -26,10 +26,13 @@
         case 'tecnico/':
             include_once "../php/tecnico.php";
             break;
+        case 'addtecnico/':
+            include_once "../php/addtecnico.php";
+            break;
         case 'usuario/':
             include_once "../php/usuario.php";
             break;
-                
+
 
         default:
             # code...

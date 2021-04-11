@@ -33,15 +33,52 @@ public function insertAgendaTecnico (ClassTecnico $ClassTecnico){
     $insert->bindValue(":CRM_AGT_DATA",$ClassTecnico->getData());
     $insert->execute();
     
-
-   
-   
-
 }
+public function selectAgendaTecnico(){
 
+
+    $sql = "SELECT * FROM `crm_agt`";
+
+    $select = $this->con->prepare($sql);
+    $select->execute();
+    $array = array();
+    while($row = $select->fetch(PDO::FETCH_ASSOC)){
+
+        $ClassTecnico = new ClassTecnico();
+        $ClassTecnico->setID($row['CRM_AGT_ID']);
+        $ClassTecnico->setCliente($row['CRM_AGT_CODCAD']);
+        $ClassTecnico->setUsuario($row['CRM_AGT_CODUSU']);
+        $ClassTecnico->setData($row['CRM_AGT_DATA']);
+        $ClassTecnico->setResumo($row['CRM_AGT_RESUMO']);
+        $ClassTecnico->setContrato($row['CRM_AGT_NUMCTR']);
+        $ClassTecnico->setHorainicio($row['CRM_AGT_HORA']);
+        $ClassTecnico->setHorafim($row['CRM_AGT_HORA2']);
+        $ClassTecnico->setDuracao($row['CRM_AGT_DURACAO']);
+        $ClassTecnico->setEvento($row['CRM_AGT_EVENTO']);
+        $ClassTecnico->setStatus($row['CRM_AGT_STATUS']);
+        $ClassTecnico->setContato($row['CRM_AGT_CONTATO']);
+        $ClassTecnico->setDetalhe($row['CRM_AGT_DETALHETEC']);
+        $array[] =  $ClassTecnico;
+    }
+    return $array;
+}
+public function selectCliente($cliente){
+
+    $sql = "SELECT TAB_CAD_NOME FROM `tab_cad` where TAB_CAD_ID ='$cliente'";
+    $select = $this->con->prepare($sql);
+    $select->execute();
+    $row = $select->fetch(PDO::FETCH_ASSOC);
+    echo $row['TAB_CAD_NOME'];
     
 }
+public function selectUsuario($usuario){
 
-
-
-?>
+    $sql = "SELECT TAB_COL_NOMESOCIAL FROM `tab_col` where TAB_COL_ID ='$usuario'";
+    $select = $this->con->prepare($sql);
+    $select->execute();
+    $row = $select->fetch(PDO::FETCH_ASSOC);
+    echo $row['TAB_COL_NOMESOCIAL'];
+    
+}
+    
+}

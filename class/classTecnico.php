@@ -3,6 +3,7 @@
 
 class ClassTecnico{
 
+    private $id;
     private $cliente;
     private $usuario;
     private $data;
@@ -16,6 +17,14 @@ class ClassTecnico{
     private $contato;
     private $detalhe;
 
+
+    public function setID($id){
+        $this->id = $id;
+    }
+    
+    public function getID(){
+        return $this->id;      
+    }
 
     public function setCliente($cliente){
         $this->cliente = $cliente;
