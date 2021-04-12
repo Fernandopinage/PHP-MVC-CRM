@@ -39,21 +39,20 @@ $dado = $classTecnico->selectAgendaTecnico();
         ?>
             <tr>
                 <td><?php echo $obj->getID(); ?></td>
-                <td scope="row"><?php
+                <td scope="row">
+                                <?php
                                 $cliente = $obj->getCliente();
                                 $classTecnico->selectCliente($cliente);
                                 ?>
                 </td>
 
                 <td scope="row">
-                                
                                 <?php
                                 
                                 $usuario = $obj->getUsuario();
                                 $classTecnico->selectUsuario($usuario);
                                
-                                ?>
-                                
+                                ?>   
                 </td>
                 <td><?php echo $obj->getResumo(); ?></td>
                 <td><?php echo $obj->getHorainicio(); ?></td>
