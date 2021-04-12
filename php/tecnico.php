@@ -45,10 +45,15 @@ $dado = $classTecnico->selectAgendaTecnico();
                                 ?>
                 </td>
 
-                <td scope="row"><?php
+                <td scope="row">
+                                
+                                <?php
+                                
                                 $usuario = $obj->getUsuario();
-                                $classTecnico->selectCliente($usuario);
+                                $classTecnico->selectUsuario($usuario);
+                               
                                 ?>
+                                
                 </td>
                 <td><?php echo $obj->getResumo(); ?></td>
                 <td><?php echo $obj->getHorainicio(); ?></td>
