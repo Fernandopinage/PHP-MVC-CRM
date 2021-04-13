@@ -29,6 +29,9 @@
         case 'addtecnico/':
             include_once "../php/addtecnico.php";
             break;
+        case 'OS/':
+            include_once "../php/ordem.php";
+            break;
         case 'usuario/':
             include_once "../php/usuario.php";
             break;
