@@ -37,7 +37,6 @@ if (isset($_POST['cadastroagenda'])) {
 
 ?>
 
-
 <br><br>
 <div class="card" style="margin-bottom: 20px;">
     <div class="navbar navbar-dark bg-dark navbar-expand-lg" style=" color:#fff; ">
@@ -89,7 +88,7 @@ if (isset($_POST['cadastroagenda'])) {
 
                 <div class="form-group col-md-2">
                     <label for="data">Data Agendamento</label>
-                    <input type="date" class="form-control form-control-sm" name="data" id="data" placeholder="">
+                    <input type="date" class="form-control form-control-sm" name="data" id="data" placeholder="" value="<?php echo date("Y-m-d");?>">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="resumo">Resumo</label>

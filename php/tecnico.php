@@ -8,7 +8,7 @@ $classTecnico = new Tecnico();
 $totalregistro = count($classTecnico->totalAgendamento()); // total de registro
 $paginação = 10; // total de registro por pagina
 $numpagina = ceil($totalregistro / $paginação); // calcular total de paginação 
-$valor = (isset($_GET['p']))? $_GET['p']:1; // caso existe um numero de pagina
+$valor = (isset($_GET['p'])) ? $_GET['p'] : 1; // caso existe um numero de pagina
 $inicio = ($paginação * $valor) - $paginação; // inicio do contador 1 ate 10 registro
 $dado = $classTecnico->selectAgendaTecnico($inicio, $paginação);
 
@@ -67,7 +67,7 @@ $dado = $classTecnico->selectAgendaTecnico($inicio, $paginação);
 
                 <td><a class="btn btn-primary btn-sm" type="button" value="Editar"><img src="../img/baseline_edit_white_24dp.png"></a></td>
                 <td><a class="btn btn-danger btn-sm" type="button" value="Deletar"><img src="../img/baseline_delete_forever_white_24dp.png"></a></td>
-                <td><a class="btn btn-info btn-sm" type="button" value="Visualizar"><img src="../img/baseline_remove_red_eye_white_24dp.png"></a></td>
+                <td><a class="btn btn-secondary btn-sm" type="button" value="Visualizar"><img src="../img/baseline_remove_red_eye_white_24dp.png"></a></td>
             </tr>
         <?php
 
