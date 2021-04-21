@@ -83,17 +83,14 @@ if (isset($_POST['cadastroagenda'])) {
                     <input type="time" class="form-control form-control-sm is-invalid" name="horafim" id="horafim" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="duracao">Duração <span style="color: red;">*</span></label>
-                    <input type="time" class="form-control form-control-sm is-invalid" name="duracao" id="duracao" placeholder="">
+                    <label for="duracao">Translado</label>
+                    <input type="time" class="form-control form-control-sm" name="translado" id="translado" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="cliente">Evento</label>
-                    <select id="evento" name="evento" class="form-control form-control-sm">
-                        <option selected value="com hora">Com Hora</option>
-                        <option value="sem hora">Sem Hora</option>
-                    </select>
-
+                    <label for="duracao">Duração <span style="color: red;">*</span></label>
+                    <input type="time" class="form-control form-control-sm" name="duracao" id="duracao" placeholder="">
                 </div>
+
 
             </div>
             <div class="form-row">
@@ -112,6 +109,14 @@ if (isset($_POST['cadastroagenda'])) {
                     </select>
 
                 </div>
+                <div class="form-group col-md-2">
+                    <label for="cliente">Evento</label>
+                    <select id="evento" name="evento" class="form-control form-control-sm">
+                        <option selected value="com hora">Com Hora</option>
+                        <option value="sem hora">Sem Hora</option>
+                    </select>
+
+                </div>
                 <div class="form-group col-md-4">
                     <label for="contato">Contato do Cliente</label>
                     <input type="type" class="form-control form-control-sm" name="contato" id="contato" placeholder="">
@@ -121,7 +126,7 @@ if (isset($_POST['cadastroagenda'])) {
             <div class="form-row">
 
                 <div class="form-group col-md-12">
-                    <label for="detalhe">Detalhe</label>
+                    <label for="detalhe">Detalhe da OS</label>
                     <textarea class="form-control form-control-sm" name="detalhe" id="detalhe" rows="6"></textarea>
                 </div>
 
@@ -144,6 +149,50 @@ if (isset($_POST['cadastroagenda'])) {
 
 </form>
 </div>
+
+<script>
+    $('#horainicio').change(function() {
+
+        var horainicio = document.getElementById('horainicio').value
+        var horainicio = horainicio.split(':');
+        var horafim = document.getElementById('horafim').value
+        var horafim = horafim.split(':');
+        var translado = document.getElementById('translado').value
+        var translado = translado.split(':');
+
+        if (document.getElementById('horafim').value == "") {
+
+            var duracao = document.getElementById('duracao').value = horainicio.join(':')
+
+
+        } else {
+
+            /** convertendo hora inicio em minutos */
+            var segundoinicio = parseInt((+horainicio[0]) * 60);
+            var segundoinicio = (segundoinicio + parseInt(horainicio[1]))
+
+
+            /** convertendo hora final em minutos */
+            var segundofinal = parseInt((+horafim[0]) * 60);
+            var segundofinal = (segundofinal + parseInt(horafim[1]))
+
+
+            /** convertendo hora translado em minutos */
+            var segundotranslado = parseInt((+translado[0]) * 60);
+            var segundotranslado = (segundotranslado + parseInt(translado[1]))
+
+            var totalHora = (segundofinal - segundoinicio) / 60 * 100;
+            var hora = totalHora.toString()
+
+
+
+            console.log(hora)
+            var duracao = document.getElementById('duracao').value = hora
+        }
+
+    });
+</script>
+
 <!-- Função responsavel por preencher o campo do contrato de acordo com a consulta do cliente -->
 
 <script>
@@ -202,15 +251,9 @@ if (isset($_POST['cadastroagenda'])) {
         $('#horafim').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
 
 
-    });
-    $("#duracao").change(function() {
-
-        $('#duracao').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
-
-
-    });
+    });;
 </script>
-<!-- ---------------------------------------------------------------------------------------  $("#cliente").removeClass('is-valid');-->
+<!-- --------------------------------------------------------------------------------------- -->
 <!-- Função responsavel por preencher o campo do numero cadastro  ----------------------------->
 
 
