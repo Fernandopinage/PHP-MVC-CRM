@@ -22,7 +22,8 @@ class Tecnico extends Dao
         $insert->bindValue(":CRM_AGT_RESUMO", $ClassTecnico->getResumo());
         $insert->bindValue(":CRM_AGT_RESUMO2", '');
         $insert->bindValue(":CRM_AGT_DETALHETEC", $ClassTecnico->getDetalhe());
-        $insert->bindValue(":CRM_AGT_DURACAO", $ClassTecnico->getDuracao());
+        //$insert->bindValue(":CRM_AGT_DURACAO", $ClassTecnico->getDuracao());
+        $insert->bindValue(":CRM_AGT_DURACAO", '');
         $insert->bindValue(":CRM_AGT_STATUS", $ClassTecnico->getStatus());
         $insert->bindValue(":CRM_AGT_EVENTO", $ClassTecnico->getEvento());
         $insert->bindValue(":CRM_AGT_CONTATO", $ClassTecnico->getContato());

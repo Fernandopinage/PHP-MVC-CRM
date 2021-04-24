@@ -1,6 +1,20 @@
 <?php
 
+include_once "../class/classParceiro.php";
+include_once "../class/classColaborador.php";
+include_once "../class/classTecnico.php";
+include_once "../dao/ParceiroDAO.php";
+include_once "../dao/Colaborador.php";
+include_once "../dao/TecnicoDAO.php";
+
+$cliente = new ParceiroDao();
+$cliente = $cliente->contratoParceiro();
+
+$colaborador = new Colaborador();
+$dado = $colaborador->selectColaborador();
 if (isset($_POST['cadastroagenda'])) {
+
+
 }
 
 
@@ -83,12 +97,12 @@ if (isset($_POST['cadastroagenda'])) {
                     <input type="time" class="form-control form-control-sm is-invalid" name="horafim" id="horafim" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="duracao">Translado</label>
-                    <input type="time" class="form-control form-control-sm" name="translado" id="translado" placeholder="">
+                    <label for="duracao">Intervalo</label>
+                    <input type="time" class="form-control form-control-sm" name="Intervalo" id="Intervalo" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="duracao">Duração <span style="color: red;">*</span></label>
-                    <input type="time" class="form-control form-control-sm" name="duracao" id="duracao" placeholder="">
+                    <label for="duracao">Translado</label>
+                    <input type="time" class="form-control form-control-sm" name="translado" id="translado" placeholder="">
                 </div>
 
 
@@ -150,48 +164,6 @@ if (isset($_POST['cadastroagenda'])) {
 </form>
 </div>
 
-<script>
-    $('#horainicio').change(function() {
-
-        var horainicio = document.getElementById('horainicio').value
-        var horainicio = horainicio.split(':');
-        var horafim = document.getElementById('horafim').value
-        var horafim = horafim.split(':');
-        var translado = document.getElementById('translado').value
-        var translado = translado.split(':');
-
-        if (document.getElementById('horafim').value == "") {
-
-            var duracao = document.getElementById('duracao').value = horainicio.join(':')
-
-
-        } else {
-
-            /** convertendo hora inicio em minutos */
-            var segundoinicio = parseInt((+horainicio[0]) * 60);
-            var segundoinicio = (segundoinicio + parseInt(horainicio[1]))
-
-
-            /** convertendo hora final em minutos */
-            var segundofinal = parseInt((+horafim[0]) * 60);
-            var segundofinal = (segundofinal + parseInt(horafim[1]))
-
-
-            /** convertendo hora translado em minutos */
-            var segundotranslado = parseInt((+translado[0]) * 60);
-            var segundotranslado = (segundotranslado + parseInt(translado[1]))
-
-            var totalHora = (segundofinal - segundoinicio) / 60 * 100;
-            var hora = totalHora.toString()
-
-
-
-            console.log(hora)
-            var duracao = document.getElementById('duracao').value = hora
-        }
-
-    });
-</script>
 
 <!-- Função responsavel por preencher o campo do contrato de acordo com a consulta do cliente -->
 
@@ -220,41 +192,62 @@ if (isset($_POST['cadastroagenda'])) {
 
     });
 </script>
+
+<!----------------- Função responsavel por informa se campo já está preenchido -------------------------------->
 <script>
     $("#cliente").change(function() {
 
-        $('#cliente').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
-
+        if (document.getElementById('cliente').value != "") {
+            $('#cliente').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+            $('#contrato').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        } else {
+            $('#cliente').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+            $('#contrato').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
 
     });
     $("#usuario").change(function() {
 
-        $('#usuario').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        if (document.getElementById('usuario').value != "") {
+            $('#usuario').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
 
-        var usuario = document.getElementById('usuario').value
-        console.log(usuario);
+        } else {
+            $('#usuario').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
     });
     $("#contrato").change(function() {
 
-        $('#contrato').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        if (document.getElementById("contrato").value != "") {
+            $('#contrato').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
 
-
+        } else {
+            $('#contrato').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
     });
     $("#horainicio").change(function() {
 
-        $('#horainicio').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        if (document.getElementById("horainicio").value != "") {
 
+            $('#horainicio').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+
+        } else {
+            $('#horainicio').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
 
     });
     $("#horafim").change(function() {
 
-        $('#horafim').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        if (document.getElementById("horafim").value != "") {
+            $('#horafim').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
 
+        } else {
+            $('#horafim').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
 
-    });;
+    });
 </script>
-<!-- --------------------------------------------------------------------------------------- -->
-<!-- Função responsavel por preencher o campo do numero cadastro  ----------------------------->
+<!-- --------------------------------------------------------------------------------------------------------------->
+
 
 
 

@@ -25,7 +25,7 @@ if (isset($_POST['cadastroagenda'])) {
     $ClassTecnico->setContrato($_POST['contrato']);
     $ClassTecnico->setHorainicio($_POST['horainicio']);
     $ClassTecnico->setHorafim($_POST['horafim']);
-    $ClassTecnico->setDuracao($_POST['duracao']);
+    // $ClassTecnico->setDuracao($_POST['duracao']);
     $ClassTecnico->setEvento($_POST['evento']);
     $ClassTecnico->setStatus($_POST['status']);
     $ClassTecnico->setContato($_POST['contato']);
@@ -88,7 +88,7 @@ if (isset($_POST['cadastroagenda'])) {
 
                 <div class="form-group col-md-2">
                     <label for="data">Data Agendamento</label>
-                    <input type="date" class="form-control form-control-sm" name="data" id="data" placeholder="" value="<?php echo date("Y-m-d");?>">
+                    <input type="date" class="form-control form-control-sm" name="data" id="data" placeholder="" value="<?php echo date("Y-m-d"); ?>">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="resumo">Resumo</label>
@@ -114,25 +114,15 @@ if (isset($_POST['cadastroagenda'])) {
                     <label for="horafim">Hora Final <span style="color: red;">*</span></label>
                     <input type="time" class="form-control form-control-sm is-invalid" name="horafim" id="horafim" placeholder="">
                 </div>
+                <!--
                 <div class="form-group col-md-2">
                     <label for="duracao">Duração <span style="color: red;">*</span></label>
                     <input type="time" class="form-control form-control-sm is-invalid" name="duracao" id="duracao" placeholder="">
                 </div>
-                <div class="form-group col-md-2">
-                    <label for="cliente">Evento</label>
-                    <select id="evento" name="evento" class="form-control form-control-sm">
-                        <option selected value="com hora">Com Hora</option>
-                        <option value="sem hora">Sem Hora</option>
-                    </select>
-
-                </div>
-
-            </div>
-            <div class="form-row">
-
+                -->
                 <div class="form-group col-md-4">
-                    <label for="status">Status</label>
-                    <select id="status" name="status" class="form-control form-control-sm">
+                    <label for="status">Status <span style="color: red;">*</span></label>
+                    <select id="status" name="status" class="form-control form-control-sm is-valid">
                         <option selected></option>
                         <option value="G" selected>Geral em aberto</option>
                         <option value="A">Aguardando confirmação</option>
@@ -141,6 +131,18 @@ if (isset($_POST['cadastroagenda'])) {
                         <option value="E">Encerrado atendimento</option>
                         <option value="F">Finalizado</option>
 
+                    </select>
+
+                </div>
+
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-2">
+                    <label for="cliente">Evento</label>
+                    <select id="evento" name="evento" class="form-control form-control-sm">
+                        <option selected value="com hora">Com Hora</option>
+                        <option value="sem hora">Sem Hora</option>
                     </select>
 
                 </div>
@@ -203,48 +205,69 @@ if (isset($_POST['cadastroagenda'])) {
 
     });
 </script>
+<!----------------- Função responsavel por informa se campo já está preenchido -------------------------------->
 <script>
     $("#cliente").change(function() {
 
-        $('#cliente').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        if (document.getElementById('cliente').value != "") {
+            $('#cliente').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+
+        } else {
+            $('#cliente').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
 
 
     });
     $("#usuario").change(function() {
 
-        $('#usuario').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        if (document.getElementById('usuario').value != "") {
+            $('#usuario').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
 
-        var usuario = document.getElementById('usuario').value
-        console.log(usuario);
+        } else {
+            $('#usuario').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
     });
     $("#contrato").change(function() {
 
-        $('#contrato').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        if (document.getElementById("contrato").value != "") {
+            $('#contrato').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
 
-
+        } else {
+            $('#contrato').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
     });
     $("#horainicio").change(function() {
 
-        $('#horainicio').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        if (document.getElementById("horainicio").value != "") {
 
+            $('#horainicio').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+
+        } else {
+            $('#horainicio').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
 
     });
     $("#horafim").change(function() {
 
-        $('#horafim').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+        if (document.getElementById("horafim").value != "") {
+            $('#horafim').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
 
+        } else {
+            $('#horafim').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
+
+    })
+    $("#status").change(function() {
+
+        if (document.getElementById("status").value != "") {
+            $('#status').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
+
+        } else {
+            $('#status').removeClass("form-control form-control-sm is-valid").addClass("form-control form-control-sm is-invalid");
+        }
 
     });
-    $("#duracao").change(function() {
 
-        $('#duracao').removeClass("form-control form-control-sm is-invalid").addClass("form-control form-control-sm is-valid");
-
-
-    });
+    ;
 </script>
-<!-- ---------------------------------------------------------------------------------------  $("#cliente").removeClass('is-valid');-->
-<!-- Função responsavel por preencher o campo do numero cadastro  ----------------------------->
-
-
-
-<!-- -------------------------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------------------------->
