@@ -17,12 +17,9 @@
             case 'parceiro/':
                 include_once "../php/parceiro.php";
                 break;
-
-
             case 'colaborador/':
                 include_once "../php/colaborador.php";
                 break;
-
             case 'contrato/':
                 include_once "../php/contrato.php";
                 break;
@@ -34,6 +31,10 @@
                 break;
             case 'OS/':
                 include_once "../php/ordem.php";
+                break;
+            case 'addordem/':
+                include_once "../php/addordem.php";
+
                 break;
             case 'usuario/':
                 include_once "../php/usuario.php";

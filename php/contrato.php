@@ -72,7 +72,7 @@ if (isset($_POST['salvarcontrato'])) {
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <label for="inputEmail4">Número do Contrato</label>
-                    <input type="email" class="form-control form-control-sm" name="numerocontrato" id="numerocontrato" value="<?php $numOS->NumOS(); ?>" placeholder="" readonly>
+                    <input type="email" class="form-control form-control-sm" name="numerocontrato" id="numerocontrato" value="<?php $numOS->NumOS(); ?>" placeholder="" readonly style="color:red;">
 
                 </div>
 

@@ -1,8 +1,9 @@
 <?php
 
-class OS
+Class ClassOS
 {
 
+    private $numOS;
     private $cliente;
     private $usuario;
     private $data;
@@ -13,9 +14,15 @@ class OS
     private $Intervalo;
     private $translado;
     private $status;
-    private $evento;
-    private $contato;
+    private $chave;
+    private $horaagendada;
     private $detalhe;
+
+
+    public function getOS()
+    {
+        return $this->numOS;
+    }
 
     public function getCliente()
     {
@@ -67,14 +74,14 @@ class OS
         return $this->status;
     }
 
-    public function getEvento()
+    public function getChave()
     {
-        return $this->evento;
+        return $this->chave;
     }
 
-    public function getContato()
+    public function getHoraagendada()
     {
-        return $this->contato;
+        return $this->horaagendada;
     }
 
     public function getDetalhe()
@@ -84,6 +91,11 @@ class OS
 
 
     /****** */
+    public function setOS($numOS)
+    {
+
+        $this->numOS = $numOS;
+    }
 
     public function setCliente($cliente)
     {
@@ -145,16 +157,16 @@ class OS
         $this->status = $status;
     }
 
-    public function setEvento($evento)
+    public function setChave($chave)
     {
 
-        $this->evento = $evento;
+        $this->chave = $chave;
     }
 
-    public function setContato($contato)
+    public function setHoraagendada($horaagendada)
     {
 
-        $this->contato = $contato;
+        $this->horaagendada = $horaagendada;
     }
 
     public function setDetalhe($detalhe)
